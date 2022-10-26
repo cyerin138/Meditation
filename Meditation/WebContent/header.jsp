@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>치 명상</title>
+<link rel="stylesheet" href="./css/style.css">
+<script src="."></script>
 </head>
 <body>
-
+<div class="wrapper">
+<header></header>
+</div>
 </body>
 </html>
