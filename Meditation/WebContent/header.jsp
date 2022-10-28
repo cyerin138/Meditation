@@ -16,7 +16,7 @@
     <body>
         <div class="wrapper">
             <header>
-                <div class="header-wrap">
+                <div class="header-wrap d-flex align-items-center justify-content-between">
                     <div class="logo">
                         <img src="./" alt="로고">
                     </div>

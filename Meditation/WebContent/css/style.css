@@ -22,3 +22,19 @@ a {
 p {
     margin-bottom: 0;
 }
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/* 헤더 */
+header {
+    width: 100%;
+    height: 100px;
+}
+.header-wrap {
+    width: 100%;
+    height: 100%;
+}
