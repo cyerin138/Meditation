@@ -21,6 +21,7 @@ public class MemberDAO {
 	final String SELECT_MEMBER = "select * from memer";
 	final String DELETE_MEMBER = "delete from member where id = ?";
 	final String UPDATE_MEMBER = "update from member where id = ?";
+	final String MEMBER_CHECK = "select * from member where id =?";
 	
 
 	public MemberVO getMember(String id) {
@@ -54,11 +55,9 @@ public class MemberDAO {
 	public boolean existID(String id) {
 		boolean isExist = false;
 		
-
-		String sql = "select * from lib_member where member_id =?";
 		try {
 			con = JDBCUtil.getConnection();
-			pstmt = con.prepareStatement(sql);
+			pstmt = con.prepareStatement(MEMBER_CHECK);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 

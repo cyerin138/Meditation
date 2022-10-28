@@ -46,7 +46,7 @@ public class RegisterServlet extends HttpServlet {
 		
 		MemberDAO dao = new MemberDAO();
 		
-		boolean isExist = dao.existID(request.getParameter("memberId"));
+		boolean isExist = dao.existID(request.getParameter("id"));
 		int result = 0;
 		
 		if (isExist) {
