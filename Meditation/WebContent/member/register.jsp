@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ include file = "../header.jsp" %>
     <h1>회원가입</h1>
-    <form action="" method="post">
+    <form action="/register" method="post">
         <input type="text" name="id" class="id" placeholder="아이디를 입력해주세요">
         <a href="">중복체크</a><br>
         <input type="password" name="pw" class="pw" placeholder="비밀번호를 입력해주세요"> <br>

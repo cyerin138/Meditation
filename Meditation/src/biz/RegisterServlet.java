@@ -54,17 +54,17 @@ public class RegisterServlet extends HttpServlet {
 			
 			
 		} else {
-			MemberVO data = new MemberVO();
-			data.setMemberId(request.getParameter("memberId"));
-			data.setMemberPwd(request.getParameter("memberPwd"));
-			data.setMemberName(request.getParameter("name"));
-			data.setMemberAddr(request.getParameter("addr"));
-			data.setMemberAge(Integer.parseInt(request.getParameter("age")));
+			MemberVO vo = new MemberVO();
+			vo.setMemberId(request.getParameter("memberId"));
+			vo.setMemberPwd(request.getParameter("memberPwd"));
+			vo.setMemberName(request.getParameter("name"));
+			vo.setMemberAddr(request.getParameter("addr"));
+			vo.setMemberAge(Integer.parseInt(request.getParameter("age")));
 			
-			result = dao.insertMember(data);
+			result = dao.insertMember(vo);
 			if( result > 0) {
 				HttpSession session = request.getSession();
-				session.setAttribute("loginOK", data);
+				session.setAttribute("loginOK", vo);
 				out.println("<script>alert('회원가입에 성공했습니다.')</script>");
 			} else {
 				out.println("<script>alert('회원가입에 실패했습니다.')</script>");

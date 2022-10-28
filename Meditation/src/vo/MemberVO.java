@@ -1,55 +1,41 @@
 package vo;
 
 public class MemberVO {
-	private String memberId;
-	private String memberPwd;
-	private String memberName;
-	private String memberAddr;
-	private int memberAge;
+	private String id;
+	private String pwd;
+	private String name;
 	
 	public MemberVO() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public String getMemberId() {
-		return memberId;
+	public MemberVO(String id, String pwd, String name) {
+		super();
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
 	}
-
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
+	
+	public String getId() {
+		return id;
 	}
-
-	public String getMemberPwd() {
-		return memberPwd;
+	public void setId(String id) {
+		this.id = id;
 	}
-
-	public void setMemberPwd(String memberPwd) {
-		this.memberPwd = memberPwd;
+	public String getPwd() {
+		return pwd;
 	}
-
-	public String getMemberName() {
-		return memberName;
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
 	}
-
-	public void setMemberName(String memberName) {
-		this.memberName = memberName;
+	public String getName() {
+		return name;
 	}
-
-	public String getMemberAddr() {
-		return memberAddr;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public void setMemberAddr(String memberAddr) {
-		this.memberAddr = memberAddr;
-	}
-
-	public int getMemberAge() {
-		return memberAge;
-	}
-
-	public void setMemberAge(int memberAge) {
-		this.memberAge = memberAge;
-	}
+	
 	
 	
 }
