@@ -6,42 +6,46 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import util.JDBCUtil;
-import vo.BookVO;
 import vo.MemberVO;
 
 public class MemberDAO {
 	public MemberDAO() {
 
 	}
+	
+	Connection con = null;
+	PreparedStatement pstmt   = null;
+	ResultSet rs = null;
+	
+	final String INSERT_MEMBER = "insert into member values(?,?,?)";
+	final String SELECT_MEMBER = "select * from memer";
+	final String DELETE_MEMBER = "delete from member where id = ?";
+	final String UPDATE_MEMBER = "update from member where id = ?";
+	
 
-	public MemberVO getMemberData(String id) {
+	public MemberVO getMember(String id) {
 		MemberVO vo = null;
-		Connection conn = null;
-
-		PreparedStatement pstmt = null;
-
-		ResultSet rs = null;
 
 		String sql = "select * from lib_member where member_id =?";
 		try {
-			conn = JDBCUtil.getConnection();
-			pstmt = conn.prepareStatement(sql);
+			con = JDBCUtil.getConnection();
+			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {
 				vo = new MemberVO();
-				vo.setMemberId(rs.getString("member_id"));
-				vo.setMemberPwd(rs.getString("member_pwd"));
-				vo.setMemberName(rs.getString("member_name"));
-				vo.setMemberAddr(rs.getString("member_addr"));
-				vo.setMemberAge(rs.getInt("member_age"));
+//				vo.setMemberId(rs.getString("member_id"));
+//				vo.setMemberPwd(rs.getString("member_pwd"));
+//				vo.setMemberName(rs.getString("member_name"));
+//				vo.setMemberAddr(rs.getString("member_addr"));
+//				vo.setMemberAge(rs.getInt("member_age"));
 
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			JDBCUtil.close(conn, pstmt, rs);
+			JDBCUtil.close(con, pstmt, rs);
 		}
 
 		return vo;
@@ -50,15 +54,11 @@ public class MemberDAO {
 	public boolean existID(String id) {
 		boolean isExist = false;
 		
-		Connection conn = null;
 
-		PreparedStatement pstmt = null;
-
-		ResultSet rs = null;
 		String sql = "select * from lib_member where member_id =?";
 		try {
-			conn = JDBCUtil.getConnection();
-			pstmt = conn.prepareStatement(sql);
+			con = JDBCUtil.getConnection();
+			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 
@@ -68,7 +68,7 @@ public class MemberDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			JDBCUtil.close(conn, pstmt, rs);
+			JDBCUtil.close(con, pstmt, rs);
 		}
 
 		return isExist;
@@ -76,15 +76,10 @@ public class MemberDAO {
 	
 	public int removeMember(String id) {
 		int result = 0;
-		Connection conn = null;
-
-		PreparedStatement pstmt = null;
-
-		String sql = "delete from lib_member where member_id = ?";
 		
 		try {
-			conn = JDBCUtil.getConnection();
-			pstmt = conn.prepareStatement(sql);
+			con = JDBCUtil.getConnection();
+			pstmt = con.prepareStatement(DELETE_MEMBER);
 			pstmt.setString(1, id);
 			result = pstmt.executeUpdate();
 
@@ -94,21 +89,15 @@ public class MemberDAO {
 		return result;
 	}
 	
-	public int insertMember(MemberVO data) {
+	public int insertMember(MemberVO vo) {
 		int result = 0;
-		Connection conn = null;
-
-		PreparedStatement pstmt = null;
-		String sql = "insert into lib_member(member_id, member_pwd, member_name , member_addr , member_age) values (?,?,?,?,?)";
 		
 		try {
-			conn = JDBCUtil.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, data.getMemberId());
-			pstmt.setString(2, data.getMemberPwd());
-			pstmt.setString(3, data.getMemberName());
-			pstmt.setString(4, data.getMemberAddr());
-			pstmt.setInt(5, data.getMemberAge());
+			con = JDBCUtil.getConnection();
+			pstmt = con.prepareStatement(INSERT_MEMBER);
+			pstmt.setString(1, vo.getId());
+			pstmt.setString(2, vo.getPwd());
+			pstmt.setString(3, vo.getName());
 			result = pstmt.executeUpdate();
 
 		} catch (SQLException e) {
