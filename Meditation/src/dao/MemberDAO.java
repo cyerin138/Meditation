@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import common.JDBCUtil;
+import util.JDBCUtil;
 import vo.BookVO;
 import vo.MemberVO;
 

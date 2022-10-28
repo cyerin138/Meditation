@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import common.JDBCUtil;
+import util.JDBCUtil;
 import vo.RentVO;
 
 public class RentDAO {

@@ -1,4 +1,4 @@
-package common;
+package util;
 
 import java.sql.Connection;
 import java.sql.Driver;
@@ -20,7 +20,7 @@ public class JDBCUtil {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","hr","hr");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","1234");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
