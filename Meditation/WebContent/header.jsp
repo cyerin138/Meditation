@@ -34,10 +34,10 @@
                     </div>
                     <div class="sign">
                         <div class="login">
-                            <a href="#">로그인</a>
+                            <a href="./member/login.jsp">로그인</a>
                         </div>
                         <div class="register">
-                            <a href="#">회원가입</a>
+                            <a href="./member/register.jsp">회원가입</a>
                         </div>
                     </div>
                 </div>
