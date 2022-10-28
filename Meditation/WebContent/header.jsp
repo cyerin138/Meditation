@@ -7,10 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>치 명상</title>
-        <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="./css/bootstrap/css/bootstrap-grid.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <script src="./js/jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
+        <script src="<%=request.getContextPath()%>/js/jquery-3.1.1.min.js"></script>
     </head>
 
     <body>
@@ -34,10 +34,10 @@
                     </div>
                     <div class="sign">
                         <div class="login">
-                            <a href="./member/login.jsp">로그인</a>
+                            <a href="<%=request.getContextPath()%>/member/login.jsp">로그인</a>
                         </div>
                         <div class="register">
-                            <a href="./member/register.jsp">회원가입</a>
+                            <a href="<%=request.getContextPath()%>/member/register.jsp">회원가입</a>
                         </div>
                     </div>
                 </div>
