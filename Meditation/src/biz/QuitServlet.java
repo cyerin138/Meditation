@@ -46,14 +46,14 @@ public class QuitServlet extends HttpServlet {
 			
 		} else {
 			MemberDAO dao = new MemberDAO();
-			result = dao.removeMember(user.getMemberId());
+			result = dao.removeMember(user.getId());
 			String msg;
 			if(result > 0) {
-				msg = user.getMemberName() + "님의 회원정보가 삭제 되었습니다.";
+				msg = user.getName() + "님의 회원정보가 삭제 되었습니다.";
 				session.removeAttribute("loginOK");
 				
 			} else {
-				msg = user.getMemberName() + "님의 회원정보 삭제가 실패했습니다";
+				msg = user.getName() + "님의 회원정보 삭제가 실패했습니다";
 			}
 			session.setAttribute("quit", msg);
 			response.sendRedirect("/member/quitResult.jsp");

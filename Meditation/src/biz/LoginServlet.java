@@ -52,9 +52,9 @@ public class LoginServlet extends HttpServlet {
 		pwd = request.getParameter("pwd");
 		
 		MemberDAO dao = new MemberDAO();
-		vo = dao.getMemberData(id);
+		vo = dao.getMember(id);
 		
-		if(vo == null|| !pwd.equals(vo.getMemberPwd())) {
+		if(vo == null|| !pwd.equals(vo.getPwd())) {
 			out.println("<script> alert('회원정보가 맞지 않습니다.'); history.back() </script>");
 		}else {
 			HttpSession session = request.getSession();
