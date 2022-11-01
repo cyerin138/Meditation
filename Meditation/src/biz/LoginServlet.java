@@ -59,8 +59,7 @@ public class LoginServlet extends HttpServlet {
 			out.println("<script> alert('회원정보가 맞지 않습니다.'); history.back() </script>");
 		}else {
 			HttpSession session = request.getSession();
-			
-			
+				
 			session.setAttribute("loginOK", vo);
 			response.sendRedirect("/login/loginOK.jsp");
 		}

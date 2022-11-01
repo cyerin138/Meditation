@@ -68,6 +68,10 @@ public class RegisterServlet extends HttpServlet {
 				out.println("<script>alert('회원가입에 실패했습니다.')</script>");
 				
 			}
+			
+			HttpSession session = request.getSession();
+			
+			session.setAttribute("loginOK", vo);
 			response.sendRedirect(request.getContextPath() + "/index.jsp");
 			
 			
