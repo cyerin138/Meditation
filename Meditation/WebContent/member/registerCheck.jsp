@@ -21,7 +21,7 @@ if (isExist) {
 
 alert('이미 존재하는 ID 입니다. 다시 입력해주세요.'); 
 history.go(-1);
-
+alert(<%= isExist%>)
 
 </script>
 <%
@@ -32,7 +32,8 @@ history.go(-1);
 
 <script> 
 
-alert('사용 가능한 ID입니다.'); 
+alert('사용 가능한 ID입니다.');
+alert(<%= isExist%>)
 history.go(-1);
 
 </script>

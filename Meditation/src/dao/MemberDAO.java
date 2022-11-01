@@ -18,7 +18,7 @@ public class MemberDAO {
 	ResultSet rs = null;
 	
 	final String INSERT_MEMBER = "insert into member values(?,?,?)";
-	final String SELECT_MEMBER = "select * from memer";
+	final String SELECT_MEMBER = "select * from member";
 	final String DELETE_MEMBER = "delete from member where id = ?";
 	final String UPDATE_MEMBER = "update from member where id = ?";
 	final String MEMBER_CHECK = "select * from member where id =?";
