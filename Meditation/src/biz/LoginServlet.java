@@ -43,13 +43,14 @@ public class LoginServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		
-		String id, pwd;
+		String id, pwd, name;
 		
 		MemberVO vo = null;
 		PrintWriter out = response.getWriter();
 		
 		id = request.getParameter("id");
 		pwd = request.getParameter("pwd");
+		name = request.getParameter("name");
 		
 		MemberDAO dao = new MemberDAO();
 		vo = dao.getMember(id);
