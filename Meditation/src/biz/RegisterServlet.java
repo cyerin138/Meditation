@@ -45,8 +45,8 @@ public class RegisterServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		MemberDAO dao = new MemberDAO();
-		
 		boolean isExist = dao.existID(request.getParameter("id"));
+
 		int result = 0;
 		
 		if (isExist) {
@@ -55,8 +55,8 @@ public class RegisterServlet extends HttpServlet {
 			
 		} else {
 			MemberVO vo = new MemberVO();
-			vo.setId(request.getParameter("memberId"));
-			vo.setPwd(request.getParameter("memberPwd"));
+			vo.setId(request.getParameter("id"));
+			vo.setPwd(request.getParameter("pwd"));
 			vo.setName(request.getParameter("name"));
 			
 			result = dao.insertMember(vo);
@@ -68,7 +68,9 @@ public class RegisterServlet extends HttpServlet {
 				out.println("<script>alert('회원가입에 실패했습니다.')</script>");
 				
 			}
-			response.sendRedirect("/index.jsp");
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
+			
+			
 		}
 	}
 
