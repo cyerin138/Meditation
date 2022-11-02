@@ -69,9 +69,6 @@ public class RegisterServlet extends HttpServlet {
 				
 			}
 			
-			HttpSession session = request.getSession();
-			
-			session.setAttribute("loginOK", vo);
 			response.sendRedirect(request.getContextPath() + "/index.jsp");
 			
 			

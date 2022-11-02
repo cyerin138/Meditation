@@ -1,3 +1,4 @@
+<%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <!DOCTYPE html>
     <html lang="ko">
@@ -32,6 +33,15 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
+                    <%
+                    
+                    
+                    MemberVO vo = new MemberVO();
+    				
+                    //HttpSession session = request.getSession();
+        			//session.getAttribute("loginOK");
+                    
+                    %>
                     <div class="sign">
                         <div class="login">
                             <a href="<%=request.getContextPath()%>/member/login.jsp">로그인</a>
