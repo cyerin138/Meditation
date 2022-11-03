@@ -38,22 +38,22 @@ public class QuitServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		HttpSession session  = request.getSession();
 		
-		MemberVO user = (MemberVO) session.getAttribute("loginOK");
+		MemberVO vo = (MemberVO) session.getAttribute("loginOK");
 		int result = 0;
 		
-		if(user == null) {
+		if(vo == null) {
 			out.println("<script> alert('사용자 정보가 없어 회원탈퇴를 진행할 수 없습니다. '); history.back(); </script>");
 			
 		} else {
 			MemberDAO dao = new MemberDAO();
-			result = dao.removeMember(user.getId());
+			result = dao.removeMember(vo.getId());
 			String msg;
 			if(result > 0) {
-				msg = user.getName() + "님의 회원정보가 삭제 되었습니다.";
+				msg = vo.getName() + "님의 회원정보가 삭제 되었습니다.";
 				session.removeAttribute("loginOK");
 				
 			} else {
-				msg = user.getName() + "님의 회원정보 삭제가 실패했습니다";
+				msg = vo.getName() + "님의 회원정보 삭제가 실패했습니다";
 			}
 			session.setAttribute("quit", msg);
 			response.sendRedirect("/member/quitResult.jsp");
