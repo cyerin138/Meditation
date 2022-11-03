@@ -42,15 +42,13 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		
-		String id, pwd, name;
-		
+				
 		MemberVO vo = null;
 		PrintWriter out = response.getWriter();
 		
-		id = request.getParameter("id");
-		pwd = request.getParameter("pwd");
-		name = request.getParameter("name");
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		String name = request.getParameter("name");
 		
 		MemberDAO dao = new MemberDAO();
 		vo = dao.getMember(id);

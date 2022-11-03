@@ -33,14 +33,10 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
-                    <%
+                    <%                                    		
+    				 MemberVO login = (MemberVO) session.getAttribute("loginOK");
                     
-                    
-                    MemberVO vo = new MemberVO();
-    				
-                    //HttpSession session = request.getSession();
-        			//session.getAttribute("loginOK");
-                    
+                    if(login == null) {
                     %>
                     <div class="sign">
                         <div class="login">
@@ -50,5 +46,16 @@
                             <a href="<%=request.getContextPath()%>/member/register.jsp">회원가입</a>
                         </div>
                     </div>
+                    <% } else  { %>
+                    
+                    <div class="sign">
+                        <div class="login">
+                            <a href="<%=request.getContextPath()%>/member/myPage.jsp"><%=login.getName() %> 님</a>
+                        </div>
+                        <div class="register">
+                            <a href="/logout" id="logout">로그아웃</a> 
+                        </div>
+                    </div>
+                    <% } %>
                 </div>
             </header>

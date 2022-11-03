@@ -27,20 +27,17 @@ public class MemberDAO {
 	public MemberVO getMember(String id) {
 		MemberVO vo = null;
 
-		String sql = "select * from lib_member where member_id =?";
 		try {
 			con = JDBCUtil.getConnection();
-			pstmt = con.prepareStatement(sql);
+			pstmt = con.prepareStatement(MEMBER_CHECK);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {
 				vo = new MemberVO();
-//				vo.setMemberId(rs.getString("member_id"));
-//				vo.setMemberPwd(rs.getString("member_pwd"));
-//				vo.setMemberName(rs.getString("member_name"));
-//				vo.setMemberAddr(rs.getString("member_addr"));
-//				vo.setMemberAge(rs.getInt("member_age"));
+				vo.setId(rs.getString("id"));
+				vo.setPwd(rs.getString("pwd"));
+				vo.setName(rs.getString("name"));
 
 			}
 		} catch (SQLException e) {
