@@ -53,7 +53,7 @@
                             <a href="<%=request.getContextPath()%>/member/myPage.jsp"><%=login.getName() %> 님</a>
                         </div>
                         <div class="register">
-                            <a href="<%=request.getContextPath()%>/logout" onclick="logout()" id="logout">로그아웃</a> 
+                            <button  onclick="logout()" id="logout">로그아웃</button> 
                         </div>
                     </div>
                     <% } %>
@@ -63,6 +63,9 @@
                             if(bool) {                                
                                 location.href="<%=request.getContextPath()%>/logout";
                                 return;
+                            } else {
+                                alert("로그아웃이 취소되었습니다.")
+                            	
                             }
                         }
                     </script>
