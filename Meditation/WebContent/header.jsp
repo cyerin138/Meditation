@@ -53,9 +53,18 @@
                             <a href="<%=request.getContextPath()%>/member/myPage.jsp"><%=login.getName() %> 님</a>
                         </div>
                         <div class="register">
-                            <a href="<%=request.getContextPath()%>/logout" id="logout">로그아웃</a> 
+                            <a href="<%=request.getContextPath()%>/logout" onclick="logout()" id="logout">로그아웃</a> 
                         </div>
                     </div>
                     <% } %>
+                    <script>
+                        function logout() {
+                            let bool = confirm('정말 로그아웃 하시겠습니까?')
+                            if(bool) {                                
+                                location.href="<%=request.getContextPath()%>/logout";
+                                return;
+                            }
+                        }
+                    </script>
                 </div>
             </header>
