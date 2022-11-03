@@ -56,7 +56,7 @@ public class QuitServlet extends HttpServlet {
 				msg = vo.getName() + "님의 회원정보 삭제가 실패했습니다";
 			}
 			session.setAttribute("quit", msg);
-			response.sendRedirect("/member/quitResult.jsp");
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
 			
 		}
 	}
