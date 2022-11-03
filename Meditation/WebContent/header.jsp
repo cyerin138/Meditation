@@ -53,7 +53,7 @@
                             <a href="<%=request.getContextPath()%>/member/myPage.jsp"><%=login.getName() %> 님</a>
                         </div>
                         <div class="register">
-                            <a href="/logout" id="logout">로그아웃</a> 
+                            <a href="<%=request.getContextPath()%>/logout" id="logout">로그아웃</a> 
                         </div>
                     </div>
                     <% } %>

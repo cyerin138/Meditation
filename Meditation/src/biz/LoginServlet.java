@@ -48,7 +48,6 @@ public class LoginServlet extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
-		String name = request.getParameter("name");
 		
 		MemberDAO dao = new MemberDAO();
 		vo = dao.getMember(id);
@@ -59,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 				
 			session.setAttribute("loginOK", vo);
-			response.sendRedirect("/login/loginOK.jsp");
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		}
 	}
 

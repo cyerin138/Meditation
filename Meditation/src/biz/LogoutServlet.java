@@ -1,6 +1,8 @@
 package biz;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,10 +35,10 @@ public class LogoutServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		MemberVO vo = (MemberVO)session.getAttribute("loginOK");
-		
+
 		if( vo != null) {
 			session.removeAttribute("loginOK");
-			response.sendRedirect("/index.jsp");
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		}
 	}
 
