@@ -1,13 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ include file = "../header.jsp" %>
-    <form action="<%=request.getContextPath()%>/quit" method="post">
-        <h1>정말 계정 삭제?</h1>
-        <input type="text" name="id" class="id" placeholder="아이디를 입력해주세요"> <br>
-        <input type="password" name="pwd" class="pwd" placeholder="비밀번호를 입력해주세요"> <br>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <%@ include file="../header.jsp" %>
+    <!-- 계정삭제 -->
+        <section id="quit">
+            <div class="quit-wrap position-relative">
+                <div class="quit-box sign-box position-absolute">
+                    <div class="quit-content text-center sign-content">
 
-        <input type="submit" value="삭제">
+                        <h1>계정 삭제</h1>
+                        <form action="<%=request.getContextPath()%>/quit" method="post">
+                            <input type="text" name="id" class="q-id" placeholder="ID"> <br>
+                            <input type="password" name="pwd" class="q-pwd" placeholder="PASSWORD"> <br>
 
-    </form>
+                            <input type="submit" value="DELETE" class="quit-btn">
 
-<%@ include file = "../footer.jsp" %>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<%@ include file="../footer.jsp" %>

@@ -36,6 +36,8 @@ DB
 - ppt 
 
 나중에 해볼것=================================
+
+jsp visual code  =      https://myhappyman.tistory.com/134
 - delete = 댓글 삭제
 - deletet = 영상 삭제
 

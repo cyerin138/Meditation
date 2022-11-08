@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ include file = "../header.jsp" %>
-    <!-- 로그인 -->
+    <!-- 이름 변경 -->
     <section id="login">
         <div class="login-wrap position-relative">
             <div class="login-box position-absolute sign-box">
                 <div class="login-content text-center sign-content">
 
-                    <h1>로그인</h1>
+                    <h1>이름 변경</h1>
                     <form action="<%=request.getContextPath()%>/login" method="post">
                         <input type="text" name="id" class="l-id" placeholder="ID"><br>
                         <input type="password" name="pwd" class="l-pwd" placeholder="PASSWORD"> <br>
