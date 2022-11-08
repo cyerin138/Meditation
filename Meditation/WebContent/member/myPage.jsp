@@ -6,12 +6,17 @@
         <div class="mypage-wrap position-relative">
             <div class="mypage-box sign-box position-absolute">
                 <div class="mypage-content sign-content text-center">
+                
+                <%
+	                String id = request.getParameter("id");
+	                String name = request.getParameter("name");
+                %>
                     
-                    <h1>마이페이지</h1>
+                    <h1><%=name%></h1>
                     
-                    <a href="<%=request.getContextPath()%>/member/pwdChange.jsp">비밀번호 변경</a>
-                    <a href="<%=request.getContextPath()%>/member/nameChange.jsp">이름 변경</a>
-                    <a href="<%=request.getContextPath()%>/member/memberQuit.jsp">계정 삭제</a>
+                    <a href="<%=request.getContextPath()%>/member/pwdChange.jsp?id=<%=id%>">비밀번호 변경</a>
+                    <a href="<%=request.getContextPath()%>/member/nameChange.jsp?id=<%=id%>">이름 변경</a>
+                    <a href="<%=request.getContextPath()%>/member/memberQuit.jsp?id=<%=id%>">계정 삭제</a>
                 </div>
             </div>
         </div>

@@ -52,7 +52,7 @@
 
 
                                     <div class="login">
-                                        <a href="<%=request.getContextPath()%>/member/myPage.jsp">
+                                        <a href="<%=request.getContextPath()%>/member/myPage.jsp?id=<%=login.getId()%>&name=<%= login.getName()%>">
                                             <%=login.getName() %> 님
                                         </a>
                                     </div>

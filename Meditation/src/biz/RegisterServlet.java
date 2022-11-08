@@ -64,12 +64,13 @@ public class RegisterServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				session.setAttribute("loginOK", vo);
 				out.println("<script>alert('회원가입에 성공했습니다.')</script>");
+				response.sendRedirect(request.getContextPath() + "/index.jsp");
 			} else {
 				out.println("<script>alert('회원가입에 실패했습니다.')</script>");
+				out.print("<script> history.back() </script> ");
 				
 			}
 			
-			response.sendRedirect(request.getContextPath() + "/index.jsp");
 			
 			
 		}

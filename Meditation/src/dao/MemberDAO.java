@@ -17,13 +17,21 @@ public class MemberDAO {
 	PreparedStatement pstmt   = null;
 	ResultSet rs = null;
 	
+	// 회원추가
 	final String INSERT_MEMBER = "insert into member values(?,?,?)";
+	// 모든 회원 조회
 	final String SELECT_MEMBER = "select * from member";
+	//	계정 삭제
 	final String DELETE_MEMBER = "delete from member where id = ?";
-	final String UPDATE_MEMBER = "update from member where id = ?";
+	// 계정 이름 변경
+	final String UPDATE_NAME = "update member set name =? where id = ?";
+	// 계정 비밀번호 변경
+	final String UPDATE_PWD = "update member set pwd =? where id = ?";
+	//중복 아이디 찾기
 	final String MEMBER_CHECK = "select * from member where id =?";
 	
-
+	
+	// 회원 조회
 	public MemberVO getMember(String id) {
 		MemberVO vo = null;
 
@@ -49,6 +57,7 @@ public class MemberDAO {
 		return vo;
 	}
 	
+	// 중복아이디 찾기
 	public boolean existID(String id) {
 		boolean isExist = false;
 		
@@ -70,6 +79,7 @@ public class MemberDAO {
 		return isExist;
 	}
 	
+	// 계정 삭제
 	public int removeMember(String id) {
 		int result = 0;
 		
@@ -81,10 +91,13 @@ public class MemberDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(con, pstmt);
 		}
 		return result;
 	}
 	
+	//계정 추가
 	public int insertMember(MemberVO vo) {
 		int result = 0;
 		
@@ -98,7 +111,49 @@ public class MemberDAO {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(con, pstmt);
 		}
 		return result;
+	}
+	
+//	계정 이름 변경
+	public int updateName(String id, String name) {
+		int n = 0;		
+		try {
+			con = JDBCUtil.getConnection();
+			pstmt = con.prepareStatement(UPDATE_NAME);
+			pstmt.setString(1,name);
+			pstmt.setString(2, id);
+			n = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(con, pstmt);
+		}
+
+		return n;
+	}
+	
+//	계정 비밀번호 변경
+	public int updatePwd(String id, String pwd) {
+		int n = 0;		
+		try {
+			con = JDBCUtil.getConnection();
+			pstmt = con.prepareStatement(UPDATE_PWD);
+			pstmt.setString(1,pwd);
+			pstmt.setString(2, id);
+			n = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(con, pstmt);
+		}
+
+		return n;
 	}
 }
