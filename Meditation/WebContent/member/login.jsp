@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="./resources/imgs/forest1.jpg" alt="visual">
+                <img src="<%=request.getContextPath()%>/resources/imgs/forest1.jpg" alt="forest">
             </div>
         </section>
 

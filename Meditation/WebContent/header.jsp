@@ -11,7 +11,7 @@
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/fontawesome/css/all.min.css">
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap/css/bootstrap.min.css">
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
-            <link href="./resources/imgs/headerIcon.png" rel="shortcut icon" type="image/x-icon">
+            <link href="<%=request.getContextPath()%>/resources/imgs/headerIcon.png" rel="shortcut icon" type="image/x-icon">
             <script src="<%=request.getContextPath()%>/js/jquery-3.1.1.min.js"></script>
         </head>
 
@@ -21,8 +21,8 @@
                     <div class="header-1 header-wrap row align-items-center justify-content-between container-14">
                         <div class="col-2">
                             <div class="logo d-flex align-items-center justify-content-left">
-                                <a href="./index.jsp">
-                                    <img src="./resources/imgs/logo2.png" alt="로고" width="100px">
+                                <a href="<%=request.getContextPath()%>/index.jsp">
+                                    <img src="<%=request.getContextPath()%>/resources/imgs/logo2.png" alt="로고" width="100px">
                                 </a>                                
                             </div>
                         </div>

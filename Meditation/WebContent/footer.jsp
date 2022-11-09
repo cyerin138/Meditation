@@ -39,7 +39,7 @@
                     <div class="d-flex align-items-center justify-content-end h-100">
                         <div>
                             <div class="foo-logo mb-4">
-                                <img src="./resources/imgs/logo2.png" alt="로고" width="200px">
+                                <img src="<%=request.getContextPath()%>/resources/imgs/logo2.png" alt="로고" width="200px">
                             </div>
                             <div class="foo-sns d-flex align-items-center justify-content-end h-100 w-50">
                                 <i class="fa-brands fa-facebook"></i>
