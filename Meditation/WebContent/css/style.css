@@ -216,26 +216,28 @@ header {
 
 /* 푸터  */
 footer {
-    height: 500px;
-    position: relative;
+    height: 400px;
     background-color: #333D3D;
 }
 .footer-wrap {
+    position: relative;
     height: 100%;
 }
 .footer-wrap > .row {
     width: 100%;
     height: 100%;
 }
-
-.footer-wrap p,.footer-wrap i{
+.footer-wrap p,.foo-box i{
     color: white;
     font-size: 15px;
 }
 .foo-box i {
     flex-basis: 2%;
 }
-.foo-box p{
+.company p{
+    margin-bottom: 10px;
+}
+.contact > .foo-box > *  {   
     margin-bottom: 10px;
 }
 .foo-title {
@@ -245,11 +247,42 @@ footer {
 }
 .company {
     width: 35%;
+    margin-bottom: 60px;
 }
 .contact {
     width: 65%;
+    margin-bottom: 60px;
 }
-
+.foo-logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.foo-sns {
+    margin-left: auto;
+    margin-bottom: 60px;
+}
+.foo-sns > i {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+.foo-img > a, .foo-img > p{
+    font-size: 0.8em !important;
+    color: #539998 !important;
+    display: block;
+}
+.foo-copy {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+}
+.foo-copy > div > div> *  {
+    margin-left: 15px;
+}
+.foo-copy > div > div> a:last-child  {
+    margin-right: 30px;
+}
 /* 인트로 */
 #intro {
     display: none;

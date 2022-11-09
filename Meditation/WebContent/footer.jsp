@@ -3,8 +3,8 @@
         <div class="footer-wrap container-14">
             <div class="row">
 
-                <div class="foo-content col-7">
-                    <div class="d-flex align-items-center justify-content-center h-100 w-100">
+                <div class="foo-content col-8">
+                    <div class="d-flex align-items-center justify-content-center foo-bundle w-100 h-100">
 
                         <div class="d-flex align-items-center justify-content-start h-100 company">
                             <div class="foo-box">
@@ -34,32 +34,39 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between h-100">
-                        <p>COPYRIGHT 2022. CHI Meditation. All rights reserved.</p>
+                </div>
+                <div class="foo-right col-4">
+                    <div class="d-flex align-items-center justify-content-end h-100">
                         <div>
-                            <p>이미지 출처 : </p>
-                            <a
-                                href="https://kr.freepik.com/free-photo/stone-platform-pedestal-in-tropical-forest-for-product-presentation-and-green-forest_29815201.htm#query=forest&position=10&from_view=keyword">작가
-                                vanitjan</a> on Freepik
-                            <a
-                                href="https://kr.freepik.com/free-photo/pathway-in-the-middle-of-the-green-leafed-trees-with-the-sun-shining-through-the-branches_8281186.htm#query=forest&position=0&from_view=keyword">작가
-                                wirestock</a> on Freepik
-                            <a
-                                href="https://www.freepik.com/free-photo/high-angle-shot-beautiful-forest-with-lot-green-trees-enveloped-fog-new-zealand_10835665.htm#query=forest&position=2&from_view=search&track=sph">Image
-                                by wirestock</a> on Freepik
-
+                            <div class="foo-logo mb-4">
+                                <img src="./resources/imgs/logo2.png" alt="로고" width="200px">
+                            </div>
+                            <div class="foo-sns d-flex align-items-center justify-content-end h-100 w-50">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="foo-right col-5">
-                    <div class="foo-logo">
-                        <img src="./resources/imgs/logo2.png" alt="로고" width="100px">
-                    </div>
-                    <div class="foo-sns d-flex align-items-center justify-content-right">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="foo-copy w-100">
+
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <p>COPYRIGHT 2022. CHI Meditation. All rights reserved.</p>
+                    <div class="d-flex align-items-center justify-content-end foo-img">
+                        <p>이미지 출처 : on Freepik </p>
+                        <a
+                            href="https://kr.freepik.com/free-photo/stone-platform-pedestal-in-tropical-forest-for-product-presentation-and-green-forest_29815201.htm#query=forest&position=10&from_view=keyword">작가
+                            vanitjan</a> 
+                        <a
+                            href="https://kr.freepik.com/free-photo/pathway-in-the-middle-of-the-green-leafed-trees-with-the-sun-shining-through-the-branches_8281186.htm#query=forest&position=0&from_view=keyword">작가
+                            wirestock</a>
+                        <a
+                            href="https://www.freepik.com/free-photo/high-angle-shot-beautiful-forest-with-lot-green-trees-enveloped-fog-new-zealand_10835665.htm#query=forest&position=2&from_view=search&track=sph">Image
+                            by wirestock</a>
+
                     </div>
                 </div>
             </div>
