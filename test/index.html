@@ -9,29 +9,27 @@
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-	 <!-- 회원가입-->
+	 <!-- 마이페이지 -->
 	 <section id="member">
-		<div class="member-wrap register-wrap position-relative">  
+		<div class="member-wrap mypage-wrap position-relative">  
 			<div class="member-box position-absolute">
 				<div class="member-content text-center">
 					<div class="position-absolute">
-
+                        <%
+                        String id = request.getParameter("id");
+                        String name = request.getParameter("name");
+                    %>
 						
-						<p class="member-title">회원가입</p>
-						<form action="<%=request.getContextPath()%>/register" method="post" name ="memberForm">
-							<input type="text" name="id" class="r-id" placeholder="ID"> <br>
-							<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD"> <br>
-							<input type="text" name="name" class="r-name" placeholder="NAME"><br>
-							
-							<input type="button" onclick="check()" value="REGISTER" name="register-btn">
-							
-						</form>
+						<p class="member-title"><%=name%></p>
+                        <a href="<%=request.getContextPath()%>/member/pwdChange.jsp?id=<%=id%>">비밀번호 변경</a>
+                        <a href="<%=request.getContextPath()%>/member/nameChange.jsp?id=<%=id%>">이름 변경</a>
+                        <a href="<%=request.getContextPath()%>/member/memberQuit.jsp?id=<%=id%>">계정 삭제</a>
 					</div>
 				</div>
 			</div>
 			<img src="./resources/imgs/forest1.jpg" alt="visual">
 		</div>
 	</section>
-
+    
 </body>
 </html>

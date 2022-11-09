@@ -361,6 +361,7 @@ footer {
 .member-title {
     font-weight: bold;
     font-size:4rem;
+    margin-bottom: 30px;
 }
 .member-content input[type="text"], .member-content input[type="password"] {
     background-color: rgba(255, 255, 255, .8);
@@ -389,7 +390,16 @@ footer {
     height: 28px;
     margin-bottom: 15px;
 }
-.register-wrap .member-content {
+.register-wrap .member-content, .pwd-wrap .member-content, .mypage-wrap .member-content {
     width: 550px;
     height: 500px;
+}
+.mypage-wrap a{
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    display: block;
+    width: 230px;
+    margin: 0 auto;
+    margin-bottom: 15px;
 }
