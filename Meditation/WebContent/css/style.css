@@ -18,7 +18,7 @@ a:hover {
 
 .fa-solid {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -92,7 +92,7 @@ header {
 .visual-content {
     top: 50%;
     transform: translate(0, -50%);
-    left: 20%;
+    left: 17%;
 }
 .visual-title {
     color: white;
@@ -117,7 +117,7 @@ header {
     align-items: flex-end;
 }
 .visual-mouse {
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -175,7 +175,7 @@ header {
 }
 /* 명언 */
 #famous {
-    height: 600px;
+    height: 500px;
     position: relative;
     overflow: hidden;
 }
@@ -188,12 +188,12 @@ header {
     font-family: serif;
 }
 .famous-text {
-    font-size: 4rem;
-    line-height: 1.3em;
+    font-size: 3.5rem;
+    line-height: 1.2em;
 }
 .famous-name {
     color: #094645;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .famous-wrap img {
     position: absolute;
@@ -204,4 +204,53 @@ header {
     transform: translate(-50%, -50%);
     filter: blur(2px) opacity(40%);
     z-index: -10;
+}
+/* 계기 */
+#reason {
+    display: none;
+}
+/* 시작하기 */
+#start {
+    display: none;
+}
+
+/* 푸터  */
+footer {
+    height: 500px;
+    position: relative;
+    background-color: #333D3D;
+}
+.footer-wrap {
+    height: 100%;
+}
+.footer-wrap > .row {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-wrap p,.footer-wrap i{
+    color: white;
+    font-size: 15px;
+}
+.foo-box i {
+    flex-basis: 2%;
+}
+.foo-box p{
+    margin-bottom: 10px;
+}
+.foo-title {
+    font-size: 2rem !important;
+    font-weight: bold;
+    font-family: serif;
+}
+.company {
+    width: 35%;
+}
+.contact {
+    width: 65%;
+}
+
+/* 인트로 */
+#intro {
+    display: none;
 }

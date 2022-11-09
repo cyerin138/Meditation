@@ -37,7 +37,7 @@
         <section id="famous">
             <div class="famous-wrap text-center">
                 <div>
-                    <p class="famous-text mb-5">The greater the man, <br>the more restrained his anger.</p>
+                    <p class="famous-text mb-4 mt-3">The greater the man, <br>the more restrained his anger.</p>
                     <p class="famous-name">&lt;Ovid&gt;</p>
                     <img src="./resources/imgs/forest3.jpg" alt="famous">
                 </div>

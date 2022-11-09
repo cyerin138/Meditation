@@ -1,29 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <footer>
-        <div class="footer-wrap ">
+        <div class="footer-wrap container-14">
             <div class="row">
 
-                <div class="foo-content col-6">
-                    <div class="d-flex align-items-center justify-content-left h-100">
-                        <p>사업자 등록번호 : 123-456-7890</p>
-                        <p>㈜CHI Meditation</p>
-                        <p>대표자 : 정예린</p>
+                <div class="foo-content col-7">
+                    <div class="d-flex align-items-center justify-content-center h-100 w-100">
+
+                        <div class="d-flex align-items-center justify-content-start h-100 company">
+                            <div class="foo-box">
+
+                                <p class="foo-title">Company</p>
+                                <p>㈜CHI Meditation</p>
+                                <p>대표자 : 정예린</p>
+                                <p>사업자 등록번호 : 123-456-7890</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start h-100 contact">
+                            <div class="foo-box">
+
+                                <p class="foo-title">Contact us</p>
+                                <div class="phone d-flex align-items-center justify-content-start">
+                                    <i class="fa-solid fa-phone mr-3"></i>
+                                    <p>010-1234-5678</p>
+                                </div>
+                                <div class="email d-flex align-items-center justify-content-start">
+                                    <i class="fa-regular fa-envelope mr-3"></i>
+                                    <p>ys2110106@y-y.hs.kr</p>
+                                </div>
+                                <div class="location d-flex align-items-center justify-content-start">
+                                    <i class=" fa-solid fa-location-dot mr-3"></i>
+                                    <p>경기도 성남시 분당구 서현로 양영디지털고 소프트과동 2층</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="phone d-flex align-items-center">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>010-1234-5678</p>
+                    <div class="d-flex align-items-center justify-content-between h-100">
+                        <p>COPYRIGHT 2022. CHI Meditation. All rights reserved.</p>
+                        <div>
+                            <p>이미지 출처 : </p>
+                            <a
+                                href="https://kr.freepik.com/free-photo/stone-platform-pedestal-in-tropical-forest-for-product-presentation-and-green-forest_29815201.htm#query=forest&position=10&from_view=keyword">작가
+                                vanitjan</a> on Freepik
+                            <a
+                                href="https://kr.freepik.com/free-photo/pathway-in-the-middle-of-the-green-leafed-trees-with-the-sun-shining-through-the-branches_8281186.htm#query=forest&position=0&from_view=keyword">작가
+                                wirestock</a> on Freepik
+                            <a
+                                href="https://www.freepik.com/free-photo/high-angle-shot-beautiful-forest-with-lot-green-trees-enveloped-fog-new-zealand_10835665.htm#query=forest&position=2&from_view=search&track=sph">Image
+                                by wirestock</a> on Freepik
+
+                        </div>
                     </div>
-                    <div class="location d-flex ">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>경기도 성남시 분당구 서현로 양영디지털고 소프트과동 2층</p>
-                    </div>
-                    <div class="email d-flex ">
-                        <i class="fa-solid fa-email"></i>
-                        <p>ys2110106@y-y.hs.kr</p>
-                    </div>
-                    <p>COPYRIGHT 2022. CHI Meditation. All rights reserved.</p>
                 </div>
-                <div class="foo-right col-6">
+                <div class="foo-right col-5">
                     <div class="foo-logo">
                         <img src="./resources/imgs/logo2.png" alt="로고" width="100px">
                     </div>
@@ -34,12 +62,6 @@
                         <i class="fa-brands fa-youtube"></i>
                     </div>
                 </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-center">
-                <p>이미지 출처 : </p>
-                <a href="https://kr.freepik.com/free-photo/stone-platform-pedestal-in-tropical-forest-for-product-presentation-and-green-forest_29815201.htm#query=forest&position=10&from_view=keyword">작가 vanitjan</a> on Freepik
-                <a href="https://kr.freepik.com/free-photo/pathway-in-the-middle-of-the-green-leafed-trees-with-the-sun-shining-through-the-branches_8281186.htm#query=forest&position=0&from_view=keyword">작가 wirestock</a> on Freepik
-                <a href="https://www.freepik.com/free-photo/high-angle-shot-beautiful-forest-with-lot-green-trees-enveloped-fog-new-zealand_10835665.htm#query=forest&position=2&from_view=search&track=sph">Image by wirestock</a> on Freepik
             </div>
         </div>
     </footer>
