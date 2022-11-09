@@ -5,7 +5,7 @@
 <section id="visual">
     <div class="visual-wrap position-relative">
         <div class="position-absolute visual-content">
-            <h1 class="visual-title">A space of<br>meditation that<br>heals you</h1>
+            <p class="visual-title">A space of<br>meditation that<br>heals you <span class="line-bottom"></span></p>
             <p class="visual-text">당신을 치유하는 명상의 공간</p>
         </div>        
         <div class="position-absolute visual-mouse">

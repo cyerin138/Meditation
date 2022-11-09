@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <nav class="menuBox col-6">
-                            <ul class="menu d-flex align-items-center justify-content-start">
+                            <ul class="m-0 menu d-flex align-items-center justify-content-start">
                                 <li><a href="#">명상</a></li>
                                 <li><a href="#">전생 체험</a></li>
                                 <li><a href="#">주파수</a></li>
