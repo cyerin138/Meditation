@@ -78,10 +78,12 @@
         <!-- 인트로  -->
         <section id="intro">
             <div class="intro-wrap text-center position-relative">
-
-                <img src="./resources/imgs/headphone.png" alt="헤드폰">
-                <img src="./resources/imgs/sound.gif" alt="음파">
-                <p>더 깊은 감상을 위해 이어폰을 착용 해주세요</p>
+                <div class="position-absolute">
+                                   
+                    <img src="./resources/imgs/headphone.png" alt="헤드폰" class="headphone"> <br>
+                    <img src="./resources/imgs/sound.gif" alt="음파" class="sound">
+                    <p>몰입감을 위해 이어폰을 착용 해주세요</p>
+                </div>
             </div>
         </section>
         <!-- 인트로 끝 -->

@@ -21,7 +21,9 @@
                     <div class="header-2 header-wrap row align-items-center justify-content-between container-14">
                         <div class="col-2">
                             <div class="logo d-flex align-items-center justify-content-left">                                
-                                <img src="./resources/imgs/logo2.png" alt="로고" width="100px">
+                                <a href="./index.jsp">
+                                    <img src="./resources/imgs/logo.png" alt="로고" width="100px">
+                                </a>   
                             </div>
                         </div>
                         <nav class="menuBox col-6">
