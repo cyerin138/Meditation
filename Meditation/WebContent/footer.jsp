@@ -7,6 +7,7 @@
                     <div class="d-flex align-items-center justify-content-left h-100">
                         <p>사업자 등록번호 : 123-456-7890</p>
                         <p>㈜CHI Meditation</p>
+                        <p>대표자 : 정예린</p>
                     </div>
                     <div class="phone d-flex align-items-center">
                         <i class="fa-solid fa-phone"></i>
@@ -15,6 +16,10 @@
                     <div class="location d-flex ">
                         <i class="fa-solid fa-location-dot"></i>
                         <p>경기도 성남시 분당구 서현로 양영디지털고 소프트과동 2층</p>
+                    </div>
+                    <div class="email d-flex ">
+                        <i class="fa-solid fa-email"></i>
+                        <p>ys2110106@y-y.hs.kr</p>
                     </div>
                     <p>COPYRIGHT 2022. CHI Meditation. All rights reserved.</p>
                 </div>

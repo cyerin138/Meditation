@@ -58,6 +58,7 @@
     </div>
 </section>
 <!-- 계기 끝 -->
+<!-- 시작하기 -->
 <section id="start">
     <div class="start-wrap text-center position-relative">
         <h1 class="start-title position-absolute">안정의 공간으로<br>당신을 초대 합니다.</h1>
@@ -67,4 +68,15 @@
         </div>
     </div>
 </section>
+<!-- 시작하기 끝 -->
+<!-- 인트로  -->
+<section id="intro">
+    <div class="intro-wrap text-center position-relative">
+        
+            <img src="./resources/imgs/headphone.png" alt="헤드폰">
+            <img src="./resources/imgs/sound.gif" alt="음파">
+            <p>더 깊은 감상을 위해 이어폰을 착용 해주세요</p>
+    </div>
+</section>
+<!-- 인트로 끝 -->
 <%@ include file = "footer.jsp" %>

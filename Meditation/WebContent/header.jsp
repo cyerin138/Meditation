@@ -18,7 +18,7 @@
         <body>
             <div class="wrapper">
                 <header>
-                    <div class="header-wrap row align-items-center justify-content-between">
+                    <div class="header-1 header-wrap row align-items-center justify-content-between container-14">
                         <div class="col-2">
                             <div class="logo d-flex align-items-center justify-content-left">                                
                                 <img src="./resources/imgs/logo2.png" alt="로고" width="100px">
@@ -41,11 +41,17 @@
                             </div>
                             <% MemberVO login=(MemberVO) session.getAttribute("loginOK"); if(login==null) { %>
 
-                                <div class="login">
-                                    <a href="<%=request.getContextPath()%>/member/login.jsp">로그인</a>
+                                <div class="login d-flex align-items-center justify-content-center">
+                                    <a href="<%=request.getContextPath()%>/member/login.jsp">Login</a>
+                                    <div class="d-flex align-items-center justify-content-center ml-3">
+                                        <i class="fa-regular fa-user"></i>
+                                    </div>
                                 </div>
-                                <div class="register">
-                                    <a href="<%=request.getContextPath()%>/member/register.jsp">회원가입</a>
+                                <div class="register d-flex align-items-center justify-content-center">
+                                    <a href="<%=request.getContextPath()%>/member/register.jsp">Sign up</a>
+                                    <div class="d-flex align-items-center justify-content-center ml-3">
+                                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                    </div>
                                 </div>
 
                                 <% } else { %>
