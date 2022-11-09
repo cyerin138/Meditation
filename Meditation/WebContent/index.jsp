@@ -12,9 +12,16 @@
             <div class="mouse">
                 <div class="mouse-wheel"></div>
             </div>
-            <div class="arrow-down"></div>
-            <div class="arrow-down"></div>
-            <div class="arrow-down"></div>
+            <div class="position-relative">
+
+                <div class="arrow-down"></div>
+                <div class="arrow-down"></div>
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+        <div class="visual-scroll">
+            <p class="first">01</p>
+            <p class="second">02</p>
         </div>
         <img src="./resources/imgs/forest1.jpg" alt="visual">
         <img src="./resources/imgs/forest2.jpg" alt="visual">

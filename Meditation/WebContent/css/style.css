@@ -12,6 +12,9 @@
 a {
     text-decoration: none;
 }
+a:hover {
+    text-decoration: none;
+}
 
 .fa-solid {
     display: flex;
@@ -29,6 +32,9 @@ i {
 .wrapper {
     overflow: hidden;
     position: relative;
+}
+body::-webkit-scrollbar {
+    display: none; 
 }
 .container-14 {
     width: 1450px;
@@ -98,8 +104,7 @@ header {
 }
 .visual-text {
     color: white;
-    font-size: 14px ;
-    letter-spacing: 15px;
+    letter-spacing: 13px;
 }
 .line-bottom {
     position: absolute;
@@ -108,7 +113,6 @@ header {
     border-bottom: 2px solid white;
     width: 50px;
     height: 1px;
-    display: inline;
     display: flex;
     align-items: flex-end;
 }
@@ -118,5 +122,34 @@ header {
     transform: translate(-50%, 0);
 }
 .mouse {
-    width: ;
+    width:30px ;
+    height: 45px;
+    border: 1px solid white;
+    border-radius: 30px;    
+    position: relative;
+}
+.mouse-wheel {
+    border-left: 1px solid white;
+    height: 8px;
+    position: absolute;
+    top: 20%;
+    width: 1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.visual-mouse > .position-relative {
+    width: 100%;
+    height: 100%;
+}
+.arrow-down {
+    position: absolute;
+    left: 40%;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid white;
+    border-top: 0;
+    border-right:0 ;
+    transform: rotate(-45deg) translate(-50%,0);
+    transform-origin: 25% 25%;
 }
