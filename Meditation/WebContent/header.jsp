@@ -9,7 +9,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>치명상</title>
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/fontawesome/css/all.min.css">
-            <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap/css/bootstrap-grid.min.css">
+            <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap/css/bootstrap.min.css">
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
             <link href="./resources/imgs/headerIcon.png" rel="shortcut icon" type="image/x-icon">
             <script src="<%=request.getContextPath()%>/js/jquery-3.1.1.min.js"></script>
@@ -24,15 +24,15 @@
                                 <img src="./resources/imgs/logo2.png" alt="로고" width="100px">
                             </div>
                         </div>
-                        <nav class="menuBox col-7">
-                            <ul class="menu d-flex align-items-center justify-content-left">
+                        <nav class="menuBox col-6">
+                            <ul class="menu d-flex align-items-center justify-content-start">
                                 <li><a href="#">명상</a></li>
                                 <li><a href="#">전생 체험</a></li>
                                 <li><a href="#">주파수</a></li>
                             </ul>
                         </nav>
-                        <div class="sign col-3">
-                            <div class="d-flex align-items-center justify-content-right">
+                        <div class="sign col-4">
+                            <div class="d-flex align-items-center justify-content-end w-100">
                             
                             <div class="searchBox">
                                 <div class="search">
@@ -41,17 +41,19 @@
                             </div>
                             <% MemberVO login=(MemberVO) session.getAttribute("loginOK"); if(login==null) { %>
 
-                                <div class="login d-flex align-items-center justify-content-center">
-                                    <a href="<%=request.getContextPath()%>/member/login.jsp">Login</a>
-                                    <div class="d-flex align-items-center justify-content-center ml-3">
-                                        <i class="fa-regular fa-user"></i>
-                                    </div>
+                                <div class="login">
+                                    <a href="<%=request.getContextPath()%>/member/login.jsp" class="d-flex align-items-center justify-content-center">Login
+                                        <span class="d-flex align-items-center justify-content-center ml-3">
+                                            <i class="fa-regular fa-user"></i>
+                                        </span>
+                                    </a>
                                 </div>
-                                <div class="register d-flex align-items-center justify-content-center">
-                                    <a href="<%=request.getContextPath()%>/member/register.jsp">Sign up</a>
-                                    <div class="d-flex align-items-center justify-content-center ml-3">
-                                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                                    </div>
+                                <div class="register">
+                                    <a href="<%=request.getContextPath()%>/member/register.jsp" class="d-flex align-items-center justify-content-center">Sign up
+                                        <span class="d-flex align-items-center justify-content-center ml-3">
+                                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                        </span>
+                                    </a>
                                 </div>
 
                                 <% } else { %>

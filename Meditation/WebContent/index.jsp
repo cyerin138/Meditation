@@ -4,18 +4,10 @@
 <!-- 비주얼 -->
 <section id="visual">
     <div class="visual-wrap position-relative">
-        <input type="radio" name="visual" id="radio1" checked>
-        <input type="radio" name="visual" id="radio2">
-        <input type="radio" name="visual" id="radio3">
-        <div class="position-absolute text-center">
-            <h1 class="visual-title">당신의 마음에 안정을</h1>
-            <p class="visual-text">HEALING&PEACE</p>
+        <div class="position-absolute visual-content">
+            <h1 class="visual-title">A space of<br>meditation that<br>heals you</h1>
+            <p class="visual-text">당신을 치유하는 명상의 공간</p>
         </div>        
-        <div class="position-absolute visual-radio">
-            <label for="radio1"><div></div></label>
-            <label for="radio2"><div></div></label>
-            <label for="radio3"><div></div></label>
-        </div>
         <div class="position-absolute visual-mouse">
             <div class="mouse">
                 <div class="mouse-wheel"></div>

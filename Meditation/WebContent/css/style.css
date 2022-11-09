@@ -31,18 +31,19 @@ i {
     position: relative;
 }
 .container-14 {
-    width: 1400px;
+    width: 1450px;
     margin: 0 auto;
 }
 .container-12{
     width: 1280px;
     margin: 0 auto;
 }
+
 /* 헤더 */
 header {
     z-index: 10;
     width: 100%;
-    height: 150px;
+    height: 130px;
     position: absolute;
     top: 0;
 }
@@ -76,4 +77,15 @@ header {
     width: 100%;
     height: auto;
     transform: translate(-50%, -50%);
+    filter: brightness(80%);
+    z-index: -10;
+}
+.visual-wrap > .position-absolute {
+    z-index: 10;
+}
+.visual-content {
+    top: 100%;
+    /* transform: translate(-50%, 0); */
+    left: 20%;
+    color: white;
 }
