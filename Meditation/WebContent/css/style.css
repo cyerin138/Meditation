@@ -53,13 +53,17 @@ header {
     position: absolute;
     top: 0;
 }
+header button {
+    border: none;
+    background: none;
+}
 .header-wrap {
     height: 100%;
 }
 .menuBox li{
     margin-right: 50px;
 }
-.header-1 .menuBox a ,.header-1 .sign a, .header-1 i{
+.header-1 .menuBox a ,.header-1 .sign a, .header-1 i, .header-1 button{
     color: white;
 }
 .sign > div >div {

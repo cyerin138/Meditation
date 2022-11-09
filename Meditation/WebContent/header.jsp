@@ -62,12 +62,18 @@
 
 
                                     <div class="login">
-                                        <a href="<%=request.getContextPath()%>/member/myPage.jsp?id=<%=login.getId()%>&name=<%= login.getName()%>">
-                                            <%=login.getName() %> 님
+                                        <a href="<%=request.getContextPath()%>/member/myPage.jsp?id=<%=login.getId()%>&name=<%= login.getName()%>" class="d-flex align-items-center justify-content-center">
+                                            <%=login.getName() %> 
+                                            <span class="d-flex align-items-center justify-content-center ml-3">
+                                                <i class="fa-regular fa-user"></i>
+                                            </span>
                                         </a>
                                     </div>
-                                    <div class="register">
-                                        <button onclick="logout()" id="logout">로그아웃</button>
+                                    <div class="register d-flex align-items-center justify-content-center">
+                                        <button onclick="logout()" id="logout">Logout</button>
+                                        <span class="d-flex align-items-center justify-content-center ml-3">                                            
+                                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                        </span>
                                     </div>
                                     <% } %>
                         </div></div>
