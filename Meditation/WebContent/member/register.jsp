@@ -1,27 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ include file = "../header.jsp" %>
-	<!-- 회원가입 -->
-	<section id="register">
-		<div class="register-wrap position-relative">
-			<div class="register-box position-absolute sign-box">
+	<!-- 회원가입-->
+	<section id="member">
+		<div class="member-wrap register-wrap position-relative">  
+			<div class="member-box position-absolute">
+				<div class="member-content text-center">
+					<div class="position-absolute">
 
-				<div class="register-content text-center sign-content">
-					
-					<h1>회원가입</h1>
-					<form action="<%=request.getContextPath()%>/register" method="post" name ="memberForm">
-						<input type="text" name="id" class="r-id" placeholder="ID"> <br>
-						<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD"> <br>
-						<input type="text" name="name" class="r-name" placeholder="NAME"><br>
 						
-						<input type="button" onclick="check()" value="REGISTER" name="register-btn">
-						
-					</form>
-					
+						<p class="member-title">회원가입</p>
+						<form action="<%=request.getContextPath()%>/register" method="post" name ="memberForm">
+							<input type="text" name="id" class="r-id" placeholder="ID"> <br>
+							<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD"> <br>
+							<input type="text" name="name" class="r-name" placeholder="NAME"><br>
+							
+							<input type="button" onclick="check()" value="REGISTER" name="register-btn">
+							
+						</form>
+					</div>
 				</div>
 			</div>
+			<img src="./resources/imgs/forest1.jpg" alt="visual">
 		</div>
 	</section>
+
 <script>
 	function check() {
 		if(document.memberForm.id.value == "") {

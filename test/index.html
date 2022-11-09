@@ -9,15 +9,29 @@
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-    <section id="intro">
-        <div class="intro-wrap text-center position-relative">
-            <div class="position-absolute">
-                               
-                <img src="./resources/imgs/headphone.png" alt="헤드폰" class="headphone"> <br>
-                <img src="./resources/imgs/sound.gif" alt="음파" class="sound">
-                <p>몰입감을 위해 이어폰을 착용 해주세요</p>
-            </div>
-        </div>
-    </section>
+	 <!-- 회원가입-->
+	 <section id="member">
+		<div class="member-wrap register-wrap position-relative">  
+			<div class="member-box position-absolute">
+				<div class="member-content text-center">
+					<div class="position-absolute">
+
+						
+						<p class="member-title">회원가입</p>
+						<form action="<%=request.getContextPath()%>/register" method="post" name ="memberForm">
+							<input type="text" name="id" class="r-id" placeholder="ID"> <br>
+							<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD"> <br>
+							<input type="text" name="name" class="r-name" placeholder="NAME"><br>
+							
+							<input type="button" onclick="check()" value="REGISTER" name="register-btn">
+							
+						</form>
+					</div>
+				</div>
+			</div>
+			<img src="./resources/imgs/forest1.jpg" alt="visual">
+		</div>
+	</section>
+
 </body>
 </html>
