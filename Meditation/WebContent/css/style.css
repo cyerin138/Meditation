@@ -153,3 +153,55 @@ header {
     transform: rotate(-45deg) translate(-50%,0);
     transform-origin: 25% 25%;
 }
+.visual-scroll {
+    transform: translate(0, -50%);
+    top: 50%;
+    right:12.7% ;
+    height: 40%;
+    font-family: serif;
+}
+.visual-scroll > p {
+    color: white;
+
+}
+.visual-scroll  .progress-bar {
+    height: 1px;
+    width: 80%;
+}
+.visual-scroll > .progress {
+    margin: 0 auto;
+    height: 80%;
+    width: 1px;
+}
+/* 명언 */
+#famous {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.famous-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+}
+.famous-text {
+    font-size: 4rem;
+    line-height: 1.3em;
+}
+.famous-name {
+    color: #094645;
+    font-size: 2rem;
+}
+.famous-wrap img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    filter: blur(2px) opacity(40%);
+    z-index: -10;
+}
