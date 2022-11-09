@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.MemberDAO;
+import vo.MemberVO;
 
 /**
  * Servlet implementation class PwdChangeServlet
@@ -39,16 +40,21 @@ public class NameChangeServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		String id, name;
+		MemberVO vo = null;
 		MemberDAO dao = new MemberDAO();
 		int result = 0;
 		id = request.getParameter("id");
 		name = request.getParameter("name");
 
 		result = dao.updateName(id, name);
+		
+		vo = dao.getMember(id);
 
 		if (result > 0) {
 			response.sendRedirect(request.getContextPath() + "/index.jsp");
 			out.println("<script>alert('닉네임 변경에 성공했습니다.')</script>");
+			HttpSession session = request.getSession();
+			session.setAttribute("loginOK", vo);
 
 		} else {
 			out.print("<script> history.back() </script> ");
