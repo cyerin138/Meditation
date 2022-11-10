@@ -12,84 +12,37 @@
 </head>
 
 <body>
-    <div class="medi-video-wrap">
 
-    
-    <section id="videos">
-        <div class="videos-wrap container-12">
+
+    <!-- 영상 업로드 -->
+    <section id="upload">
+        <div class="upload-wrap container-12">
+            <form action="/" method="post">
+
+            
             <div class="d-flex align-items-center justify-content-start">
 
-                <p class="videos-title m-0">전생체험 동영상</p>
-                <a href="#" class="ml-3 videos-write d-flex align-items-center">영상 업로드
-                    <div class="d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-pen"></i>
-                    </div>
-                </a>
-            </div>
+                <p class="upload-title m-0">전생체험 영상 업로드</p>
+                <div class="upload-box d-flex justify-content-between align-items-center">
+                    <input type="file" value="영상 가져오기" class="upload-file">
+                    <button type="submit" class="upload-submit">
+                        업로드
+                        <div class="d-flex align-items-center justify-content-center">
 
-            <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
-
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+                    </button>
+                </div>
             </div>
-            <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
+            <input type="text" name="title" class="upload-text" placeholder="TITLE"> <br>
+            <textarea name="text" id="textArea" cols="30" rows="10" placeholder="CONTENT" >
 
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-            </div>
-            <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
+            </textarea>
 
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-            </div>
-            <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
-
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="videos-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-            </div>
+        </form>
         </div>
     </section>
-</div>
+
 </body>
 
 </html>
