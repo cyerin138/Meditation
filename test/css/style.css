@@ -94,6 +94,9 @@
 }
 
 /* 댓글 */
+#comment {
+    margin-bottom: 200px;
+}
 .comment-title {
     font-size: 2rem;
     font-weight: bold;
@@ -103,4 +106,27 @@
     width: 100px;
     height: 35px;
     border: 1px solid black;
+    color: black;
+    font-size: 0.7rem;
+    padding: 14px;
+}
+.comment-box {
+    border: 1px solid #97B9B9;
+    margin-bottom: 20px;
+    width: 49.3%;
+    border-radius: 20px;
+    padding: 30px;
+}
+.comment-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.comment-date {
+    margin-bottom: 10px;
+    color: #72CECC;
+    font-size: 0.9rem;
+}
+.comment-text {
+    margin: 0;
+    font-size: 14px;
 }
