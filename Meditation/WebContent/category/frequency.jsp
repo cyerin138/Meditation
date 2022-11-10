@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ include file="../header2.jsp" %>
-     <!-- 명상 -->
-    <div class="meditation-wrap">
+     <!-- 주파수 -->
+    <div class="frequency-wrap">
         <!-- 메인 -->
         <section id="main">
             <div class="main-wrap position-relative">
@@ -29,7 +29,7 @@
             <div class="recommend-wrap container-12">
                 <div class="d-flex align-items-center justify-content-start">
 
-                    <p class="recommend-title m-0">명상 동영상</p>
+                    <p class="recommend-title m-0">주파수 동영상</p>
                     <a href="#" class="view-more ml-3">
                         <span></span>
                         <span></span>
