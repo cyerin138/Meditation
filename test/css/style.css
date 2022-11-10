@@ -1,0 +1,106 @@
+/* 메인 */
+#main {
+    height: 100vh;
+}
+.main-wrap {
+    height: 100%;
+    width: 100%;
+}
+.main-content {
+    transform: translate(-50% ,-50%);
+    left: 50%;
+    top: 50%;
+    width: 700px;
+    height: 700px;
+    border-radius: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
+.main-box {
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    left: 50%;
+    top: 50%;
+}
+.main-text {
+    font-size: 3.5rem;
+    width: 100%;
+    white-space: pre;
+    margin-bottom: 30px;
+}
+.main-tt {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+.main-time {
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: 100px;
+    
+}
+
+/* 라인 */
+.line {
+    margin-bottom: 150px;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #72CECC;
+    border-radius: 100%;
+}
+.path {
+    border-bottom: 1px solid #72CECC;
+    width: 300px;
+}
+
+/* 추천 동영상 */
+#recommend {
+    height: 450px;
+}
+.recommend-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.view-more {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    position: relative;
+    
+}
+.view-more > span:nth-child(1) {
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-left: 1px solid black;
+    transform: translate(-50%, -50%);
+}
+.view-more > span:nth-child(2) {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    border-bottom: 1px solid black;
+}
+.recommend-img {
+    background-color: gray;
+    border-radius: 20px;
+    height: 180px;
+    display: block;
+    width: 24%;
+}
+
+/* 댓글 */
+.comment-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.comment-write {
+    display: block;
+    width: 100px;
+    height: 35px;
+    border: 1px solid black;
+}

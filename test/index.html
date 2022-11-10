@@ -1,142 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleorig.css">
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
 </head>
+
 <body>
+    <!-- 명상 -->
     <div class="meditation-wrap">
-
-    
-	<!-- 명상 -->
-    <section id="main">
-        <div class="main-wrap position-relative">
-            <div class="position-absolute main-content">
-                <div class="main-text">숨을 내쉬십시오.</div>
-                <div class="main-count">
-                    <p class="main-tt">앞으로</p>
-                    <p class="main-time">10초</p>
+        <!-- 메인 -->
+        <section id="main">
+            <div class="main-wrap position-relative">
+                <div class="position-absolute main-content">
+                    <div class="position-relative w-100 h-100">
+                        <div class="main-box">
+                            <div class="main-text">숨을 내쉬십시오.</div>
+                            <div class="main-count">
+                                <p class="main-tt">앞으로</p>
+                                <p class="main-time">10초</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- 추천 동영상 -->
+        <div class="line d-flex align-items-center justify-content-center">
+            <div class="circle"></div>
+            <div class="path"></div>
+            <div class="circle"></div>
         </div>
-    </section>
+        <section id="recommend">
+            <div class="recommend-wrap container-12">
+                <div class="d-flex align-items-center justify-content-start">
 
-    <!-- 추천 동영상 -->
-    <div class="line"></div>
-    <section id="recommend">
-        <div class="recommend-wrap">
-            <div class="d-flex align-items-center justify-content-start">
+                    <p class="recommend-title m-0">명상 동영상</p>
+                    <a href="#" class="view-more ml-3">
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
 
-                <p class="recommend-title">명상 동영상</p>
-                <a href="#" class="view-more"></a>
+                <div class="recommend-imgs d-flex align-items-center justify-content-between mt-4">
+
+                    <a href="#" class="recommend-img">
+                        <img src="./resources/imgs/" alt="video-img">
+                    </a>
+                    <a href="#" class="recommend-img">
+                        <img src="./resources/imgs/" alt="video-img">
+                    </a>
+                    <a href="#" class="recommend-img">
+                        <img src="./resources/imgs/" alt="video-img">
+                    </a>
+                    <a href="#" class="recommend-img">
+                        <img src="./resources/imgs/" alt="video-img">
+                    </a>
+                </div>
             </div>
-                
-            <div class="recommend-imgs">
+        </section>
 
-                <a href="#" class="recommend-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="recommend-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="recommend-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>
-                <a href="#" class="recommend-img">
-                    <img src="./resources/imgs/" alt="video-img">
-                </a>            
-            </div>
+        <div class="line d-flex align-items-center justify-content-center">
+            <div class="circle"></div>
+            <div class="path"></div>
+            <div class="circle"></div>
         </div>
-    </section>
+        <!-- 댓글 -->
+        <section id="comment">
+            <div class="comment-wrap container-12">
+                <div class="d-flex align-items-center justify-content-start">
 
-    <div class="line"></div>
-    <!-- 댓글 -->
-    <section id="comment">
-        <div class="comment-wrap">
-            <div class="d-flex align-items-center justify-content-start">
+                    <p class="comment-title m-0">댓글</p>
+                    <a href="#" class="ml-3 comment-write d-flex align-items-center">댓글 작성
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-pen"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="comment-box">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="comment-name">홍길동님</p>
+                                <p class="comment-date">2022-03-21</p>
+                            </div>
+                            <p class="comment-text">
+                                너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                                기분
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="comment-box">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="comment-name">홍길동님</p>
+                                <p class="comment-date">2022-03-21</p>
+                            </div>
+                            <p class="comment-text">
+                                너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                                기분
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="comment-box">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="comment-name">홍길동님</p>
+                                <p class="comment-date">2022-03-21</p>
+                            </div>
+                            <p class="comment-text">
+                                너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                                기분
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="comment-box">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="comment-name">홍길동님</p>
+                                <p class="comment-date">2022-03-21</p>
+                            </div>
+                            <p class="comment-text">
+                                너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                                기분
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="comment-box">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="comment-name">홍길동님</p>
+                                <p class="comment-date">2022-03-21</p>
+                            </div>
+                            <p class="comment-text">
+                                너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                                기분
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="comment-box">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="comment-name">홍길동님</p>
+                                <p class="comment-date">2022-03-21</p>
+                            </div>
+                            <p class="comment-text">
+                                너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                                기분
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <p class="comment-title">댓글</p>
-                <a href="#" class="comment-write">댓글 작성 </a>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동님</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분
-                        </p>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동님</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동님</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분
-                        </p>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동님</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동님</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분
-                        </p>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동님</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</div>
+    </div>
 </body>
+
 </html>
