@@ -30,7 +30,7 @@
                 <div class="d-flex align-items-center justify-content-start">
 
                     <p class="recommend-title m-0">전생체험 동영상</p>
-                    <a href="#" class="view-more ml-3">
+                    <a href="<%=request.getContextPath()%>/category/videos.jsp?category=" class="view-more ml-3">
                         <span></span>
                         <span></span>
                     </a>
@@ -38,16 +38,16 @@
 
                 <div class="recommend-imgs d-flex align-items-center justify-content-between mt-4">
 
-                    <a href="#" class="recommend-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
                         <img src="./resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="recommend-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
                         <img src="./resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="recommend-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
                         <img src="./resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="recommend-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
                         <img src="./resources/imgs/" alt="video-img">
                     </a>
                 </div>
@@ -66,7 +66,7 @@
 
                     <p class="comment-title m-0">댓글</p>
                     <a href="#" class="ml-3 comment-write d-flex align-items-center">댓글 작성
-                        <div class="d-flex align-items-center justify-content-center">
+                        <div class="d-flex align-items-center justify-content-center ml-2">
                             <i class="fa-solid fa-pen"></i>
                         </div>
                     </a>

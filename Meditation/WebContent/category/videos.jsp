@@ -7,8 +7,8 @@
                 <div class="d-flex align-items-center justify-content-start">
     
                     <p class="videos-title m-0">전생체험 동영상</p>
-                    <a href="#" class="ml-3 videos-write d-flex align-items-center">영상 업로드
-                        <div class="d-flex align-items-center justify-content-center">
+                    <a href="<%=request.getContextPath()%>/category/videoWrite.jsp?category=" class="ml-3 videos-write d-flex align-items-center">영상 업로드
+                        <div class="d-flex align-items-center justify-content-center ml-2">
                             <i class="fa-solid fa-pen"></i>
                         </div>
                     </a>
@@ -16,62 +16,62 @@
     
                 <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
     
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
-                    </a>
-                </div>
-                <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
-    
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
-                    </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
-                    </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
-                    </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
                 </div>
                 <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
     
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
                 </div>
                 <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
     
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
-                    <a href="#" class="videos-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
+                    </a>
+                </div>
+                <div class="videos-imgs d-flex align-items-center justify-content-between mt-4">
+    
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
+                    </a>
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
+                    </a>
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
+                    </a>
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
+                        <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
                     </a>
                 </div>
             </div>

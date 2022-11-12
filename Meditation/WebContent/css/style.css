@@ -11,8 +11,10 @@
 
 a {
     text-decoration: none;
+    color: #333D3D;
 }
 a:hover {
+    color: #333D3D;
     text-decoration: none;
 }
 
@@ -41,7 +43,7 @@ body::-webkit-scrollbar {
     margin: 0 auto;
 }
 .container-12{
-    width: 1280px;
+    width: 1280px !important;
     margin: 0 auto;
 }
 
@@ -65,6 +67,9 @@ header button {
 }
 .header-1 .menuBox a ,.header-1 .sign a, .header-1 i, .header-1 button{
     color: white;
+}
+.header-2 .menuBox a ,.header-2 .sign a, .header-2 i, .header-2 button{
+    color: #333D3D;
 }
 .sign > div >div {
     margin-left: 50px;
@@ -376,7 +381,7 @@ footer {
     height: 28px;
     padding-left: 18px;
 }
-.member-content input[type="text"]:focus, .member-content input[type="password"]:focus {
+.member-content input[type="text"]:focus, .member-content input[type="password"]:focus , input:focus , .upload-textarea:focus{
     outline: 1px solid #333D3D;
 }
 .member-content input::placeholder {
@@ -423,7 +428,7 @@ footer {
     width: 700px;
     height: 700px;
     border-radius: 100%;
-    border: 1px solid black;
+    border: 1px solid #333D3D;
     text-align: center;
 }
 .main-box {
@@ -475,7 +480,7 @@ footer {
 .view-more {
     width: 30px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid #333D3D;
     position: relative;
     
 }
@@ -484,7 +489,7 @@ footer {
     position: absolute;
     left: 50%;
     top: 50%;
-    border-left: 1px solid black;
+    border-left: 1px solid #333D3D;
     transform: translate(-50%, -50%);
 }
 .view-more > span:nth-child(2) {
@@ -493,7 +498,7 @@ footer {
     width: 50%;
     position: absolute;
     top: 50%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333D3D;
 }
 .recommend-img, .videos-img {
     background-color: gray;
@@ -515,10 +520,13 @@ footer {
     display: block;
     width: 100px;
     height: 35px;
-    border: 1px solid black;
-    color: black;
+    border: 1px solid #333D3D;
+    color: #333D3D;
     font-size: 0.7rem;
     padding: 14px;
+}
+.videos-write {    
+    width: 110px;
 }
 .comment-box {
     border: 1px solid #97B9B9;
@@ -582,4 +590,58 @@ footer {
 #videos {
     margin-top: 150px;
     margin-bottom: 200px;
+}
+
+/* 업로드 */
+
+.upload-wrap {
+    height: 100vh;
+}
+
+.upload-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.upload-content {
+    margin-top: 200px;
+}
+.upload-box{
+    width: 30%;
+}
+.upload-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 8px 25px;
+    background: none;
+    border: 1px solid #333D3D;
+    font-size: 0.9rem;
+    height: 42px;
+}
+.upload-label {
+    height: 42px !important;
+    padding: 0.55rem 1.2rem  !important;
+    border-radius: 0 !important;
+    font-size: 0.9rem;
+    border: 1px solid #ced4da !important;
+}
+.upload-label::after {    
+    font-size: 0.9rem;
+    height: 42px !important;
+    padding: 0.55rem 1.2rem  !important;
+}
+.custom-file , .upload-file{
+    height: 42px !important;
+}
+.upload-text {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #333D3D;
+    border-radius: 10px;
+}
+.upload-textarea {
+    border-radius: 10px;        
+    padding: 20px 40px;
 }

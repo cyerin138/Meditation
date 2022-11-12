@@ -28,9 +28,9 @@
                         </div>
                         <nav class="menuBox col-6">
                             <ul class="m-0 menu d-flex align-items-center justify-content-start">
-                                <li><a href="#">명상</a></li>
-                                <li><a href="#">전생 체험</a></li>
-                                <li><a href="#">주파수</a></li>
+                                <li><a href="<%=request.getContextPath()%>/category/meditation.jsp">명상</a></li>
+                                <li><a href="<%=request.getContextPath()%>/category/previous.jsp">전생 체험</a></li>
+                                <li><a href="<%=request.getContextPath()%>/category/frequency.jsp">주파수</a></li>
                             </ul>
                         </nav>
                         <div class="sign col-4">

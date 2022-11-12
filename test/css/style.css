@@ -1,51 +1,58 @@
+/* 업로드 */
 
-
-/* 추천 동영상 */
-#videos {
-    margin-top: 150px;
-    margin-bottom: 200px;
+#upload {
+    height: 100vh;
 }
-.videos-title {
+
+.upload-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.upload-title {
     font-size: 2rem;
     font-weight: bold;
 }
-.view-more {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    position: relative;
-    
+.upload-content {
+    margin-top: 200px;
 }
-.view-more > span:nth-child(1) {
-    height: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-left: 1px solid black;
-    transform: translate(-50%, -50%);
+.upload-box{
+    width: 30%;
 }
-.view-more > span:nth-child(2) {
-    transform: translate(-50%, -50%);
-    left: 50%;
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    border-bottom: 1px solid black;
+.upload-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 8px 25px;
+    background: none;
+    border: 1px solid #333D3D;
+    font-size: 0.9rem;
+    height: 42px;
 }
-.videos-img {
-    background-color: gray;
-    border-radius: 20px;
-    height: 180px;
-    display: block;
-    width: 24%;
+.upload-label {
+    height: 42px !important;
+    padding: 0.55rem 1.2rem  !important;
+    border-radius: 0 !important;
+    font-size: 0.9rem;
+    border: 1px solid #ced4da !important;
 }
-
-.videos-write {
-    display: block;
-    width: 110px;
-    height: 35px;
-    border: 1px solid black;
-    color: black;
-    font-size: 0.7rem;
-    padding: 14px;
+.upload-label::after {    
+    font-size: 0.9rem;
+    height: 42px !important;
+    padding: 0.55rem 1.2rem  !important;
+}
+.custom-file , .upload-file{
+    height: 42px !important;
+}
+.upload-text {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #333D3D;
+    border-radius: 10px;
+}
+.upload-textarea {
+    border-radius: 10px;        
+    padding: 20px 40px;
 }
