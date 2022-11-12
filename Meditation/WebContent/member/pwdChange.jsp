@@ -13,9 +13,9 @@
 						
 						<p class="member-title">PW변경</p>
                         <form action="<%=request.getContextPath()%>/pwdChange" method="post" name ="memberForm">
-                            <input type="text" name="id" class="l-id" placeholder="ID" value="<%= id %>" readonly><br>
-                            <input type="password" name="pwd" class="l-pwd" placeholder="NEW PASSWORD"> <br>
-                            <input type="password" name="cpwd" class="l-c-pwd" placeholder="CONFIRM PASSWORD"> <br>
+                            <input type="text" name="id" class="l-id" placeholder="ID" value="<%= id %>" maxlength="10" readonly><br>
+                            <input type="password" name="pwd" class="l-pwd" placeholder="NEW PASSWORD" maxlength="10"> <br>
+                            <input type="password" name="cpwd" class="l-c-pwd" placeholder="CONFIRM PASSWORD" maxlength="10"> <br>
                             
                             <input type="button" value="CHANGE" onclick="check()" class="cpwd-btn">
                             

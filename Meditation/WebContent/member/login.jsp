@@ -11,8 +11,8 @@
                             
                             <p class="member-title">로그인</p>
                             <form action="<%=request.getContextPath()%>/login" method="post">
-                                <input type="text" name="id" class="l-id" placeholder="ID"><br>
-                                <input type="password" name="pwd" class="l-pwd" placeholder="PASSWORD"> <br>
+                                <input type="text" name="id" class="l-id" placeholder="ID" maxlength="10"><br>
+                                <input type="password" name="pwd" class="l-pwd" placeholder="PASSWORD" maxlength="10"> <br>
                                 
                                 <input type="submit" value="LOGIN" class="login-btn">
                                 

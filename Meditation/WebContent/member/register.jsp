@@ -11,9 +11,9 @@
 						
 						<p class="member-title">회원가입</p>
 						<form action="<%=request.getContextPath()%>/register" method="post" name ="memberForm">
-							<input type="text" name="id" class="r-id" placeholder="ID"> <br>
-							<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD"> <br>
-							<input type="text" name="name" class="r-name" placeholder="NAME"><br>
+							<input type="text" name="id" class="r-id" placeholder="ID" maxlength="10"> <br>
+							<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD" maxlength="10"> <br>
+							<input type="text" name="name" class="r-name" placeholder="NAME" maxlength="10"><br>
 							
 							<input type="button" onclick="check()" value="REGISTER" name="register-btn">
 							

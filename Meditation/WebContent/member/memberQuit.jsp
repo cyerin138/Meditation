@@ -10,8 +10,8 @@
 						
 						<p class="member-title">계정삭제</p>
 						<form action="<%=request.getContextPath()%>/quit" method="post">
-                            <input type="text" name="id" class="q-id" placeholder="ID"> <br>
-                            <input type="password" name="pwd" class="q-pwd" placeholder="PASSWORD"> <br>
+                            <input type="text" name="id" class="q-id" placeholder="ID" maxlength="10"> <br>
+                            <input type="password" name="pwd" class="q-pwd" placeholder="PASSWORD" maxlength="10"> <br>
     
                             <input type="submit" value="DELETE" class="quit-btn">
     
