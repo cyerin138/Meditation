@@ -27,7 +27,7 @@ public class MemberDAO {
 	final String UPDATE_NAME = "update member set name =? where id = ?";
 	// 계정 비밀번호 변경
 	final String UPDATE_PWD = "update member set pwd =? where id = ?";
-	//중복 아이디 찾기
+	// 중복 아이디 찾기
 	final String MEMBER_CHECK = "select * from member where id =?";
 	
 	
