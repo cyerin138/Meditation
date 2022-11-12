@@ -14,38 +14,159 @@
 
 <body>
 
-
-    <!-- 영상 업로드 -->
-    <section id="upload">
-        <div class="upload-wrap container-12">
-            <form action="/" method="post">
-
-            
-            <div class="d-flex align-items-center justify-content-between upload-content">
-
-                <p class="upload-title m-0">전생체험 영상 업로드</p>
-                <div class="upload-box d-flex justify-content-between align-items-center">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input upload-file" id="validatedCustomFile" required>
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">영상 가져오기</label>
-                      </div>
-                    <button type="submit" class="upload-submit ml-3">
-                        업로드 
-                        <div class="d-flex align-items-center justify-content-center ml-2">
-
-                            <i class="fa-solid fa-paper-plane"></i>
+ <!-- 명상 -->
+ <div class="meditation-wrap">
+    <!-- 메인 -->
+    <section id="main">
+        <div class="main-wrap position-relative">
+            <div class="position-absolute main-content">
+                <div class="position-relative w-100 h-100">
+                    <div class="main-box">
+                        <div class="main-text">숨을 내쉬십시오.</div>
+                        <div class="main-count">
+                            <p class="main-tt">앞으로</p>
+                            <p class="main-time">10초</p>
                         </div>
-                    </button>
+                    </div>
                 </div>
             </div>
-            <input type="text" name="title" class="upload-text mb-3" placeholder="TITLE"> <br>
-            <textarea name="text" id="textArea" cols="40" rows="10" placeholder="CONTENT" class="upload-textarea w-100">
-
-            </textarea>
-
-        </form>
         </div>
     </section>
+
+    <!-- 추천 동영상 -->
+    <div class="line d-flex align-items-center justify-content-center">
+        <div class="circle"></div>
+        <div class="path"></div>
+        <div class="circle"></div>
+    </div>
+    <section id="recommend">
+        <div class="recommend-wrap container-12">
+            <div class="d-flex align-items-center justify-content-start">
+
+                <p class="recommend-title m-0">명상 동영상</p>
+                <a href="<%=request.getContextPath()%>/category/videos.jsp?category=" class="view-more ml-3">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+
+            <div class="recommend-imgs d-flex align-items-center justify-content-between mt-4">
+
+                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
+                    <img src="./resources/imgs/" alt="video-img">
+                </a>
+                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
+                    <img src="./resources/imgs/" alt="video-img">
+                </a>
+                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
+                    <img src="./resources/imgs/" alt="video-img">
+                </a>
+                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
+                    <img src="./resources/imgs/" alt="video-img">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="line d-flex align-items-center justify-content-center">
+        <div class="circle"></div>
+        <div class="path"></div>
+        <div class="circle"></div>
+    </div>
+    <!-- 댓글 -->
+    <section id="comment">
+        <div class="comment-wrap container-12">
+            <div class="d-flex align-items-center justify-content-start comment-bundle">
+
+                <p class="comment-title m-0">댓글</p>
+                <a href="#" class="ml-3 comment-write d-flex align-items-center">댓글 작성
+                    <div class="d-flex align-items-center justify-content-center ml-2">
+                        <i class="fa-solid fa-pen"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+
+                <div class="comment-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="comment-name">홍길동</p>
+                        <p class="comment-date">2022-03-21</p>
+                    </div>
+                    <p class="comment-text">
+                        너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                        기분
+                    </p>
+                </div>
+
+
+                <div class="comment-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="comment-name">홍길동</p>
+                        <p class="comment-date">2022-03-21</p>
+                    </div>
+                    <p class="comment-text">
+                        너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                        기분
+                    </p>
+                </div>
+
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+
+                <div class="comment-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="comment-name">홍길동</p>
+                        <p class="comment-date">2022-03-21</p>
+                    </div>
+                    <p class="comment-text">
+                        너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                        기분
+                    </p>
+                </div>
+
+
+                <div class="comment-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="comment-name">홍길동</p>
+                        <p class="comment-date">2022-03-21</p>
+                    </div>
+                    <p class="comment-text">
+                        너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                        기분
+                    </p>
+                </div>
+
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+
+                <div class="comment-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="comment-name">홍길동</p>
+                        <p class="comment-date">2022-03-21</p>
+                    </div>
+                    <p class="comment-text">
+                        너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                        기분
+                    </p>
+                </div>
+
+
+                <div class="comment-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="comment-name">홍길동</p>
+                        <p class="comment-date">2022-03-21</p>
+                    </div>
+                    <p class="comment-text">
+                        너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
+                        기분
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
 
 </body>
 
