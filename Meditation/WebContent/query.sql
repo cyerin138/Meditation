@@ -12,7 +12,9 @@ create table video(
 	name varchar2(10),
 	vi_date date default sysdate,
 	title varchar2(20),
-	text varchar2(30)
+	text varchar2(30),
+	video_url varchar2(30),
+	img_url varchar2(30)
 );
 
 create sequence video_seq;
@@ -30,12 +32,15 @@ create table vi_comment(
 
 select * from vi_comment;
 
-insert into video values(video_seq.nextval,'M','홍길동',default,'명상이란 무엇인가','명상에 대한 내용입니다');
+select * from video where (title like '%명상%' or text like '%명상%');
+
+insert into video values(video_seq.nextval,'M','홍길동',default,'명상 이 무엇인가','에 대한 내용입니다', 'url', 'url');
 insert into vi_comment values(2,'홍길동', default, '오 대박 멋진데');
 
 
 insert into member values('d', 'd', '이름');
 
-drop table comment;
+drop table video;
+drop table vi_comment;
 
 drop sequence video_seq;
