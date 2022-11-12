@@ -27,7 +27,7 @@
         </div>
         <section id="recommend">
             <div class="recommend-wrap container-12">
-                <div class="d-flex align-items-center justify-content-start">
+                <div class="d-flex align-items-center justify-content-start ">
 
                     <p class="recommend-title m-0">주파수 동영상</p>
                     <a href="<%=request.getContextPath()%>/category/videos.jsp?category=" class="view-more ml-3">
@@ -71,7 +71,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-between comment-bundle">
 
                     <div class="comment-box">
                         <div class="d-flex align-items-center justify-content-between">

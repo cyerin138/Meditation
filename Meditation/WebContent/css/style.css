@@ -548,6 +548,9 @@ footer {
     margin: 0;
     font-size: 14px;
 }
+.comment-bundle {
+    margin-top: 1.5rem !important;
+}
 
 /* 비디오 페이지 */
 #video {

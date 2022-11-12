@@ -71,7 +71,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-between comment-bundle">
 
                     <div class="comment-box">
                         <div class="d-flex align-items-center justify-content-between">
