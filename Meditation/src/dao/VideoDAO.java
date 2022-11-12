@@ -33,7 +33,7 @@ public class VideoDAO {
 	final String SELECT_FOUR = "select * from (select * from video where category = ? order by vi_date desc) where rownum <= 4";
 
 	// 비디오 추가
-	public int insertMember(VideoVO vo) {
+	public int insertVideo(VideoVO vo) {
 		int result = 0;
 
 		try {
