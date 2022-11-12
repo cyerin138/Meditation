@@ -552,6 +552,32 @@ footer {
     margin-bottom: 1.5rem !important;
 }
 
+.comment-form {
+    margin-bottom: 1.5rem;
+    height: 40px;
+    display: none;
+}
+.comment-input {
+    width: 96%;
+    border: 1px solid #333D3D;
+    height: 100%;
+    padding: 10px 40px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+.comment-btn {
+    width: 3.2%;
+    height: 100%;
+    border: 1px solid #333D3D;
+    background-color: #333D3D;
+    border-radius: 15px;
+    padding: 9px;
+    font-size: 0.8rem;
+}
+.comment-btn > i {
+    color: white !important;
+}
+
 /* 비디오 페이지 */
 #video {
     height: 100vh;

@@ -71,6 +71,12 @@
                         </div>
                     </a>
                 </div>
+                <div class="comment-form">
+                    <form action="/" class="d-flex align-items-center justify-content-between  h-100 ">
+                        <input type="text" name="comment-input" class="comment-input" id="">
+                        <button type="submit" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
                 <div class="d-flex align-items-center justify-content-between">
 
                     <div class="comment-box">

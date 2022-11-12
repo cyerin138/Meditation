@@ -1,58 +1,25 @@
-/* 업로드 */
-
-#upload {
-    height: 100vh;
+.comment-form {
+    margin-bottom: 1.5rem;
+    height: 40px;
+    display: none;
 }
-
-.upload-wrap {
-    width: 100%;
+.comment-input {
+    width: 96%;
+    border: 1px solid #333D3D;
     height: 100%;
-}
-
-.upload-title {
-    font-size: 2rem;
-    font-weight: bold;
-}
-.upload-content {
-    margin-top: 200px;
-}
-.upload-box{
-    width: 30%;
-}
-.upload-submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    padding: 8px 25px;
-    background: none;
-    border: 1px solid #333D3D;
-    font-size: 0.9rem;
-    height: 42px;
-}
-.upload-label {
-    height: 42px !important;
-    padding: 0.55rem 1.2rem  !important;
-    border-radius: 0 !important;
-    font-size: 0.9rem;
-    border: 1px solid #ced4da !important;
-}
-.upload-label::after {    
-    font-size: 0.9rem;
-    height: 42px !important;
-    padding: 0.55rem 1.2rem  !important;
-}
-.custom-file , .upload-file{
-    height: 42px !important;
-}
-.upload-text {
-    margin-top: 20px;
-    width: 100%;
     padding: 10px 40px;
-    border: 1px solid #333D3D;
-    border-radius: 10px;
+    border-radius: 15px;
+    font-size: 15px;
 }
-.upload-textarea {
-    border-radius: 10px;        
-    padding: 20px 40px;
+.comment-btn {
+    width: 3.2%;
+    height: 100%;
+    border: 1px solid #333D3D;
+    background-color: #333D3D;
+    border-radius: 15px;
+    padding: 9px;
+    font-size: 0.8rem;
+}
+.comment-btn > i {
+    color: white !important;
 }
