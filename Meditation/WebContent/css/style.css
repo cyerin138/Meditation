@@ -622,7 +622,7 @@ footer {
     padding: 0.55rem 1.2rem  !important;
     border-radius: 0 !important;
     font-size: 0.9rem;
-    border: 1px solid #ced4da !important;
+    border: 1px solid #333D3D !important;
 }
 .upload-label::after {    
     font-size: 0.9rem;

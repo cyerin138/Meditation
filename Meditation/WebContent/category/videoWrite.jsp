@@ -24,9 +24,7 @@
                 </div>
             </div>
             <input type="text" name="title" class="upload-text mb-3" placeholder="TITLE"> <br>
-            <textarea name="text" id="textArea" cols="40" rows="10" placeholder="CONTENT" class="upload-textarea w-100">
-
-            </textarea>
+            <textarea name="text" id="textArea" cols="40" rows="10" placeholder="CONTENT" class="upload-textarea w-100"></textarea>
 
         </form>
         </div>
