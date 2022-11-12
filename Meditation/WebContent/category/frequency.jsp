@@ -62,7 +62,7 @@
         <!-- 댓글 -->
         <section id="comment">
             <div class="comment-wrap container-12">
-                <div class="d-flex align-items-center justify-content-start">
+                <div class="d-flex align-items-center justify-content-start comment-bundle">
 
                     <p class="comment-title m-0">댓글</p>
                     <a href="#" class="ml-3 comment-write d-flex align-items-center">댓글 작성
@@ -71,7 +71,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="d-flex align-items-center justify-content-between comment-bundle">
+                <div class="d-flex align-items-center justify-content-between">
 
                     <div class="comment-box">
                         <div class="d-flex align-items-center justify-content-between">
