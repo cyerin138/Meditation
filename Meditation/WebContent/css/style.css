@@ -14,8 +14,8 @@ a {
     color: #333D3D;
 }
 a:hover {
-    color: #333D3D;
-    text-decoration: none;
+    color: #333D3D !important;
+    text-decoration: none !important;
 }
 
 .fa-solid {
@@ -524,6 +524,7 @@ footer {
     color: #333D3D;
     font-size: 0.7rem;
     padding: 14px;
+    cursor: pointer;
 }
 .videos-write {    
     width: 110px;
@@ -571,7 +572,7 @@ footer {
     border: 1px solid #333D3D;
     background-color: #333D3D;
     border-radius: 15px;
-    padding: 9px;
+    padding: 12px;
     font-size: 0.8rem;
 }
 .comment-btn > i {

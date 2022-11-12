@@ -65,16 +65,16 @@
                 <div class="d-flex align-items-center justify-content-start comment-bundle">
 
                     <p class="comment-title m-0">댓글</p>
-                    <a href="#" class="ml-3 comment-write d-flex align-items-center">댓글 작성
+                    <div class="ml-3 comment-write d-flex align-items-center" onclick="commentClick()">댓글 작성
                         <div class="d-flex align-items-center justify-content-center ml-2">
                             <i class="fa-solid fa-pen"></i>
                         </div>
-                    </a>
+                    </div>
                 </div>
-                <div class="comment-form">
+                <div class="comment-form" name="commentForm">
                     <form action="/" class="d-flex align-items-center justify-content-between  h-100 ">
-                        <input type="text" name="comment-input" class="comment-input" id="">
-                        <button type="submit" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        <input type="text" name="commentInput" class="comment-input" id="">
+                        <button onclick="commentSubmit()" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
@@ -159,4 +159,29 @@
         </section>
 
     </div>
+
+    <script>
+        let count = false;
+        function commentClick() {
+            if(count) {
+                count = false;
+                $('.comment-form').hide();
+                
+            } else {            
+                count = true;
+                $('.comment-form').show();
+                $('.comment-input').focus();
+            }
+            
+        }
+        
+        function commentSubmit() {
+            let comment = confirm("정말 이 댓글을 올리시겠습니까?");        
+    
+            if(comment) {
+                $('.comment-form').hide();
+                document.commentForm.submit();
+            }
+        }
+    </script>
 <%@ include file="../footer.jsp" %>
