@@ -1,6 +1,8 @@
 <%@page import="vo.VideoVO"%>
+<%@page import="vo.CommentVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.VideoDAO"%>
+<%@page import="dao.CommentDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ include file="../header2.jsp" %>
      <!-- 명상 -->
@@ -39,14 +41,14 @@
                     </a>
                 </div>
                 <%
-						VideoDAO dao = new VideoDAO();
-						ArrayList<VideoVO> list =  dao.fourVideo("M");
+						VideoDAO viDao = new VideoDAO();
+						ArrayList<VideoVO> viList =  viDao.fourVideo("M");
 				%>
 
                 <div class="recommend-imgs d-flex align-items-center justify-content-between mt-4">
                 
                 <%
-				for(VideoVO vo : list){
+				for(VideoVO vo : viList){
 						
 				%>
                     <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=vo.getCategory()%>" class="recommend-img">
@@ -75,88 +77,27 @@
                     </div>
                 </div>
                 <div class="comment-form" name="commentForm">
-                    <form action="/" class="d-flex align-items-center justify-content-between  h-100 ">
+                    <form action="/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
+                    	<input type="hidden" value="1" class="viNum">
                         <input type="text" name="commentInput" class="comment-input" id="">
                         <button onclick="commentSubmit()" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
-                <div class="d-flex align-items-center justify-content-between">
-
+                <div class="comments">
+                   <%
+						CommentDAO coDao = new CommentDAO();
+						ArrayList<CommentVO> coList =  coDao.getComment(1);
+						for(CommentVO vo : coList){
+					%>
                     <div class="comment-box">
                         <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동</p>
-                            <p class="comment-date">2022-03-21</p>
+                            <p class="comment-name"><%= vo.getName()%></p>
+                            <p class="comment-date"><%= vo.getCoDate()%></p>
                         </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
-                            기분
-                        </p>
-                    </div>
-
-
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
-                            기분
-                        </p>
-                    </div>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-between">
-
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
-                            기분
-                        </p>
-                    </div>
-
-
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
-                            기분
-                        </p>
-                    </div>
-
-                </div>
-                <div class="d-flex align-items-center justify-content-between">
-
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
-                            기분
-                        </p>
-                    </div>
-
-
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name">홍길동</p>
-                            <p class="comment-date">2022-03-21</p>
-                        </div>
-                        <p class="comment-text">
-                            너무 좋아요~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는 기분 ~~ 항상 힐링하는
-                            기분
-                        </p>
-                    </div>
-
+                        <p class="comment-text"><%= vo.getText()%></p>
+                    </div>  
+                    <%} %>
+    
                 </div>
             </div>
         </section>

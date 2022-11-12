@@ -48,13 +48,13 @@ public class CommentDAO {
 		}
 
 		// 댓글 조회
-		public ArrayList<CommentVO> getComment(String num) {
+		public ArrayList<CommentVO> getComment(int num) {
 			ArrayList<CommentVO> list = new ArrayList<CommentVO>();
 
 			try {
 				con = JDBCUtil.getConnection();
 				pstmt = con.prepareStatement(SELECT_COM);
-				pstmt.setString(1, num);
+				pstmt.setInt(1, num);
 				rs = pstmt.executeQuery();
 
 				while (rs.next()) {

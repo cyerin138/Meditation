@@ -3,16 +3,25 @@
      <!-- 영상 업로드 -->
      <section id="upload">
         <div class="upload-wrap container-12">
-            <form action="/" method="post">
-
+            <form action="/video" method="post">
+            
+            	<%
+            			String category = request.getParameter("category");
+				%>
+				
+			<input type="hidden" name="category" value="<%=category%>">
             
             <div class="d-flex align-items-center justify-content-between upload-content">
 
                 <p class="upload-title m-0">전생체험 영상 업로드</p>
                 <div class="upload-box d-flex justify-content-between align-items-center">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input upload-file" id="validatedCustomFile" required>
+                        <input type="file" class="custom-file-input upload-file" name="" id="validatedCustomFile" required>
                         <label class="custom-file-label upload-label" for="validatedCustomFile">영상 가져오기</label>
+                      </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input upload-file" name="" id="validatedCustomFile" required>
+                        <label class="custom-file-label upload-label" for="validatedCustomFile">이미지 가져오기</label>
                       </div>
                     <button type="submit" class="upload-submit ml-3">
                        		업로드 

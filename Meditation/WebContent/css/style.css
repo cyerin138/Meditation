@@ -505,7 +505,8 @@ footer {
     border-radius: 20px;
     height: 180px;
     display: block;
-    width: 24%;
+    width: 97%;
+    padding: 0 15px;
 }
 
 /* 댓글 */
@@ -532,7 +533,7 @@ footer {
 .comment-box {
     border: 1px solid #97B9B9;
     margin-bottom: 20px;
-    width: 49.3%;
+    width: 97%;
     border-radius: 20px;
     padding: 30px;
 }
@@ -551,6 +552,11 @@ footer {
 }
 .comment-bundle {
     margin-bottom: 1.5rem !important;
+}
+
+.comments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .comment-form {
@@ -615,11 +621,14 @@ footer {
     font-size: 0.9rem;
 }
 
-
 /* 동영상 모음 페이지*/
 #videos {
     margin-top: 150px;
     margin-bottom: 200px;
+}
+.videos-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 /* 업로드 */
