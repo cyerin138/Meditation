@@ -1,3 +1,6 @@
+<%@page import="vo.VideoVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.VideoDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ include file="../header2.jsp" %>
      <!-- 명상 -->
@@ -30,26 +33,26 @@
                 <div class="d-flex align-items-center justify-content-start">
 
                     <p class="recommend-title m-0">명상 동영상</p>
-                    <a href="<%=request.getContextPath()%>/category/videos.jsp?category=" class="view-more ml-3">
+                    <a href="<%=request.getContextPath()%>/category/videos.jsp?category=M" class="view-more ml-3">
                         <span></span>
                         <span></span>
                     </a>
                 </div>
+                <%
+						VideoDAO dao = new VideoDAO();
+						ArrayList<VideoVO> list =  dao.fourVideo("M");
+				%>
 
                 <div class="recommend-imgs d-flex align-items-center justify-content-between mt-4">
-
-                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
-                        <img src="./resources/imgs/" alt="video-img">
+                
+                <%
+				for(VideoVO vo : list){
+						
+				%>
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=vo.getCategory()%>" class="recommend-img">
+                        <img src="<%= vo.getImgUrl()%>" alt="video-img">
                     </a>
-                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
-                        <img src="./resources/imgs/" alt="video-img">
-                    </a>
-                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
-                        <img src="./resources/imgs/" alt="video-img">
-                    </a>
-                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="recommend-img">
-                        <img src="./resources/imgs/" alt="video-img">
-                    </a>
+                 <% } %>
                 </div>
             </div>
         </section>

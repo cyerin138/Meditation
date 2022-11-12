@@ -91,13 +91,13 @@ public class VideoDAO {
 	}
 
 	// 특정 비디오 조회
-	public VideoVO getVideo(String num) {
+	public VideoVO getVideo(int num) {
 		VideoVO vo = null;
 
 		try {
 			con = JDBCUtil.getConnection();
 			pstmt = con.prepareStatement(SELECT_ONE);
-			pstmt.setString(1, num);
+			pstmt.setInt(1, num);
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {

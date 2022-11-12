@@ -15,7 +15,7 @@
                         <label class="custom-file-label upload-label" for="validatedCustomFile">영상 가져오기</label>
                       </div>
                     <button type="submit" class="upload-submit ml-3">
-                        업로드 
+                       		업로드 
                         <div class="d-flex align-items-center justify-content-center ml-2">
 
                             <i class="fa-solid fa-paper-plane"></i>
