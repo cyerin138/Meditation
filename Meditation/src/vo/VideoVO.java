@@ -4,18 +4,21 @@ import java.sql.Date;
 
 public class VideoVO {
 	private int viNum;
-	private char category;
+	private String category;
 	private String name;
 	private Date viDate;
 	private String title;
 	private String text;
+	private String videoUrl;
+	private String imgUrl;
 	
 	public VideoVO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public VideoVO(int viNum, char category, String name, Date viDate, String title, String text) {
+	public VideoVO(int viNum, String category, String name, Date viDate, String title, String text, String videoUrl,
+			String imgUrl) {
 		super();
 		this.viNum = viNum;
 		this.category = category;
@@ -23,6 +26,8 @@ public class VideoVO {
 		this.viDate = viDate;
 		this.title = title;
 		this.text = text;
+		this.videoUrl = videoUrl;
+		this.imgUrl = imgUrl;
 	}
 
 	public int getViNum() {
@@ -33,12 +38,12 @@ public class VideoVO {
 		this.viNum = viNum;
 	}
 
-	public char getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
-	public void setCategory(char category) {
-		this.category = category;
+	public void setCategory(String string) {
+		this.category = string;
 	}
 
 	public String getName() {
@@ -72,6 +77,23 @@ public class VideoVO {
 	public void setText(String text) {
 		this.text = text;
 	}
+
+	public String getVideoUrl() {
+		return videoUrl;
+	}
+
+	public void setVideoUrl(String videoUrl) {
+		this.videoUrl = videoUrl;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
+
 	
 	
 	
