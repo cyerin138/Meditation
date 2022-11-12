@@ -596,14 +596,12 @@ footer {
 
 .upload-wrap {
     height: 100vh;
+    padding-top: 200px;
 }
 
 .upload-title {
     font-size: 2rem;
     font-weight: bold;
-}
-.upload-content {
-    margin-top: 200px;
 }
 .upload-box{
     width: 30%;
