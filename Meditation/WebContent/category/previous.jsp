@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="comment-form" name="commentForm">
-                   <form action="/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
+                   <form action="<%=request.getContextPath()%>/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
                     	<input type="hidden" value="1" class="viNum" name="viNum">
                         <input type="text" name="text" class="comment-input" id="">
                         <button onclick="commentSubmit()" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>

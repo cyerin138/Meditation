@@ -74,6 +74,32 @@ header button {
 .sign > div >div {
     margin-left: 50px;
 }
+.search-btn {
+    cursor: pointer;
+}
+.search-text {
+    display: none;
+}
+.search-text div {
+    background-color: rgba(255, 255, 255, .3);
+    padding:3px 10px;
+    border-radius: 20px;
+    width: 230px;
+}
+.search {
+    background: none !important;
+    cursor: pointer;
+}
+.search-text input {
+    width: 180px;
+    border: none;
+    background: none;
+    font-size:0.9rem;
+    padding-left: 15px;
+}
+.search-text input:focus{
+    outline: none;
+}
 /* 비주얼 */
 #visual {
     height: 100vh;

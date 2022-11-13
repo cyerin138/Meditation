@@ -3,7 +3,7 @@
      <!-- 영상 업로드 -->
      <section id="upload">
         <div class="upload-wrap container-12">
-            <form action="/video" method="post">
+            <form action="<%=request.getContextPath()%>/video" method="post">
             
             	<%
             			String category = request.getParameter("category");

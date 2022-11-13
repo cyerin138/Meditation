@@ -11,7 +11,8 @@
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/fontawesome/css/all.min.css">
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap/css/bootstrap.min.css">
             <link rel="stylesheet" href="<%=request.getContextPath()%>/css/style.css">
-            <link href="<%=request.getContextPath()%>/resources/imgs/headerIcon.png" rel="shortcut icon" type="image/x-icon">
+            <link href="<%=request.getContextPath()%>/resources/imgs/headerIcon.png" rel="shortcut icon"
+                type="image/x-icon">
             <script src="<%=request.getContextPath()%>/js/jquery-3.1.1.min.js"></script>
         </head>
 
@@ -22,61 +23,77 @@
                         <div class="col-2">
                             <div class="logo d-flex align-items-center justify-content-left">
                                 <a href="<%=request.getContextPath()%>/index.jsp">
-                                    <img src="<%=request.getContextPath()%>/resources/imgs/logo2.png" alt="로고" width="100px">
-                                </a>                                
+                                    <img src="<%=request.getContextPath()%>/resources/imgs/logo2.png" alt="로고"
+                                        width="100px">
+                                </a>
                             </div>
                         </div>
-                        <nav class="menuBox col-6">
+                        <nav class="menuBox col-5">
                             <ul class="m-0 menu d-flex align-items-center justify-content-start">
                                 <li><a href="<%=request.getContextPath()%>/category/meditation.jsp">명상</a></li>
                                 <li><a href="<%=request.getContextPath()%>/category/previous.jsp">전생 체험</a></li>
                                 <li><a href="<%=request.getContextPath()%>/category/frequency.jsp">주파수</a></li>
                             </ul>
                         </nav>
-                        <div class="sign col-4">
+                        <div class="sign col-5">
                             <div class="d-flex align-items-center justify-content-end w-100">
-                            
-                            <div class="searchBox">
-                                <div class="search">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
-                            </div>
-                            <% MemberVO login=(MemberVO) session.getAttribute("loginOK"); if(login==null) { %>
 
-                                <div class="login">
-                                    <a href="<%=request.getContextPath()%>/member/login.jsp" class="d-flex align-items-center justify-content-center">Login
-                                        <span class="d-flex align-items-center justify-content-center ml-3">
-                                            <i class="fa-regular fa-user"></i>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="register">
-                                    <a href="<%=request.getContextPath()%>/member/register.jsp" class="d-flex align-items-center justify-content-center">Sign up
-                                        <span class="d-flex align-items-center justify-content-center ml-3">
-                                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                                        </span>
-                                    </a>
-                                </div>
+                                <div class="search-box">
+                                    <div class="search-btn" onclick="search()">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <div class="search-text">
 
-                                <% } else { %>
-
+                                        <form action="<%=request.getContextPath()%>/search" method="post" name="searchForm">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <input type="text" name="search" id="search" onkeyup="enterkey()">
+                                                <div class="search" onclick="searchBtn()">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <% MemberVO login=(MemberVO) session.getAttribute("loginOK"); if(login==null) { %>
 
                                     <div class="login">
-                                        <a href="<%=request.getContextPath()%>/member/myPage.jsp?id=<%=login.getId()%>&name=<%= login.getName()%>" class="d-flex align-items-center justify-content-center">
-                                            <%=login.getName() %> 
+                                        <a href="<%=request.getContextPath()%>/member/login.jsp"
+                                            class="d-flex align-items-center justify-content-center">Login
                                             <span class="d-flex align-items-center justify-content-center ml-3">
                                                 <i class="fa-regular fa-user"></i>
                                             </span>
                                         </a>
                                     </div>
-                                    <div class="register d-flex align-items-center justify-content-center">
-                                        <button onclick="logout()" id="logout">Logout</button>
-                                        <span class="d-flex align-items-center justify-content-center ml-3">                                            
-                                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                        </span>
+                                    <div class="register">
+                                        <a href="<%=request.getContextPath()%>/member/register.jsp"
+                                            class="d-flex align-items-center justify-content-center">Sign up
+                                            <span class="d-flex align-items-center justify-content-center ml-3">
+                                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                            </span>
+                                        </a>
                                     </div>
-                                    <% } %>
-                        </div></div>
+
+                                    <% } else { %>
+
+
+                                        <div class="login">
+                                            <a href="<%=request.getContextPath()%>/member/myPage.jsp?id=<%=login.getId()%>&name=<%= login.getName()%>"
+                                                class="d-flex align-items-center justify-content-center">
+                                                <%=login.getName() %>
+                                                    <span class="d-flex align-items-center justify-content-center ml-3">
+                                                        <i class="fa-regular fa-user"></i>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="register d-flex align-items-center justify-content-center">
+                                            <button onclick="logout()" id="logout">Logout</button>
+                                            <span class="d-flex align-items-center justify-content-center ml-3">
+                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                            </span>
+                                        </div>
+                                        <% } %>
+                            </div>
+                        </div>
                         <script>
                             function logout() {
                                 let bool = confirm('정말 로그아웃 하시겠습니까?')
@@ -87,6 +104,26 @@
                                     alert("로그아웃이 취소되었습니다.")
 
                                 }
+                            }
+                            function search() {
+                                $('.search-text').show();
+                                $('.search-btn').hide();
+                                $('.search-text input').focus();
+                            }
+                            
+                            function enterkey() {
+                                if (window.event.keyCode == 13) {
+                                    document.searchForm.submit();
+                                    $('.search-text').hide();
+                                    $('.search-btn').show();
+                                }
+                            }
+                            
+                            function searchBtn() {
+                                document.searchForm.submit();
+                                $('.search-text').hide();
+                                $('.search-btn').show();
+                                
                             }
                         </script>
                     </div>

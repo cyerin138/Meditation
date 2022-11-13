@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/styleorig.css">
-    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
-</head>
-
-<body>
-    <!-- 검색 -->
-    <section id="videos">
+<%@page import="dao.VideoDAO"%>
+<%@page import="vo.VideoVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <%@ include file="../header2.jsp" %>
+       <!-- 검색 -->
+       <section id="videos">
         <div class="videos-wrap container-12">
             <p class="videos-title m-0">명상 동영상</p>
             <div class="videos-imgs mt-4">
@@ -67,7 +57,4 @@
 
         </div>
     </section>
-
-</body>
-
-</html>
+<%@ include file="../footer.jsp" %>
