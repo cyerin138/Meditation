@@ -17,13 +17,17 @@
                 <div class="upload-box d-flex justify-content-between align-items-center">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input upload-file" 
-                        name="video" id="validatedCustomFile" required>
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">영상 가져오기</label>
+                        name="video" id="validatedCustomFile" required accept=".mp4, .mkv, .avi">
+                        <label class="custom-file-label upload-label" for="validatedCustomFile">Choose file...</label>
                       </div>
                     <div class="custom-file ml-3">
-                        <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required>
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">이미지 가져오기</label>
+                        <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required  accept=".gif, .jpg, .png, .jpeg">
+                        <label class="custom-file-label upload-label" for="validatedCustomFile">Choose file...</label>
                       </div>
+                      <div class="custom-file">
+  <input type="file" class="custom-file-input" id="customFile">
+  <label class="custom-file-label" for="customFile">Choose file</label>
+</div>
                     <button onclick="check()" class="upload-submit ml-3">
                        		업로드 
                         <div class="d-flex align-items-center justify-content-center ml-2">
