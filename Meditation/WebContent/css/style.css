@@ -17,6 +17,12 @@ a:hover {
     color: #333D3D !important;
     text-decoration: none !important;
 }
+.header-1 a:hover {    
+    color: white !important;
+}
+.header-2 a:hover {    
+    color: #333D3D !important;
+}
 
 .fa-solid {
     display: flex;
@@ -85,6 +91,9 @@ header button {
     padding:3px 10px;
     border-radius: 20px;
     width: 230px;
+}
+.header-2 .search-text div {
+    background-color: rgba(0, 0, 0, 0.3);    
 }
 .search {
     background: none !important;

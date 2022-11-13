@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="search-text">
 
-                                        <form action="<%=request.getContextPath()%>/search" method="post" name="searchForm">
+                                        <form action="<%=request.getContextPath()%>/category/search.jsp" method="post" name="searchForm">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <input type="text" name="search" id="search" onkeyup="enterkey()">
                                                 <div class="search" onclick="searchBtn()">
