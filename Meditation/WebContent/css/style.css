@@ -513,7 +513,7 @@ footer {
     font-weight: bold;
 }
 .view-more {
-    width: 30px;
+    width: 30px; 
     height: 30px;
     border: 1px solid #333D3D;
     position: relative;
@@ -541,12 +541,14 @@ footer {
     height: 180px;
     display: block;
     width: 97%;
-    padding: 0 15px;
 }
 
 /* 댓글 */
 #comment {
     margin-bottom: 200px;
+}
+.comment-wrap {
+    min-height: 400px;
 }
 .comment-title {
     font-size: 2rem;
@@ -592,6 +594,7 @@ footer {
 .comments {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items:center;
 }
 
 .comment-form {
@@ -664,6 +667,7 @@ footer {
 .videos-imgs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 /* 업로드 */
@@ -678,7 +682,7 @@ footer {
     font-weight: bold;
 }
 .upload-box{
-    width: 30%;
+    width: 50%;
 }
 .upload-submit {
     display: flex;

@@ -54,7 +54,13 @@
                                         </form>
                                     </div>
                                 </div>
-                                <% MemberVO login=(MemberVO) session.getAttribute("loginOK"); if(login==null) { %>
+                                <%
+                                
+                                MemberVO login=(MemberVO) session.getAttribute("loginOK"); 
+                                
+                                if(login==null) { 
+                                
+                                %>
 
                                     <div class="login">
                                         <a href="<%=request.getContextPath()%>/member/login.jsp"

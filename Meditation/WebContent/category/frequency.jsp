@@ -70,16 +70,35 @@
             <div class="comment-wrap container-12">
                 <div class="d-flex align-items-center justify-content-start comment-bundle">
 
-                    <p class="comment-title m-0">댓글</p>
-                    <div class="ml-3 comment-write d-flex align-items-center" onclick="commentClick()">댓글 작성
-                        <div class="d-flex align-items-center justify-content-center ml-2">
-                            <i class="fa-solid fa-pen"></i>
-                        </div>
-                    </div>
-                </div>
+				<p class="comment-title m-0">댓글</p>
+				<%
+					if (login == null) {
+				%>
+				<div class="ml-3 comment-write d-flex align-items-center"
+					onclick="check()">
+					댓글 작성
+					<div class="d-flex align-items-center justify-content-center ml-2">
+						<i class="fa-solid fa-pen"></i>
+					</div>
+				</div>
+				<%
+					} else {
+				%>
+
+				<div class="ml-3 comment-write d-flex align-items-center"
+					onclick="commentClick()">
+					댓글 작성
+					<div class="d-flex align-items-center justify-content-center ml-2">
+						<i class="fa-solid fa-pen"></i>
+					</div>
+				</div>
+				<%
+					}
+				%>
+			</div>
                 <div class="comment-form" name="commentForm">
                    <form action="<%=request.getContextPath()%>/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
-                    	<input type="hidden" value="1" class="viNum" name="viNum">
+                    	<input type="hidden" value="3" class="viNum" name="viNum">
                         <input type="text" name="text" class="comment-input" id="">
                         <button onclick="commentSubmit()" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
@@ -87,7 +106,7 @@
                 <div class="comments">
                    <%
 						CommentDAO coDao = new CommentDAO();
-						ArrayList<CommentVO> coList =  coDao.getComment(1);
+						ArrayList<CommentVO> coList =  coDao.getComment(3);
 						for(CommentVO vo : coList){
 					%>
                     <div class="comment-box">
@@ -106,6 +125,10 @@
     </div>
 
     <script>
+    function check() {
+		alert('로그인을 먼저 해주십시오');
+	}
+    
         let count = false;
         function commentClick() {
             if(count) {

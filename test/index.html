@@ -13,58 +13,37 @@
 </head>
 
 <body>
-    <!-- 검색 -->
-    <section id="videos">
-        <div class="videos-wrap container-12">
-            <p class="videos-title m-0">명상 동영상</p>
-            <div class="videos-imgs mt-4">
+    <section id="upload">
+        <div class="upload-wrap container-12">
+            <form action="<%=request.getContextPath()%>/video" method="post">
+			<input type="hidden" name="category" value="<%=category%>">
+            
+            <div class="d-flex align-items-center justify-content-between upload-content">
 
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
+                <p class="upload-title m-0">전생체험 영상 업로드</p>
+                <div class="upload-box d-flex justify-content-between align-items-center">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input upload-file" 
+                        name="video" id="validatedCustomFile" required>
+                        <label class="custom-file-label upload-label" for="validatedCustomFile">영상 가져오기</label>
+                      </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required>
+                        <label class="custom-file-label upload-label" for="validatedCustomFile">이미지 가져오기</label>
+                      </div>
+                    <button type="submit" class="upload-submit ml-3">
+                       		업로드 
+                        <div class="d-flex align-items-center justify-content-center ml-2">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+                    </button>
+                </div>
             </div>
-            <p class="videos-title mt-5 mb-0">전생체험 동영상</p>
-            <div class="videos-imgs mt-4">
+            <input type="text" name="title" class="upload-text mb-3" placeholder="TITLE"> <br>
+            <textarea name="text" id="textArea" cols="40" rows="10" placeholder="CONTENT" class="upload-textarea w-100"></textarea>
 
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-            </div>
-            <p class="videos-title mt-5 mb-0">주파수 동영상</p>
-            <div class="videos-imgs mt-4">
-
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-                <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?video=" class="videos-img">
-                    <img src="<%=request.getContextPath()%>/resources/imgs/" alt="video-img">
-                </a>
-            </div>
-
+        </form>
         </div>
     </section>
 

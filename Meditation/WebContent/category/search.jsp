@@ -10,8 +10,7 @@
     
        <!-- 검색 -->
        <section id="videos">
-        <div class="videos-wrap container-12">
-            <p class="videos-title m-0">명상 동영상</p>
+        <div class="videos-wrap container-12"  style="min-height: 100vh;">
             <div class="videos-imgs mt-4">
 				<%
                 		VideoDAO viDao = new VideoDAO();
@@ -19,7 +18,7 @@
 						for(VideoVO vo : caList){
 				%>
 				
-                 <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=category%>" class="videos-img">
+                 <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%= vo.getCategory()%>" class="videos-img">
                        <img src="<%= vo.getImgUrl()%>" alt="video-img">
                     </a>
                 <% } %>

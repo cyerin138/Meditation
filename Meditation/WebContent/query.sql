@@ -19,6 +19,10 @@ create table video(
 
 create sequence video_seq;
 
+insert into video values(1,'M','관리자',default,'data','data', 'url', 'url');
+insert into video values(2,'P','관리자',default,'data','data', 'url', 'url');
+insert into video values(3,'F','관리자',default,'data','data', 'url', 'url');
+
 --댓글 테이블
 create table vi_comment(
 	vi_num number(10),
@@ -30,6 +34,7 @@ create table vi_comment(
 
 --테스트
 
+select * from video;
 select * from vi_comment;
 select * from video where category = 'M' order by vi_date desc;
 select * from video where (title like '%명상%' or text like '%명상%') order by vi_date desc;

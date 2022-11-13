@@ -52,10 +52,10 @@ public class CommentServlet extends HttpServlet {
 		result = dao.insertComment(vo);
 		if (result > 0) {
 			out.println("<script>alert('댓글 작성에 성공했습니다.')</script>");
-			out.print("<script> history.back() </script> ");
+			out.print("<script>window.location=document.referrer</script> ");
 		} else {
 			out.println("<script>alert('댓글 작성에 실패했습니다.')</script>");
-			out.print("<script> history.back() </script> ");
+			out.print("<script>window.location=document.referrer</script> ");
 
 		}
 

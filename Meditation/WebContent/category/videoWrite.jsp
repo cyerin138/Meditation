@@ -3,7 +3,7 @@
      <!-- 영상 업로드 -->
      <section id="upload">
         <div class="upload-wrap container-12">
-            <form action="<%=request.getContextPath()%>/video" method="post">
+            <form action="<%=request.getContextPath()%>/video" method="post" name="videoForm">
             
             	<%
             			String category = request.getParameter("category");
@@ -16,14 +16,15 @@
                 <p class="upload-title m-0">전생체험 영상 업로드</p>
                 <div class="upload-box d-flex justify-content-between align-items-center">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input upload-file" name="video" id="validatedCustomFile" required>
+                        <input type="file" class="custom-file-input upload-file" 
+                        name="video" id="validatedCustomFile" required>
                         <label class="custom-file-label upload-label" for="validatedCustomFile">영상 가져오기</label>
                       </div>
-                    <div class="custom-file">
+                    <div class="custom-file ml-3">
                         <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required>
                         <label class="custom-file-label upload-label" for="validatedCustomFile">이미지 가져오기</label>
                       </div>
-                    <button type="submit" class="upload-submit ml-3">
+                    <button onclick="check()" class="upload-submit ml-3">
                        		업로드 
                         <div class="d-flex align-items-center justify-content-center ml-2">
 
@@ -38,4 +39,33 @@
         </form>
         </div>
     </section>
+    
+    
+    <script>
+	function check() {
+		if(document.videoForm.video.value == "") {
+			alert("비디오를 입력해주세요")
+			document.videoForm.video.focus();
+			return;
+			
+		}if(document.videoForm.img.value == "") {
+			alert("이미지를 입력해주세요")
+			document.videoForm.img.focus();
+			return;
+			
+		}if(document.videoForm.title.value == "") {
+			alert("제목을 입력해주세요")
+			document.videoForm.title.focus();
+			return;
+			
+		}if(document.videoForm.text.value == "") {
+			alert("내용을 입력해주세요")
+			document.videoForm.text.focus();
+			return;
+			
+		}
+		
+		document.videoForm.submit();
+	}
+</script>
 <%@ include file="../footer.jsp" %>

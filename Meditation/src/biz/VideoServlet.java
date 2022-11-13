@@ -62,10 +62,10 @@ public class VideoServlet extends HttpServlet {
 		result = dao.insertVideo(vo);
 		if (result > 0) {
 			out.println("<script>alert('영상 업로드에 성공했습니다.')</script>");
-			out.print("<script> history.back() </script> ");
+			out.print("<script>window.location=document.referrer</script> ");
 		} else {
 			out.println("<script>alert('영상 업로드에 실패했습니다.')</script>");
-			out.print("<script> history.back() </script> ");
+			out.print("<script>window.location=document.referrer</script> ");
 
 		}
 	}
