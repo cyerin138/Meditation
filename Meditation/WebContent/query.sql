@@ -24,7 +24,7 @@ create table vi_comment(
 	vi_num number(10),
 	name varchar2(10),
 	co_date date default sysdate,
-	text varchar2(30),
+	text varchar2(100),
 	constraint co_num_fk foreign key (vi_num) references video(vi_num)
 );
 
@@ -33,7 +33,7 @@ create table main_comment(
 	category varchar2(1) constraint main_category_ck check( category in('M','F','P')),
 	name varchar2(10),
 	co_date date default sysdate,
-	text varchar2(30)
+	text varchar2(100)
 );
 
 
@@ -42,6 +42,8 @@ create table main_comment(
 
 select * from video;
 select * from vi_comment;
+select * from main_comment;
+
 select * from video where category = 'M' order by vi_date desc;
 select * from video where (title like '%명상%' or text like '%명상%') order by vi_date desc;
 select * from (select * from video order by vi_date desc) where rownum <= 4;
@@ -58,5 +60,5 @@ delete from vi_comment;
 
 drop table video;
 drop table vi_comment;
-
+drop table main_comment;
 drop sequence video_seq;

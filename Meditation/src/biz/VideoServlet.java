@@ -61,47 +61,20 @@ public class VideoServlet extends HttpServlet {
 		VideoVO vo = new VideoVO();
 
 		int maxSize = 1024 * 1024 * 1024;
-		String encType = "utf-8";
-
-//		ServletContext context = getServletContext();
-//		String realFolder = context.getRealPath("upload");
 		
-//		String path = request.getSession().getServletContext().getRealPath("/resources/video/");
-
-//		File folder = new File(realFolder);
-//		if (!folder.exists()) {
-//			folder.mkdir();
-//		}
+		String savePath = request.getServletContext().getRealPath("upload");
 
 		try {
-			MultipartRequest multi = null;
 
-			multi = new MultipartRequest(request, request.getRealPath("/upload"), maxSize, encType, new DefaultFileRenamePolicy());
+			MultipartRequest multi = new MultipartRequest(request,savePath, maxSize, "utf-8", new DefaultFileRenamePolicy());
 
 			vo.setCategory(multi.getParameter("category"));
 			vo.setName(login.getName());
 			vo.setTitle(multi.getParameter("title"));
 			vo.setText(multi.getParameter("text"));
-			vo.setVideoUrl(multi.getFile("video").getName());
-			vo.setImgUrl(multi.getFile("img").getName());
+			vo.setVideoUrl( savePath + "/" + multi.getFilesystemName("video"));
+			vo.setImgUrl( savePath + "/" + multi.getFilesystemName("img"));
 
-//			Enumeration params = multi.getParameterNames();
-//
-//			while (params.hasMoreElements()) {
-//				String name = (String) params.nextElement();
-//				String value = multi.getParameter(name);
-//			}
-//
-//			Enumeration files = multi.getFileNames();
-//
-//			while (files.hasMoreElements()) {
-//				String name = (String) files.nextElement();
-//				String filename = multi.getFilesystemName(name);
-//				String original = multi.getOriginalFileName(name);
-//				String type = multi.getContentType(name);
-//				File file = multi.getFile(name);
-//
-//			}
 			int result = 0;		
 			
 			result = dao.insertVideo(vo);

@@ -88,7 +88,7 @@ public class CommentDAO {
 			
 			try {
 				con = JDBCUtil.getConnection();
-				pstmt = con.prepareStatement(INSERT_COM);
+				pstmt = con.prepareStatement(INSERT_MAIN);
 				pstmt.setString(1, vo.getCategory());
 				pstmt.setString(2, vo.getName());
 				pstmt.setString(3, vo.getText());
@@ -109,7 +109,7 @@ public class CommentDAO {
 			
 			try {
 				con = JDBCUtil.getConnection();
-				pstmt = con.prepareStatement(SELECT_COM);
+				pstmt = con.prepareStatement(SELECT_MAIN);
 				pstmt.setString(1, category);
 				rs = pstmt.executeQuery();
 				
