@@ -63,21 +63,20 @@ public class VideoServlet extends HttpServlet {
 		int maxSize = 1024 * 1024 * 1024;
 		String encType = "utf-8";
 
-		ServletContext context = getServletContext();
-		String realFolder = context.getRealPath("upload");
+//		ServletContext context = getServletContext();
+//		String realFolder = context.getRealPath("upload");
 		
 //		String path = request.getSession().getServletContext().getRealPath("/resources/video/");
-		String realPath = request.getRealPath("/resources/video/");
 
-		File folder = new File(realPath);
-		if (!folder.exists()) {
-			folder.mkdir();
-		}
+//		File folder = new File(realFolder);
+//		if (!folder.exists()) {
+//			folder.mkdir();
+//		}
 
 		try {
 			MultipartRequest multi = null;
 
-			multi = new MultipartRequest(request, realPath, maxSize, encType, new DefaultFileRenamePolicy());
+			multi = new MultipartRequest(request, request.getRealPath("/upload"), maxSize, encType, new DefaultFileRenamePolicy());
 
 			vo.setCategory(multi.getParameter("category"));
 			vo.setName(login.getName());
