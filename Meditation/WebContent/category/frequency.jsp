@@ -1,3 +1,4 @@
+<%@page import="vo.MCommentVO"%>
 <%@page import="vo.CommentVO"%>
 <%@page import="dao.CommentDAO"%>
 <%@page import="vo.VideoVO"%>
@@ -97,17 +98,17 @@
 				%>
 			</div>
                 <div class="comment-form" name="commentForm">
-                   <form action="<%=request.getContextPath()%>/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
-                    	<input type="hidden" value="3" class="viNum" name="viNum">
+                   <form action="<%=request.getContextPath()%>/mcomment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
+                    	<input type="hidden" value="F" class="category" name="category">
                         <input type="text" name="text" class="comment-input" id="">
                         <button onclick="commentSubmit()" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
                 <div class="comments">
                    <%
-						CommentDAO coDao = new CommentDAO();
-						ArrayList<CommentVO> coList =  coDao.getComment(3);
-						for(CommentVO vo : coList){
+                   		CommentDAO coDao = new CommentDAO();
+						ArrayList<MCommentVO> coList = coDao.getMain("M");
+						for (MCommentVO vo : coList) {
 					%>
                     <div class="comment-box">
                         <div class="d-flex align-items-center justify-content-between">

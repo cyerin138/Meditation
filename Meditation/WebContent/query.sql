@@ -19,10 +19,6 @@ create table video(
 
 create sequence video_seq;
 
-insert into video values(1,'M','관리자',default,'data','data', 'url', 'url');
-insert into video values(2,'P','관리자',default,'data','data', 'url', 'url');
-insert into video values(3,'F','관리자',default,'data','data', 'url', 'url');
-
 --댓글 테이블
 create table vi_comment(
 	vi_num number(10),
@@ -32,7 +28,17 @@ create table vi_comment(
 	constraint co_num_fk foreign key (vi_num) references video(vi_num)
 );
 
+-- 메인 댓글 테이블
+create table main_comment(
+	category varchar2(1) constraint main_category_ck check( category in('M','F','P')),
+	name varchar2(10),
+	co_date date default sysdate,
+	text varchar2(30)
+);
+
+
 --테스트
+
 
 select * from video;
 select * from vi_comment;
@@ -45,6 +51,9 @@ insert into vi_comment values(2,'홍길동', default, '오 대박 멋진데');
 
 
 insert into member values('d', 'd', '이름');
+
+
+delete from video;
 
 drop table video;
 drop table vi_comment;
