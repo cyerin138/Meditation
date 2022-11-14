@@ -62,7 +62,7 @@ public class VideoServlet extends HttpServlet {
 
 		int maxSize = 1024 * 1024 * 1024;
 		
-		String savePath = "C:\\Users\\SEC\\OneDrive\\바탕 화면\\Meditation\\Meditation\\WebContent\\resources\\video";
+		String savePath = "C:\\Users\\SEC\\OneDrive\\바탕 화면\\Meditation\\Meditation\\WebContent\\resources\\upload";
 		System.out.println(savePath);
 		// 테스트 돌릴때 오류 날수 잇음 글키 때문에 이 링크를 똒같이 해줄 친구를 찾아야함
 

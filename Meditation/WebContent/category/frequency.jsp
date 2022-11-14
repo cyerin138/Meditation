@@ -54,7 +54,7 @@
 						
 				%>
                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=vo.getCategory()%>" class="recommend-img">
-                        <img src="<%= vo.getImgUrl()%>" alt="video-img">
+                        <img src="<%=request.getContextPath()%>/resources/upload<%=vo.getImgUrl()%>" alt="videos-img">
                         <div class="d-flex align-items-center justify-content-between">
 							<div class="img-title"><%= vo.getTitle()%></div>
 							<div class="video-date m-0"><%= vo.getViDate()%></div>
