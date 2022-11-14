@@ -13,8 +13,8 @@ create table video(
 	vi_date date default sysdate,
 	title varchar2(20),
 	text varchar2(30),
-	video_url varchar2(30),
-	img_url varchar2(30)
+	video_url varchar2(150),
+	img_url varchar2(150)
 );
 
 create sequence video_seq;

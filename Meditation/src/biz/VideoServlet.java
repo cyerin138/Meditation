@@ -62,7 +62,9 @@ public class VideoServlet extends HttpServlet {
 
 		int maxSize = 1024 * 1024 * 1024;
 		
-		String savePath = request.getServletContext().getRealPath("upload");
+		String savePath = "C:\\Users\\SEC\\OneDrive\\바탕 화면\\Meditation\\Meditation\\WebContent\\resources\\video";
+		System.out.println(savePath);
+		// 테스트 돌릴때 오류 날수 잇음 글키 때문에 이 링크를 똒같이 해줄 친구를 찾아야함
 
 		try {
 
@@ -72,8 +74,8 @@ public class VideoServlet extends HttpServlet {
 			vo.setName(login.getName());
 			vo.setTitle(multi.getParameter("title"));
 			vo.setText(multi.getParameter("text"));
-			vo.setVideoUrl( savePath + "/" + multi.getFilesystemName("video"));
-			vo.setImgUrl( savePath + "/" + multi.getFilesystemName("img"));
+			vo.setVideoUrl(multi.getFilesystemName("video"));
+			vo.setImgUrl(multi.getFilesystemName("img"));
 
 			int result = 0;		
 			
