@@ -65,6 +65,8 @@ public class VideoServlet extends HttpServlet {
 
 		ServletContext context = getServletContext();
 		String realFolder = context.getRealPath("upload");
+		
+		String path = request.getSession().getServletContext().getRealPath("/resources/video/");
 
 		File folder = new File(realFolder);
 		if (!folder.exists()) {
@@ -100,6 +102,17 @@ public class VideoServlet extends HttpServlet {
 //				File file = multi.getFile(name);
 //
 //			}
+			int result = 0;		
+			
+			result = dao.insertVideo(vo);
+			if (result > 0) {
+				out.println("<script>alert('영상 업로드에 성공했습니다.')</script>");
+				response.sendRedirect(request.getContextPath() + "/category/videos.jsp?category=" + multi.getParameter("category"));
+				
+			} else {
+				out.println("<script>alert('영상 업로드에 실패했습니다.')</script>");
+				out.println("<script>history.back() </script> ");
+			}
 
 		} catch (IOException ioe) {
 			System.out.println(ioe);
@@ -107,17 +120,6 @@ public class VideoServlet extends HttpServlet {
 			System.out.println(ex);
 		}
 		
-		int result = 0;		
-
-		result = dao.insertVideo(vo);
-		if (result > 0) {
-			out.println("<script>alert('영상 업로드에 성공했습니다.')</script>");
-			out.print("<script>window.location=document.referrer</script> ");
-		} else {
-			out.println("<script>alert('영상 업로드에 실패했습니다.')</script>");
-			out.print("<script>window.location=document.referrer</script> ");
-
-		}
 	}
 
 }

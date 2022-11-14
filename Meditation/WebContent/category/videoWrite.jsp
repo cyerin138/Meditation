@@ -4,16 +4,28 @@
      <section id="upload">
         <div class="upload-wrap container-12">
             <form action="<%=request.getContextPath()%>/video" method="post" name="videoForm" enctype="multipart/form-data">
-            
-            	<%
-            			String category = request.getParameter("category");
-				%>
+            <%
+				String category = request.getParameter("category");
+				
+				String categoryName = "";
+				switch (category) {
+					case "M" :
+						categoryName = "명상";
+						break;
+					case "P" :
+						categoryName = "전생체험";
+						break;
+					case "F" :
+						categoryName = "주파수";
+						break;
+				}
+			%>
 				
 			<input type="hidden" name="category" value="<%=category%>">
             
             <div class="d-flex align-items-center justify-content-between upload-content">
 
-                <p class="upload-title m-0">전생체험 영상 업로드</p>
+                <p class="upload-title m-0"><%=categoryName%> 영상 업로드</p>
                 <div class="upload-box d-flex justify-content-between align-items-center">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input upload-file" 
