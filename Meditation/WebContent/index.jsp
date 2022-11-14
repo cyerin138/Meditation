@@ -87,4 +87,12 @@
             </div>
         </section>
         <!-- 인트로 끝 -->
+
+        <script>
+            $(()=> {
+                setTimeout(function () {
+                    $("#intro").fadeOut('slow');
+                }, 4500);
+            })
+        </script>
         <%@ include file="footer.jsp" %>

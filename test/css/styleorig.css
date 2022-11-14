@@ -329,6 +329,9 @@ footer {
 }
 /* 인트로 */
 #intro {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
     height: 100vh;
     background-color: white;
