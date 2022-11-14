@@ -89,7 +89,7 @@
         <!-- 인트로 끝 -->
 
         <script>
-            $(()=> {
+            $(()=>{
                 setTimeout(function () {
                     $("#intro").fadeOut('slow');
                 }, 4500);

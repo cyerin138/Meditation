@@ -549,6 +549,11 @@ footer {
     display: block;
     width: 97%;
 }
+.recommend-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items:center;
+}
 
 /* 댓글 */
 #comment {

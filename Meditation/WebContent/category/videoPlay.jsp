@@ -50,7 +50,7 @@
 						ArrayList<VideoVO> caList =  viDao.fourVideo(category);
 				%>
 
-                <div class="recommend-imgs d-flex align-items-center justify-content-between mt-4">
+                <div class="recommend-imgs mt-4">
                 
                 <%
 				for(VideoVO vo : caList){
