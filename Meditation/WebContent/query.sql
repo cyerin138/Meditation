@@ -54,6 +54,7 @@ insert into member values('d', 'd', '이름');
 
 
 delete from video;
+delete from vi_comment;
 
 drop table video;
 drop table vi_comment;

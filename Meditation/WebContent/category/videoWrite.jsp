@@ -3,7 +3,7 @@
      <!-- 영상 업로드 -->
      <section id="upload">
         <div class="upload-wrap container-12">
-            <form action="<%=request.getContextPath()%>/video" method="post" name="videoForm">
+            <form action="<%=request.getContextPath()%>/video" method="post" name="videoForm" enctype="multipart/form-data">
             
             	<%
             			String category = request.getParameter("category");
@@ -24,10 +24,6 @@
                         <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required  accept=".gif, .jpg, .png, .jpeg">
                         <label class="custom-file-label upload-label" for="validatedCustomFile">Choose file...</label>
                       </div>
-                      <div class="custom-file">
-  <input type="file" class="custom-file-input" id="customFile">
-  <label class="custom-file-label" for="customFile">Choose file</label>
-</div>
                     <button onclick="check()" class="upload-submit ml-3">
                        		업로드 
                         <div class="d-flex align-items-center justify-content-center ml-2">
