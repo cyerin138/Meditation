@@ -14,8 +14,14 @@ a {
     color: #333D3D;
 }
 a:hover {
-    color: #333D3D;
-    text-decoration: none;
+    color: #333D3D !important;
+    text-decoration: none !important;
+}
+.header-1 a:hover {    
+    color: white !important;
+}
+.header-2 a:hover {    
+    color: #333D3D !important;
 }
 
 .fa-solid {
@@ -73,6 +79,35 @@ header button {
 }
 .sign > div >div {
     margin-left: 50px;
+}
+.search-btn {
+    cursor: pointer;
+}
+.search-text {
+    display: none;
+}
+.search-text div {
+    background-color: rgba(255, 255, 255, .3);
+    padding:3px 10px;
+    border-radius: 20px;
+    width: 230px;
+}
+.header-2 .search-text div {
+    background-color: rgba(0, 0, 0, 0.3);    
+}
+.search {
+    background: none !important;
+    cursor: pointer;
+}
+.search-text input {
+    width: 180px;
+    border: none;
+    background: none;
+    font-size:0.9rem;
+    padding-left: 15px;
+}
+.search-text input:focus{
+    outline: none;
 }
 /* 비주얼 */
 #visual {
@@ -478,7 +513,7 @@ footer {
     font-weight: bold;
 }
 .view-more {
-    width: 30px;
+    width: 30px; 
     height: 30px;
     border: 1px solid #333D3D;
     position: relative;
@@ -505,12 +540,16 @@ footer {
     border-radius: 20px;
     height: 180px;
     display: block;
-    width: 24%;
+    width: 97%;
+    
 }
 
 /* 댓글 */
 #comment {
     margin-bottom: 200px;
+}
+.comment-wrap {
+    min-height: 400px;
 }
 .comment-title {
     font-size: 2rem;
@@ -524,6 +563,7 @@ footer {
     color: #333D3D;
     font-size: 0.7rem;
     padding: 14px;
+    cursor: pointer;
 }
 .videos-write {    
     width: 110px;
@@ -531,7 +571,7 @@ footer {
 .comment-box {
     border: 1px solid #97B9B9;
     margin-bottom: 20px;
-    width: 49.3%;
+    width: 97%;
     border-radius: 20px;
     padding: 30px;
 }
@@ -550,6 +590,38 @@ footer {
 }
 .comment-bundle {
     margin-bottom: 1.5rem !important;
+}
+
+.comments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items:center;
+}
+
+.comment-form {
+    margin-bottom: 1.5rem;
+    height: 40px;
+    display: none;
+}
+.comment-input {
+    width: 96%;
+    border: 1px solid #333D3D;
+    height: 100%;
+    padding: 10px 40px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+.comment-btn {
+    width: 3.2%;
+    height: 100%;
+    border: 1px solid #333D3D;
+    background-color: #333D3D;
+    border-radius: 15px;
+    padding: 12px;
+    font-size: 0.8rem;
+}
+.comment-btn > i {
+    color: white !important;
 }
 
 /* 비디오 페이지 */
@@ -588,11 +660,15 @@ footer {
     font-size: 0.9rem;
 }
 
-
 /* 동영상 모음 페이지*/
 #videos {
     margin-top: 150px;
     margin-bottom: 200px;
+}
+.videos-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 /* 업로드 */
@@ -607,7 +683,7 @@ footer {
     font-weight: bold;
 }
 .upload-box{
-    width: 30%;
+    width: 50%;
 }
 .upload-submit {
     display: flex;

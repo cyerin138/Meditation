@@ -13,37 +13,22 @@
 </head>
 
 <body>
-    <section id="upload">
-        <div class="upload-wrap container-12">
-            <form action="<%=request.getContextPath()%>/video" method="post">
-			<input type="hidden" name="category" value="<%=category%>">
-            
-            <div class="d-flex align-items-center justify-content-between upload-content">
+    <section id="videos">
+        <div class="videos-wrap container-12" style="min-height: 100vh;">
+            <div class="videos-imgs mt-4">
 
-                <p class="upload-title m-0">전생체험 영상 업로드</p>
-                <div class="upload-box d-flex justify-content-between align-items-center">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input upload-file" 
-                        name="video" id="validatedCustomFile" required>
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">영상 가져오기</label>
-                      </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required>
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">이미지 가져오기</label>
-                      </div>
-                    <button type="submit" class="upload-submit ml-3">
-                       		업로드 
-                        <div class="d-flex align-items-center justify-content-center ml-2">
 
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </div>
-                    </button>
-                </div>
+
+                <a href="" class="videos-img"> 
+                    <img src="" alt="video-img">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="img-title">명상이란 무엇인가ddddddddddd</div>
+                        <div class="video-date m-0">2022-03-23</div>
+                    </div>
+                </a>
+
             </div>
-            <input type="text" name="title" class="upload-text mb-3" placeholder="TITLE"> <br>
-            <textarea name="text" id="textArea" cols="40" rows="10" placeholder="CONTENT" class="upload-textarea w-100"></textarea>
 
-        </form>
         </div>
     </section>
 
