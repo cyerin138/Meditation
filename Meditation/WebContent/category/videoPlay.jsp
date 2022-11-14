@@ -14,7 +14,7 @@
             			int num = Integer.parseInt(request.getParameter("num"));
 						VideoVO numVO =  viDao.getVideo(num);
 				%>
-            <video src="<%=numVO.getVideoUrl()%>" class="video-play"></video>
+            <video src="<%=request.getContextPath()%>/resources/upload/<%=numVO.getVideoUrl()%>" class="video-play"></video>
             <div class="video-content">
                 <div class="video-top d-flex align-items-center justify-content-between">
                     <p class="video-title"><%=numVO.getTitle()%></p>
@@ -58,7 +58,7 @@
 							
 				%>
                     <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=category%>" class="recommend-img">
-                        <img src="<%= vo.getImgUrl()%>" alt="video-img">
+                        <img src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>" alt="videos-img">
                         <div class="d-flex align-items-center justify-content-between">
 							<div class="img-title"><%= vo.getTitle()%></div>
 							<div class="video-date m-0"><%= vo.getViDate()%></div>
