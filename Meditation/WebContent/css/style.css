@@ -535,7 +535,7 @@ footer {
 
 /* 추천 동영상 */
 #recommend {
-    height: 450px;
+    height: 500px;
 }
 .recommend-title , .videos-title{
     font-size: 2rem;
@@ -721,19 +721,23 @@ footer {
     margin-bottom: 8px;
 }
 .video-content {
-    padding: 20px 45px;
+    padding: 20px 35px;
 }
 .video-person {
-    width: 150px;
+    width: 190px;
 }
 .video-name {
     margin-bottom: 10px;
+    white-space: pre;
+    text-align: right;
+    width: 96px;
 
 }
 .video-date {
     color: #72CECC;
     margin-bottom: 10px;
     font-size: 0.9rem;
+    white-space: pre;
 }
 .video-box {
     position: relative;

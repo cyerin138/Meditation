@@ -50,14 +50,12 @@
 
             	<%
             			String category = request.getParameter("category");
-						ArrayList<VideoVO> caList =  viDao.fourVideo(category);
+						ArrayList<VideoVO> caList =  viDao.recommend(category, num);
 				%>
-
                 <div class="recommend-imgs mt-4">
                 
                 <%
 				for(VideoVO vo : caList){
-						if(num != vo.getViNum()) {
 							
 				%>
                     <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=category%>" class="recommend-a">
@@ -69,7 +67,9 @@
 							<div class="img-date m-0"><%= vo.getViDate()%></div>
 						</div>
                     </a>
-                 <% } }%>
+                 <%
+				}
+				%>
                 </div>
         </div>
     </section>

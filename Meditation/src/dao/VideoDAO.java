@@ -31,6 +31,8 @@ public class VideoDAO {
 	final String SEARCH_VIDEO = "select * from video where (title like ? or text like ?) order by vi_date desc";
 	// 비디오 4개 띄우기
 	final String SELECT_FOUR = "select * from (select * from video where category = ? order by vi_date desc) where rownum <= 4";
+	// 비디오 4개 띄우기(현재 비디오 제외)
+	final String RECOMMEND = "select * from (select * from video where category = ? and not vi_num in(?) order by vi_date desc) where rownum <= 4";
 
 	// 비디오 추가
 	public int insertVideo(VideoVO vo) {
@@ -188,6 +190,41 @@ public class VideoDAO {
 				JDBCUtil.close(con, pstmt, rs);
 			}
 
+			return list;
+		}
+		
+		// 비디오 4개 띄우기(현재 	비디오 거르기)
+		public ArrayList<VideoVO> recommend(String category, int num) {
+			ArrayList<VideoVO> list = new ArrayList<VideoVO>();
+			
+			try {
+				con = JDBCUtil.getConnection();
+				pstmt = con.prepareStatement(RECOMMEND);
+				pstmt.setString(1, category);
+				pstmt.setInt(2, num);
+				rs = pstmt.executeQuery();
+				
+				while (rs.next()) {
+					int viNum = rs.getInt("vi_num");
+					String viCategory = rs.getString("category");
+					String name = rs.getString("name");
+					Date viDate = rs.getDate("vi_date");
+					String title = rs.getString("title");
+					String text = rs.getString("text");
+					String videoUrl = rs.getString("video_url");
+					String imgUrl = rs.getString("img_url");
+					
+					VideoVO vo = new VideoVO(viNum, viCategory, name, viDate, title, text, videoUrl, imgUrl);
+					
+					list.add(vo);
+					
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				JDBCUtil.close(con, pstmt, rs);
+			}
+			
 			return list;
 		}
 
