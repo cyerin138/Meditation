@@ -493,30 +493,6 @@ footer {
     line-height: 100px;    
 }
 
-.main-circle {
-    transform: translate(-50% ,-50%);
-    left: 50%;
-    top: 50%;
-    width: 700px;
-    height: 700px;
-    text-align: center;
-    z-index: -10;
-    border-radius: 100%;
-    border: 1px solid #333D3D;
-    opacity: 1;
-}
-.sub-circle {
-    opacity: 1;
-    transform: translate(-50% ,-50%);
-    left: 50%;
-    top: 50%;
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    z-index: -10;
-    border-radius: 100%;
-    border: 1px solid #333D3D;
-}
 
 /* 라인 */
 .line {

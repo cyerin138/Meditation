@@ -1,0 +1,36 @@
+
+.main-circle {
+    transform: translate(-50% ,-50%);
+    left: 50%;
+    top: 50%;
+    z-index: -10;
+    border-radius: 100%;
+    border: 1px solid #333D3D;
+    position: absolute;
+}
+.circle-1 {
+    width: 720px;
+    height: 720px;
+    opacity: 0.7;
+}
+.circle-2 {
+    width: 600px;
+    height: 600px;
+    opacity: 0.1;
+}
+.circle-3 {
+    width: 850px;
+    height: 850px;
+    opacity: 0.5;
+}
+.circle-4 {
+    width: 950px;
+    height: 950px;
+    opacity: 0.1;
+}
+.sub-circle {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333D3D;
+    border-radius: 100%;
+}
