@@ -16,6 +16,7 @@ create table video(
 	video_url varchar2(150),
 	img_url varchar2(150)
 );
+insert into video values(video_seq.nextval,'M','홍길동',default,'명상 이 무엇인가','에 대한 내용입니다', 'url', 'url');
 
 create sequence video_seq;
 

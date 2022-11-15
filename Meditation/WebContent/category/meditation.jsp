@@ -22,6 +22,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="main-circle position-absolute">
+                    <div class="sub-circle position-absolute"></div>
+                </div>
             </div>
         </section>
 
@@ -151,6 +154,26 @@
 			audio.play();
 			
     	}, 1000);
+    	
+    	
+    	const CONTENT =  $('.main-content');
+    	
+    	// CONTENT.animate({width : 1000, height : 1000},1000,
+    	// function(){
+    	// 	CONTENT.css({'border' :'none' });
+    	// }).animate({
+    	// 	height : 400, width : 400	
+    	// }, 500,function(){
+    		
+    	// }).animate({
+    	// 	height : 700, width : 700
+    	// }, 1000, function(){    		
+    	// 	CONTENT.css({'border' :'1px solid #333D3D' });
+    	// })
+    	
+    	
+    	
+    	
 	}
     
     function check() {
