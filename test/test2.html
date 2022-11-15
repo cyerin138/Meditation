@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>해피CGI</title>
+
+<style type="text/css">
+    #screen {
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    #screen img {
+        position: absolute;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+        left: -1000px;
+    }
+</style>
+
+<script type="text/javascript">
+var xm = 0;
+var ym = 0;
+var nx = 0;
+var ny = 0;
+var nw = 0;
+var nh = 0;
+function resize() {
+    with(document.getElementById("screen")){
+        nx = offsetLeft;
+        ny = offsetTop;
+        nw = offsetWidth;
+        nh = offsetHeight;
+    }
+}
+onresize = resize;
+
+document.onmousemove = function(e){
+    if(window.event) e=window.event;
+    xm = (e.x || e.clientX) - nx;
+    ym = (e.y || e.clientY) - ny;
+    R = 1;
+}
+// ---------------------
+var Nb = 17;
+var R = 0;
+var C = 0;
+var object = new Array();
+
+function makedoot(N){
+    this.ds = document.createElement("img");
+    this.ds.src = document.getElementById("glob").src;
+    document.getElementById("screen").appendChild(this.ds);
+    this.r = (N * 100 / Nb);
+    this.x = -1000;
+    this.y = 0;
+    this.Ge = function (){
+        with (this){
+            if (r >= 100){
+                R--;
+                if (R<0){
+                    x = Math.random() * nw;
+                    y = Math.random() * nh;
+                }
+                else {
+                    x = xm;
+                    y = ym;
+                }
+                r = 0;
+                ds.style.zIndex = C++;
+            }
+            r += 2;
+            with (ds.style){
+                left = Math.round(x-r)+"px";
+                top = Math.round(y-r)+"px";
+                width = height = Math.round(r * 2)+"px";
+            }
+            if (ds.filters != undefined) ds.filters.item(0).opacity = Math.round(102 - r);
+            else ds.style.opacity = (102 - r) / 100;
+        }
+    }
+}
+
+
+onload = function() {
+    resize();
+    for (i=0; i<Nb; i++) object[i] = new makedoot(i);
+    setInterval("for(i in object)object[i].Ge();", 16);
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="screen"></div>
+
+<img id="glob" src="resources/imgs/logo.png" style="visibility: hidden">
+
+</body>
+</html>

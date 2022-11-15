@@ -57,11 +57,63 @@
             }, 1000 / 30);
 
         }
+
+
+
+
+
+
+
+
+
+                    // const SUBCIRCLE1 = $('.sub-circle-1');
+            // const SUBCIRCLE2 = $('.sub-circle-2');
+
+            // let angle1 = 0;
+            // let angle2 = 0;
+
+
+            // setInterval(function () {
+
+
+            //     let angleLeft = 2000 + 350 * Math.cos(angle1);
+            //     let angleTop = 500 + 350 * Math.sin(angle1);
+            //     SUBCIRCLE1.css({
+            //         'left': angleLeft + 'px', 
+            //         'top' : angleTop + 'px'
+            //     })
+
+            //     angle1 += 0.1;
+
+            // }, 3000 / 100);
     </script>
+    <style>
+        .sub-circle {
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    left: 50%;
+    top: 50%;
+    width: 15px;
+    opacity: 0.5;
+    height: 15px;
+    border: 1px solid #333D3D;
+    border-radius: 100%;
+}
+.circle-center {
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    left: 50%;
+    top: 50%;
+
+}
+    </style>
 
 </head>
 
 <body>
+    <div class="sub-circle-1 sub-circle"></div>
+    <div class="sub-circle-2 sub-circle"></div>
+    <div class="circle-center"></div>
 
     <h1 id="sun">●</h1>
 
