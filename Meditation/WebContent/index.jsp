@@ -89,10 +89,11 @@
         <!-- 인트로 끝 -->
 
         <script>
-            $(()=>{
+        
+        window.onload = function(){
                 setTimeout(function () {
                     $("#intro").fadeOut('slow');
                 }, 4500);
-            })
+ 		}
         </script>
         <%@ include file="footer.jsp" %>

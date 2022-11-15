@@ -15,7 +15,7 @@
 						VideoVO numVO =  viDao.getVideo(num);
 				%>
                 <div class="video-box">
-                    <video src="<%=request.getContextPath()%>/resources/upload/<%=numVO.getVideoUrl()%>" class="video-play"></video>
+                    <video src="<%=request.getContextPath()%>/resources/upload/<%=numVO.getVideoUrl()%>" class="video-play" autoplay controls></video>
                 </div>
             <div class="video-content">
                 <div class="video-top d-flex align-items-center justify-content-between">
@@ -109,39 +109,52 @@
 					}
 				%>
 			</div>
-                <div class="comment-form" name="commentForm">
-                    <form action="<%=request.getContextPath()%>/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
-                    	<input type="hidden" value="<%=num%>" class="viNum">
-                        <input type="text" name="commentInput" class="comment-input" id="">
-                        <button onclick="commentSubmit()" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                <div class="comment-form" >
+                    <form action="<%=request.getContextPath()%>/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post" name="commentForm">
+                    	<input type="hidden" value="<%=num%>" class="viNum" name = "viNum">
+                        <input type="text" name="text" class="comment-input" id="">
+                        <button type="button" onclick="commentSubmit()" class="comment-btn" ><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
-                <div class="comments">
-                   <%
-						CommentDAO coDao = new CommentDAO();
-						ArrayList<CommentVO> coList =  coDao.getComment(num);
-						for(CommentVO vo : coList){
+                <%
+			
+			CommentDAO coDao = new CommentDAO();
+			ArrayList<CommentVO> coList = coDao.getComment(num);
+			
+			if (coList.size() == 0) {
+				%>
+					<h3 class="text-center comment-no">댓글이 없습니다</h3>
+				<%
+			}
+			
+			%>
+			<div class="comments">
+					<%										
+					for (CommentVO vo : coList) {
+						
 					%>
-                    <div class="comment-box">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="comment-name"><%= vo.getName()%></p>
-                            <p class="comment-date"><%= vo.getCoDate()%></p>
-                        </div>
-                        <p class="comment-text"><%= vo.getText()%></p>
-                    </div>  
-                    <%} %>
-    
-                </div>
+				<div class="comment-box">
+					<div class="d-flex align-items-center justify-content-between">
+						<p class="comment-name"><%=vo.getName()%></p>
+						<p class="comment-date"><%=vo.getCoDate()%></p>
+					</div>
+					<p class="comment-text"><%=vo.getText()%></p>
+				</div>
+				<%
+					}
+				%>
+
+			</div>
             </div>
         </section>
     <script>
-    function check() {
-		alert('로그인을 먼저 해주십시오');
-	}
+    	function check() {
+			alert('로그인을 먼저 해주십시오');
+		}    	
     
         let count = false;
         function commentClick() {
-            if(count) {
+            if(count == true) {
                 count = false;
                 $('.comment-form').hide();
                 
@@ -154,12 +167,20 @@
         }
         
         function commentSubmit() {
-            let comment = confirm("정말 이 댓글을 올리시겠습니까?");        
-    
-            if(comment) {
+            let comment = confirm("정말 이 댓글을 올리시겠습니까?");
+            
+            if(comment == true) {
                 $('.comment-form').hide();
                 document.commentForm.submit();
+                $('.comment-input').val("");
+                count = false;
+            } else {
+                $('.comment-form').hide();
+                $('.comment-input').val("");
+            	alert("댓글 작성이 취소 되었습니다")
+            	 count = false;
             }
+            
         }
     </script>
 <%@ include file="../footer.jsp" %>

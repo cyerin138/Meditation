@@ -19,7 +19,7 @@
 
 				if (caList.size() == 0) {
 					%>
-						<h1 class="text-center font-weight-bold" style="padding-top:300px;">검색 결과가 없습니다</h1>
+						<h1 class="text-center font-weight-bold" style="padding-top:300px; color: #97B9B9;">검색 결과가 없습니다</h1>
 					<%
 				}
 				%>

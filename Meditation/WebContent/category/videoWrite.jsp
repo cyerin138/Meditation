@@ -29,7 +29,7 @@
                 <div class="upload-box d-flex justify-content-between align-items-center">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input upload-file" 
-                        name="video" id="validatedCustomFile" required accept=".mp4, .mkv, .avi">
+                        name="video" id="validatedCustomFile" required accept=".mp4, .mkv">
                         <label class="custom-file-label upload-label" for="validatedCustomFile">Choose file...</label>
                       </div>
                     <div class="custom-file ml-3">

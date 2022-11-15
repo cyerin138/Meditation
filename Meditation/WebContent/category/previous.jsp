@@ -117,12 +117,24 @@
 					</button>
 				</form>
 			</div>
-			<div class="comments">
-				<%
-					CommentDAO coDao = new CommentDAO();
-					ArrayList<MCommentVO> coList = coDao.getMain("P");
-					for (MCommentVO vo : coList) {
+			
+			<%
+			
+			CommentDAO coDao = new CommentDAO();
+			ArrayList<MCommentVO> coList = coDao.getMain("P");
+			
+			if (coList.size() == 0) {
 				%>
+					<h3 class="text-center comment-no">댓글이 없습니다</h3>
+				<%
+			}
+			
+			%>
+			<div class="comments">
+					<%										
+					for (MCommentVO vo : coList) {
+						
+					%>
 				<div class="comment-box">
 					<div class="d-flex align-items-center justify-content-between">
 						<p class="comment-name"><%=vo.getName()%></p>
@@ -140,31 +152,48 @@
 
 </div>
 <script>
+	window.onload = function(){
+		let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/전생체험.mp3`);
+		audio.volume = 1;
+		setTimeout(function() {    		
+			audio.play();
+			
+    	}, 2000);
+	}
+
 	function check() {
 		alert('로그인을 먼저 해주십시오');
 	}
 
 	let count = false;
-	function commentClick() {
-		if (count) {
-			count = false;
-			$('.comment-form').hide();
-
-		} else {
-			count = true;
-			$('.comment-form').show();
-			$('.comment-input').focus();
-		}
-
-	}
-
-	function commentSubmit() {
-		let comment = confirm("정말 이 댓글을 올리시겠습니까?");
-
-		if (comment) {
-			$('.comment-form').hide();
-			document.commentForm.submit();
-		}
-	}
+    function commentClick() {
+        if(count == true) {
+            count = false;
+            $('.comment-form').hide();
+            
+        } else {            
+            count = true;
+            $('.comment-form').show();
+            $('.comment-input').focus();
+        }
+        
+    }
+    
+    function commentSubmit() {
+        let comment = confirm("정말 이 댓글을 올리시겠습니까?");
+        
+        if(comment == true) {
+            $('.comment-form').hide();
+            document.commentForm.submit();
+            $('.comment-input').val("");
+            count = false;
+        } else {
+            $('.comment-form').hide();
+            $('.comment-input').val("");
+        	alert("댓글 작성이 취소 되었습니다")
+        	 count = false;
+        }
+        
+    }
 </script>
 <%@ include file="../footer.jsp"%>
