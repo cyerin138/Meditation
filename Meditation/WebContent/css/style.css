@@ -561,6 +561,9 @@ footer {
     display: block;
     width: 93%;
 }
+.videos-a {
+    margin-bottom: 70px;
+}
 .recommend-img > img , .videos-img > img {
     position: absolute;
     top: 50%;
