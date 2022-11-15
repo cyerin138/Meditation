@@ -10,7 +10,8 @@
 <section id="videos">
 	<div class="videos-wrap container-12" style="min-height: 100vh;">
 		<div class="d-flex align-items-center justify-content-start">
-			<%
+			<%	
+				request.setCharacterEncoding("UTF-8");
 				String category = request.getParameter("category");
 				
 				String categoryName = "";

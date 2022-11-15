@@ -9,7 +9,8 @@
     <section id="video">
         <div class="video-wrap container-12">
         
-            	<%
+            	<%		
+            			request.setCharacterEncoding("UTF-8");
 						VideoDAO viDao = new VideoDAO();
             			int num = Integer.parseInt(request.getParameter("num"));
 						VideoVO numVO =  viDao.getVideo(num);

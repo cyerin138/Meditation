@@ -44,6 +44,7 @@
 			</div>
 
 			<%
+				request.setCharacterEncoding("UTF-8");
 				VideoDAO viDao = new VideoDAO();
 				ArrayList<VideoVO> list = viDao.fourVideo("P");
 			%>

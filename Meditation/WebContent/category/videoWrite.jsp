@@ -5,6 +5,7 @@
         <div class="upload-wrap container-12">
             <form action="<%=request.getContextPath()%>/video" method="post" name="videoForm" enctype="multipart/form-data">
             <%
+        		request.setCharacterEncoding("UTF-8");
 				String category = request.getParameter("category");
 				
 				String categoryName = "";

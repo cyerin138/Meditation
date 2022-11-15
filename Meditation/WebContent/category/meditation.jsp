@@ -44,7 +44,8 @@
                         <span></span>
                     </a>
                 </div>
-                <%
+                <%		
+            			request.setCharacterEncoding("UTF-8");
 						VideoDAO viDao = new VideoDAO();
 						ArrayList<VideoVO> viList =  viDao.fourVideo("M");
 				%>

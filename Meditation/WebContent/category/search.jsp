@@ -7,6 +7,7 @@
 <%@ include file="../header2.jsp"%>
 
 <%
+	request.setCharacterEncoding("UTF-8");
 	String search = request.getParameter("search");
 %>
 
