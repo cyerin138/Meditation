@@ -14,7 +14,9 @@
             			int num = Integer.parseInt(request.getParameter("num"));
 						VideoVO numVO =  viDao.getVideo(num);
 				%>
-            <video src="<%=request.getContextPath()%>/resources/upload/<%=numVO.getVideoUrl()%>" class="video-play"></video>
+                <div class="video-box">
+                    <video src="<%=request.getContextPath()%>/resources/upload/<%=numVO.getVideoUrl()%>" class="video-play"></video>
+                </div>
             <div class="video-content">
                 <div class="video-top d-flex align-items-center justify-content-between">
                     <p class="video-title"><%=numVO.getTitle()%></p>
@@ -57,11 +59,13 @@
 						if(num != vo.getViNum()) {
 							
 				%>
-                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=category%>" class="recommend-img">
-                        <img src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>" alt="videos-img">
+                    <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=category%>" class="recommend-a">
+                        <div class="recommend-img">
+                            <img src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>" alt="videos-img">
+                        </div>
                         <div class="d-flex align-items-center justify-content-between">
 							<div class="img-title"><%= vo.getTitle()%></div>
-							<div class="video-date m-0"><%= vo.getViDate()%></div>
+							<div class="img-date m-0"><%= vo.getViDate()%></div>
 						</div>
                     </a>
                  <% } }%>

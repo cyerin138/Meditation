@@ -330,11 +330,15 @@ footer {
 /* 인트로 */
 #intro {
     position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    left: 50%;
+    display: block;
     height: 100vh;
+    width: 100vw;
     background-color: white;
+    transform: translate(-50%, -50%);
 }
 .intro-wrap {
     width: 100%;
@@ -538,14 +542,36 @@ footer {
     top: 50%;
     border-bottom: 1px solid #333D3D;
 }
-.recommend-img, .videos-img {
-    background-color: gray;
-    border-radius: 20px;
+.recommend-a, .videos-a {
     height: 180px;
     display: block;
     width: 97%;
-    
 }
+.recommend-img, .videos-img {
+    background-color: gray;
+    border-radius: 10px;
+    height: 100%;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.recommend-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items:center;
+}
+.recommend-img > img , .videos-img > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+.recommend-a > div, .a > div {
+    margin-top: 10px;
+} 
 
 /* 댓글 */
 #comment {
@@ -636,11 +662,13 @@ footer {
     width: 100%;
 }
 .video-play {
-    background-color: gray;
+
     width: 100%;
-    height: 600px;
-    border-radius: 20px;
-    margin-top: 120px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .video-title {
     font-size: 1.8rem;
@@ -661,6 +689,15 @@ footer {
     color: #72CECC;
     margin-bottom: 10px;
     font-size: 0.9rem;
+}
+.video-box {
+    position: relative;
+    background-color: gray;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    margin-top: 120px;
+    overflow: hidden;
 }
 
 /* 동영상 모음 페이지*/
@@ -724,4 +761,12 @@ footer {
 .upload-textarea {
     border-radius: 10px;        
     padding: 20px 40px;
+}
+
+.img-title {
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: pre;
+    width: 220px;
+    overflow: hidden;
 }

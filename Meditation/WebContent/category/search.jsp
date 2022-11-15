@@ -30,11 +30,13 @@
 				for (VideoVO vo : caList) {
 			%>
 
-			<a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%=vo.getViNum()%>&category=<%=vo.getCategory()%>" class="videos-img"> 
-				<img src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>" alt="videos-img">
+			<a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%=vo.getViNum()%>&category=<%=vo.getCategory()%>" class="videos-a"> 
+				<div class="videos-img">
+					<img src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>" alt="videos-img">
+				</div>
 				<div class="d-flex align-items-center justify-content-between">
 					<div class="img-title"><%= vo.getTitle()%></div>
-					<div class="video-date m-0"><%= vo.getViDate()%></div>
+					<div class="img-date m-0"><%= vo.getViDate()%></div>
 				</div>
 			</a>
 			<%
