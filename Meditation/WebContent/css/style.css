@@ -565,7 +565,7 @@ footer {
     border-bottom: 1px solid #333D3D;
 }
 .recommend-img, .videos-img {
-    background-color: gray;
+    background-color: black;
     border-radius: 10px;
     height: 100%;
     display: block;
@@ -590,8 +590,8 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: auto;
+    width:auto;
+    height: 100%;
     transform: translate(-50%, -50%);
 }
 .recommend-a > div, .videos-a > div {

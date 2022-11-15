@@ -8,6 +8,7 @@
 				<div class="member-content text-center">
 					<div class="position-absolute">
                         <%
+                    	request.setCharacterEncoding("UTF-8");
                         String id = request.getParameter("id");
                         %>
 						

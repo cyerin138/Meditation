@@ -93,7 +93,7 @@
         window.onload = function(){
                 setTimeout(function () {
                     $("#intro").fadeOut('slow');
-                }, 4500);
+                }, 3500);
  		}
         </script>
         <%@ include file="footer.jsp" %>
