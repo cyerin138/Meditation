@@ -120,7 +120,10 @@ header button {
     position: relative;
     overflow: hidden;
 }
-.visual-wrap > img {
+.slide {
+    position: absolute;
+}
+.slide > img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -129,6 +132,9 @@ header button {
     transform: translate(-50%, -50%);
     filter: brightness(80%);
     z-index: -10;
+}
+.slide > img:first-child {
+    top:  0;
 }
 .visual-wrap > .position-absolute {
     z-index: 10;

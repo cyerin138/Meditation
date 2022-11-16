@@ -27,9 +27,15 @@
                     </div>
                     <p class="second mt-3">02</p>
                 </div>
-                <img src="./resources/imgs/forest1.jpg" alt="visual">
-                <img src="./resources/imgs/forest2.jpg" alt="visual">
-                <img src="./resources/imgs/forest3.jpg" alt="visual">
+                <div class="slide">
+                    <img src="./resources/imgs/forest1.jpg" alt="visual">
+                </div>
+                <div class="slide">                    
+                    <img src="./resources/imgs/forest2.jpg" alt="visual">
+                </div>
+                <div class="slide">
+                    <img src="./resources/imgs/forest3.jpg" alt="visual">
+                </div>
             </div>
         </section>
         <!-- 비주얼 끝 -->
@@ -79,7 +85,7 @@
         <section id="intro">
             <div class="intro-wrap text-center position-relative">
                 <div class="position-absolute">
-                                   
+
                     <img src="./resources/imgs/headphone.png" alt="헤드폰" class="headphone"> <br>
                     <img src="./resources/imgs/sound.gif" alt="음파" class="sound">
                     <p>몰입감을 위해 이어폰을 착용 해주세요</p>
@@ -89,11 +95,40 @@
         <!-- 인트로 끝 -->
 
         <script>
-        
-        window.onload = function(){
+
+            window.onload = function () {
                 setTimeout(function () {
                     $("#intro").fadeOut('slow');
                 }, 3500);
- 		}
+            }
+            var slide = $('.slide> img')
+            var sno = 0;
+            var eno = slide.length - 1;
+
+            var timer = setInterval("autoslide()", 3000)
+
+            function autoslide() {
+                $(slide[sno]).stop().animate({
+                    top: "300px"
+                }, 1000, function () {
+                    $(this).css({ top: "-300px" })
+                })
+                sno++;
+                if (sno > eno) {
+                    sno = 0;
+                }
+                $(slide[sno]).stop().animate({
+                    top: "0"
+                }, 1000)
+            }
+
+            $('.slide').hover(
+
+                function () {
+                    clearInterval(timer)
+                }, function () {
+                    timer = setInterval("autoslide()", 3000);
+                }
+            )
         </script>
         <%@ include file="footer.jsp" %>
