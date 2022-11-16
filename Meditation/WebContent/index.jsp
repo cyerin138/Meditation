@@ -107,10 +107,9 @@
 
         <script>
 
-            window.onload = function () {
-                let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/forest.mp3`);
-            	audio.volume = 1;
-            	
+            let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/forest.mp3`);
+            audio.volume = 1;
+            window.onload = function () {            	
                 setTimeout(function () {        			
                 	$("#intro").fadeOut('slow');
                 	audio.play();

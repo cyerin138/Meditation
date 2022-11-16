@@ -44,7 +44,8 @@
                                     </div>
                                     <div class="search-text">
 
-                                        <form action="<%=request.getContextPath()%>/category/search.jsp" method="post" name="searchForm">
+                                        <form action="<%=request.getContextPath()%>/category/search.jsp" method="post"
+                                            name="searchForm">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <input type="text" name="search" id="search" onkeyup="enterkey()">
                                                 <div class="search" onclick="searchBtn()">
@@ -54,13 +55,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <%
-                                
-                                MemberVO login=(MemberVO) session.getAttribute("loginOK"); 
-                                
-                                if(login==null) { 
-                                
-                                %>
+                                <% MemberVO login=(MemberVO) session.getAttribute("loginOK"); if(login==null) { %>
 
                                     <div class="login">
                                         <a href="<%=request.getContextPath()%>/member/login.jsp"
@@ -100,7 +95,8 @@
                                         <% } %>
                             </div>
                         </div>
-                        <script>
+                        <script>                          
+
                             function logout() {
                                 let bool = confirm('정말 로그아웃 하시겠습니까?')
                                 if (bool) {
@@ -116,7 +112,7 @@
                                 $('.search-btn').hide();
                                 $('.search-text input').focus();
                             }
-                            
+
                             function enterkey() {
                                 if (window.event.keyCode == 13) {
                                     document.searchForm.submit();
@@ -124,12 +120,12 @@
                                     $('.search-btn').show();
                                 }
                             }
-                            
+
                             function searchBtn() {
                                 document.searchForm.submit();
                                 $('.search-text').hide();
                                 $('.search-btn').show();
-                                
+
                             }
                         </script>
                     </div>
