@@ -13,10 +13,15 @@
                         <div class="mouse-wheel"></div>
                     </div>
                     <div class="position-relative">
-
-                        <div class="arrow-down"></div>
-                        <div class="arrow-down"></div>
-                        <div class="arrow-down"></div>
+                        <div class="mouse-move" style="animation-delay: -0.1s;">
+                            <div class="arrow-down" ></div>
+                        </div>
+                        <div class="mouse-move"  style="animation-delay: -0.5s;">
+                            <div class="arrow-down"></div>
+                        </div>
+                        <div class="mouse-move" style="animation-delay: -1s;">
+                            <div class="arrow-down" ></div>
+                        </div>
                     </div>
                 </div>
                 <div class="visual-scroll position-absolute">
@@ -27,14 +32,20 @@
                     </div>
                     <p class="second mt-3">02</p>
                 </div>
-                <div class="slide">
-                    <img src="./resources/imgs/forest1.jpg" alt="visual">
+                <div class="slide" style="opacity: 1;">
+                    <div class="position-relative">
+                        <img src="./resources/imgs/forest1.jpg" alt="visual">
+                    </div>
                 </div>
-                <div class="slide">                    
-                    <img src="./resources/imgs/forest2.jpg" alt="visual">
+                <div class="slide">
+                    <div class="position-relative">
+                        <img src="./resources/imgs/forest3.jpg" alt="visual">
+                    </div>
                 </div>
                 <div class="slide">
-                    <img src="./resources/imgs/forest3.jpg" alt="visual">
+                    <div class="position-relative">
+                        <img src="./resources/imgs/forest.png" alt="visual">
+                    </div>
                 </div>
             </div>
         </section>
@@ -97,38 +108,32 @@
         <script>
 
             window.onload = function () {
-                setTimeout(function () {
-                    $("#intro").fadeOut('slow');
+                let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/forest.mp3`);
+            	audio.volume = 1;
+            	
+                setTimeout(function () {        			
+                	$("#intro").fadeOut('slow');
+                	audio.play();
                 }, 3500);
+                
             }
-            var slide = $('.slide> img')
-            var sno = 0;
-            var eno = slide.length - 1;
+            let slide = $('.slide')
+            let sno = 0;
+            let eno = slide.length - 1;
 
-            var timer = setInterval("autoslide()", 3000)
+            let timer = setInterval("autoslide()", 6000)
 
             function autoslide() {
                 $(slide[sno]).stop().animate({
-                    top: "300px"
-                }, 1000, function () {
-                    $(this).css({ top: "-300px" })
-                })
+                    opacity: 0
+                }, 2000)
                 sno++;
                 if (sno > eno) {
                     sno = 0;
                 }
                 $(slide[sno]).stop().animate({
-                    top: "0"
-                }, 1000)
-            }
-
-            $('.slide').hover(
-
-                function () {
-                    clearInterval(timer)
-                }, function () {
-                    timer = setInterval("autoslide()", 3000);
-                }
-            )
+                    opacity: 1
+                }, 2000)
+            }  
         </script>
         <%@ include file="footer.jsp" %>
