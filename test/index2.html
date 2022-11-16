@@ -14,7 +14,7 @@
         body {
             color: #fff !important;
             font-size: 16px;
-            background-image: url(./resources/imgs/forest1.jpg);
+            background-image: url(./resources/imgs/forest9.jpg);
             background-size: cover;
             background-position: 50% 0;
             height: 100%;
@@ -29,32 +29,28 @@
         <div class="main-wrap position-relative">
             <div class="position-absolute main-content">
                 <div class="position-relative w-100 h-100">
-                    <div class="main-box">
+                    <!-- <div class="main-box">
                         <div class="main-text">숨을 내쉬십시오.</div>
                         <div class="main-count">
                             <p class="main-tt">앞으로</p>
                             <p class="main-time">10초</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <!-- <script src="./js/jquery.ripples-master/dist/jquery.ripples-min.js"></script> -->
 
 
     <script>
-        // $('body').ripples({
-        //     resolution: 512,
-        //     dropRadius: 20,
-        //     perturbance: 0.04,
-        // });
-        // window.onload = function () {
-        //     // $('body').ripples("drop", x, y, radius, strength)
-
-        // }
-
+        $('body').ripples({
+            resolution: 512,
+            dropRadius: 20,
+            perturbance: 0.04,
+        });
 
 
 
