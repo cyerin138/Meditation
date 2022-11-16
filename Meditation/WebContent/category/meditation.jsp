@@ -22,18 +22,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-circle position-absolute">
-                    <div class="sub-circle position-absolute"></div>
+                <div class="circle-box">
+                    <div class="circle-1 main-circle"></div>
+                    <div class="circle-2 main-circle"></div>
+                    <div class="circle-3 main-circle"></div>
+                    <div class="circle-4 main-circle"></div>
                 </div>
             </div>
         </section>
 
         <!-- 추천 동영상 -->
-        <div class="line d-flex align-items-center justify-content-center">
-            <div class="circle"></div>
-            <div class="path"></div>
-            <div class="circle"></div>
-        </div>
+
         <section id="recommend">
             <div class="recommend-wrap container-12">
                 <div class="d-flex align-items-center justify-content-start">
@@ -70,11 +69,6 @@
             </div>
         </section>
 
-        <div class="line d-flex align-items-center justify-content-center">
-            <div class="circle"></div>
-            <div class="path"></div>
-            <div class="circle"></div>
-        </div>
         <!-- 댓글 -->
         <section id="comment">
             <div class="comment-wrap container-12">
@@ -156,22 +150,33 @@
 			
     	}, 1000);
     	
-    	
-    	const CONTENT =  $('.main-content');
-    	
-    	// CONTENT.animate({width : 1000, height : 1000},1000,
-    	// function(){
-    	// 	CONTENT.css({'border' :'none' });
-    	// }).animate({
-    	// 	height : 400, width : 400	
-    	// }, 500,function(){
-    		
-    	// }).animate({
-    	// 	height : 700, width : 700
-    	// }, 1000, function(){    		
-    	// 	CONTENT.css({'border' :'1px solid #333D3D' });
-    	// })
-    	
+    	    const CIRCLE1 = $('.circle-1');
+            const CIRCLE2 = $('.circle-2');
+            const CIRCLE3 = $('.circle-3');
+            const CIRCLE4 = $('.circle-4');
+
+            setInterval(function () {
+                CIRCLE1.animate({ width: 720, height: 720 , opacity :0.3}, 2000, 'swing'
+                    ).animate({ width:900, height: 900 , opacity :0.1}, 2000, 'swing'
+                    ).animate({ width:950, height: 950 , opacity :0.2}, 2000, 'swing'
+                    ).animate({ width:600, height: 600 , opacity :0.4}, 2000, 'swing'
+                    )
+                CIRCLE2.animate({ width: 900, height:900 , opacity :0.1}, 2000, 'swing'
+                    ).animate({ width:950, height: 950 , opacity :0.2}, 2000, 'swing'
+                    ).animate({ width:600, height: 600 , opacity :0.4}, 2000, 'swing'
+                    ).animate({ width:720, height: 720 , opacity :0.3}, 2000, 'swing'
+                    )
+                CIRCLE3.animate({ width: 950, height: 950 , opacity :0.2}, 2000, 'swing'
+                    ).animate({ width:600, height: 600 , opacity :0.4}, 2000, 'swing'
+                    ).animate({ width:720, height: 720 , opacity :0.3}, 2000, 'swing'
+                    ).animate({ width:900, height: 900 , opacity :0.1}, 2000, 'swing'
+                    )
+                CIRCLE4.animate({ width: 600, height: 600 , opacity :0.4}, 2000, 'swing'
+                    ).animate({ width:720, height: 720 , opacity :0.3}, 2000, 'swing'
+                    ).animate({ width:900, height: 900 , opacity :0.1}, 2000, 'swing'
+                    ).animate({ width:950, height: 950 , opacity :0.2}, 2000, 'swing'
+                    )
+            })
     	
     	
     	

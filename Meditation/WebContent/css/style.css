@@ -458,6 +458,7 @@ footer {
 /* 메인 */
 #main {
     height: 100vh;
+    margin-bottom: 250px;
 }
 .main-wrap {
     height: 100%;
@@ -497,25 +498,30 @@ footer {
     transform: translate(-50% ,-50%);
     left: 50%;
     top: 50%;
-    width: 700px;
-    height: 700px;
-    text-align: center;
     z-index: -10;
     border-radius: 100%;
-    border: 1px solid #333D3D;
-    opacity: 1;
+    border: 1px solid #65b8b8;
+    position: absolute;
 }
-.sub-circle {
-    opacity: 1;
-    transform: translate(-50% ,-50%);
-    left: 50%;
-    top: 50%;
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    z-index: -10;
-    border-radius: 100%;
-    border: 1px solid #333D3D;
+.circle-1 {
+    width: 600px;
+    height: 600px;
+    opacity: 0.3 ;
+}
+.circle-2 {
+    width: 720px;
+    height: 720px;
+    opacity: 0.7;
+}
+.circle-3 {
+    width: 900px;
+    height: 900px;
+    opacity: 0.3;
+}
+.circle-4 {
+    width: 950px;
+    height: 950px;
+    opacity: 0.1;
 }
 
 /* 라인 */
@@ -535,7 +541,8 @@ footer {
 
 /* 추천 동영상 */
 #recommend {
-    height: 500px;
+    height: 300px;
+    margin-bottom: 150px;
 }
 .recommend-title , .videos-title{
     font-size: 2rem;
@@ -812,3 +819,11 @@ footer {
     padding: 20px 40px;
 }
 
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(55px);
+}

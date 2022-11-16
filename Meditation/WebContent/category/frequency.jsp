@@ -26,11 +26,6 @@
         </section>
 
         <!-- 추천 동영상 -->
-        <div class="line d-flex align-items-center justify-content-center">
-            <div class="circle"></div>
-            <div class="path"></div>
-            <div class="circle"></div>
-        </div>
         <section id="recommend">
             <div class="recommend-wrap container-12">
                 <div class="d-flex align-items-center justify-content-start ">
@@ -68,11 +63,7 @@
             </div>
         </section>
 
-        <div class="line d-flex align-items-center justify-content-center">
-            <div class="circle"></div>
-            <div class="path"></div>
-            <div class="circle"></div>
-        </div>
+
         <!-- 댓글 -->
        <section id="comment">
             <div class="comment-wrap container-12">
@@ -145,6 +136,7 @@
 
     </div>
 
+    <script src="<%=request.getContextPath()%>/js/quietflow.min.js"></script>
     <script>
     window.onload = function(){
     	let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/주파수.mp3`);
@@ -153,6 +145,15 @@
 			audio.play();
 			
     	}, 1000);
+
+        $(".main-wrap").quietflow({
+            theme: "bouncingBalls",
+            specificColors: [
+                "rgba(221, 212, 255, .5)",
+                "rgba(201, 255, 230, .5)",
+                "rgba(186, 247, 255, .5)"
+            ]
+        })
 	}
     
     function check() {
