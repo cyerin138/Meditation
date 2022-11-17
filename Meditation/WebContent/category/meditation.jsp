@@ -41,6 +41,7 @@
 				</a>
 			</div>
 			<%
+				//관련 영상 띄우기
 				request.setCharacterEncoding("UTF-8");
 				VideoDAO viDao = new VideoDAO();
 				ArrayList<VideoVO> viList = viDao.fourVideo("M");
@@ -153,7 +154,7 @@
             const CIRCLE3 = $('.circle-3');
             const CIRCLE4 = $('.circle-4');
 
-            
+        //오디오 틀기
     	let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/명상.mp3`);
     	audio.volume = 1;
     	
@@ -161,7 +162,8 @@
 			audio.play();
 			textChange();
     	}, 1000);
-
+    	
+			//대사 뒤에 효과 틀기
             setInterval(function () {
                 CIRCLE1.animate({ width: 720, height: 720 , opacity :0.3}, 2000, 'swing'
                     ).animate({ width:900, height: 900 , opacity :0.1}, 2000, 'swing'
@@ -186,7 +188,8 @@
             })    
             
             const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
-
+	
+         //대사 띄우기
     async function textChange() {
         TEXT.html("반갑습니다.");
         await sleep(1600);
@@ -251,10 +254,12 @@
     	
 	}
     
+    //로그인 체크
     function check() {
 		alert('로그인을 먼저 해주십시오');
 	}
     
+    //댓글 창 숨겼다가 보였다가
     let count = false;
     function commentClick() {
         if(count == true) {
@@ -269,6 +274,7 @@
         
     }
     
+    //댓글 작성 여부 확인 및 등록
     function commentSubmit() {
         let comment = confirm("정말 이 댓글을 올리시겠습니까?");
         

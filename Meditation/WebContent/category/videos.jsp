@@ -11,6 +11,7 @@
 	<div class="videos-wrap container-12" style="min-height: 100vh;">
 		<div class="d-flex align-items-center justify-content-start">
 			<%	
+				//카테고리 체크
 				request.setCharacterEncoding("UTF-8");
 				String category = request.getParameter("category");
 				
@@ -58,6 +59,7 @@
 			<%
 				VideoDAO viDao = new VideoDAO();
 				ArrayList<VideoVO> caList = viDao.allVideo(category);
+				//관련된 영상 띄우기
 				for (VideoVO vo : caList) {
 			%>
 
@@ -79,6 +81,7 @@
 </section>
 
 <script>
+	//로그인 여부 체크
 	function check() {
 		alert('로그인을 먼저 해주십시오');
 	}

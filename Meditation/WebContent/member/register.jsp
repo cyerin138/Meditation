@@ -11,9 +11,9 @@
 						
 						<p class="member-title">회원가입</p>
 						<form action="<%=request.getContextPath()%>/register" method="post" name ="memberForm">
-							<input type="text" name="id" class="r-id" placeholder="ID" maxlength="10"> <br>
-							<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD" maxlength="10"> <br>
-							<input type="text" name="name" class="r-name" placeholder="NAME" maxlength="10"><br>
+							<input type="text" name="id" class="r-id" placeholder="ID" minlength="1" maxlength="10"> <br>
+							<input type="password" name="pwd" class="r-pwd" placeholder="PASSWORD" minlength="1" maxlength="10"> <br>
+							<input type="text" name="name" class="r-name" placeholder="NAME" maxlength="6" minlength="1"><br>
 							
 							<input type="button" onclick="check()" value="REGISTER" name="register-btn">
 							
@@ -26,6 +26,8 @@
 	</section>
 
 <script>
+
+	// 값 비었는지 체크
 	function check() {
 		if(document.memberForm.id.value == "") {
 			alert("아이디를 입력해주세요")

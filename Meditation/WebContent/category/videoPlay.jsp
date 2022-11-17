@@ -10,6 +10,7 @@
         <div class="video-wrap container-12">
         
             	<%		
+            			// 비디오의 번호로 해당 비디오 가져오기
             			request.setCharacterEncoding("UTF-8");
 						VideoDAO viDao = new VideoDAO();
             			int num = Integer.parseInt(request.getParameter("num"));
@@ -48,7 +49,8 @@
                 </a>
             </div>
 
-            	<%
+            	<%		
+            			// 관련 영상 띄우기
             			String category = request.getParameter("category");
 						ArrayList<VideoVO> caList =  viDao.recommend(category, num);
 				%>
@@ -149,10 +151,12 @@
             </div>
         </section>
     <script>
+    	//로그인 체크
     	function check() {
 			alert('로그인을 먼저 해주십시오');
 		}    	
     
+    	//댓글 창 숨겼다가 보였다가
         let count = false;
         function commentClick() {
             if(count == true) {
@@ -167,6 +171,7 @@
             
         }
         
+        //댓글 작성 여부 확인 및 등록
         function commentSubmit() {
             let comment = confirm("정말 이 댓글을 올리시겠습니까?");
             

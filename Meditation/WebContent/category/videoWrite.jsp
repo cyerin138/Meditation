@@ -8,6 +8,7 @@
         		request.setCharacterEncoding("UTF-8");
 				String category = request.getParameter("category");
 				
+				//카테고리 체크
 				String categoryName = "";
 				switch (category) {
 					case "M" :
@@ -55,6 +56,7 @@
     
     
     <script>
+    //값이 비였는지 체크
 	function check() {
 		if(document.videoForm.video.value == "") {
 			alert("비디오를 입력해주세요")

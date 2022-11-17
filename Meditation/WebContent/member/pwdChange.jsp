@@ -14,9 +14,9 @@
 						
 						<p class="member-title">PW변경</p>
                         <form action="<%=request.getContextPath()%>/pwdChange" method="post" name ="memberForm">
-                            <input type="text" name="id" class="l-id" placeholder="ID" value="<%= id %>" maxlength="10" readonly><br>
-                            <input type="password" name="pwd" class="l-pwd" placeholder="NEW PASSWORD" maxlength="10"> <br>
-                            <input type="password" name="cpwd" class="l-c-pwd" placeholder="CONFIRM PASSWORD" maxlength="10"> <br>
+                            <input type="text" name="id" class="l-id" placeholder="ID" value="<%= id %>" maxlength="10" minlength="1" readonly><br>
+                            <input type="password" name="pwd" class="l-pwd" placeholder="NEW PASSWORD" maxlength="10" minlength="1"> <br>
+                            <input type="password" name="cpwd" class="l-c-pwd" placeholder="CONFIRM PASSWORD" maxlength="10" minlength="1"> <br>
                             
                             <input type="button" value="CHANGE" onclick="check()" class="cpwd-btn">
                             
@@ -29,6 +29,7 @@
 	</section>
     
     <script>
+	//값 비었는지 체크
 	function check() {
 		if(document.memberForm.pwd.value == "") {
 			alert("비밀번호를 입력해주세요")

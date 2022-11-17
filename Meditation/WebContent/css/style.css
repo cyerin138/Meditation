@@ -604,6 +604,7 @@ footer {
     font-weight: bold;
     font-size:4rem;
     margin-bottom: 30px;
+    white-space: pre;
 }
 .member-content input[type="text"], .member-content input[type="password"] {
     background-color: rgba(255, 255, 255, .8);
@@ -644,6 +645,12 @@ footer {
     width: 230px;
     margin: 0 auto;
     margin-bottom: 15px;
+    transition: .5s;
+}
+.mypage-wrap a:hover{
+    border: 1px solid black;
+    color: white!important;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* 메인 */
@@ -729,6 +736,7 @@ footer {
     left: 50%;
     transform: translate(-50%, 0);
     color: #65b8b8;
+    cursor: pointer;
 }
 
 /* 라인 */

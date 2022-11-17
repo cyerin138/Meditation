@@ -119,13 +119,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
 
         <script>
+        	//시작하기 쪽 물 효과
             $('.start-wrap').ripples({
                 resolution: 512,
                 dropRadius: 20, 
                 perturbance: 0.04,
             });
 
-
+			//새소리 플레이
             let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/forest.mp3`);
             audio.volume = 1;
             window.onload = function () {
@@ -135,6 +136,7 @@
                 }, 3500);
 
             }
+            // 비주얼 슬라이드 효과
             let slide = $('.slide')
             let sno = 0;
             let eno = slide.length - 1;

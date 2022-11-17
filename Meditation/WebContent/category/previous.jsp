@@ -36,7 +36,8 @@
 				</a>
 			</div>
 
-			<%
+			<%	
+				//관련 영상 띄우기
 				request.setCharacterEncoding("UTF-8");
 				VideoDAO viDao = new VideoDAO();
 				ArrayList<VideoVO> list = viDao.fourVideo("P");
@@ -145,6 +146,7 @@
 	window.onload = function(){
         const TEXT = $('.main-text');
         
+        // 오디오 틀기
 		let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/전생체험.mp3`);
 		audio.volume = 1;
 		setTimeout(function() {    		
@@ -152,12 +154,14 @@
 			textChange();
     	}, 1000);
 
+		// 대사 뒤에 효과 띄우기
 		$('#canvas').gradient({
                   colors: ['#fff', '#c2f0e1', '#fff', '#bee6ed']
 		});
 		
 		 const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
-
+		
+		 //대사 띄우기
 		    async function textChange() {
 		        TEXT.html("반갑습니다.");
 		        await sleep(1500);
@@ -261,11 +265,13 @@
 		    }
 
 	}
-
+	
+	//로그인 체크
 	function check() {
 		alert('로그인을 먼저 해주십시오');
 	}
-
+	
+	//댓글 창 숨겼다가 보였다가
 	let count = false;
     function commentClick() {
         if(count == true) {
@@ -280,6 +286,7 @@
         
     }
     
+    //댓글 작성 여부 확인 및 등록
     function commentSubmit() {
         let comment = confirm("정말 이 댓글을 올리시겠습니까?");
         

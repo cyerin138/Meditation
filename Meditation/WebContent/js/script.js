@@ -1,3 +1,6 @@
+
+
+// 마우스 클릭 이벤트 (동그라미 퍼지는)
 function clickEffect(e) {
     var d = document.createElement("div");
     d.className = "clickEffect";

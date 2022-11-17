@@ -17,7 +17,8 @@
 			<%
 				VideoDAO viDao = new VideoDAO();
 				ArrayList<VideoVO> caList = viDao.search(search);
-
+				// 검색 결과 여부 체크
+				
 				if (caList.size() == 0) {
 					%>
 						<h1 class="text-center font-weight-bold" style="padding-top:300px; color: #97B9B9;">검색 결과가 없습니다</h1>
@@ -28,6 +29,7 @@
 					
 				
 			<%
+				//검색 영상 띄우기
 				for (VideoVO vo : caList) {
 			%>
 

@@ -31,6 +31,7 @@ public class LogoutServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//로그아웃 서블렛
 		response.setContentType("text/html; charset=UTF-8");
 		
 		HttpSession session = request.getSession();
