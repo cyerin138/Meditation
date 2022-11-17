@@ -96,7 +96,7 @@
                 <div class="comment-form" name="commentForm">
                    <form action="<%=request.getContextPath()%>/mcomment" class="d-flex align-items-center justify-content-between  h-100 " method="post">
                     	<input type="hidden" value="F" class="category" name="category">
-                        <input type="text" name="text" class="comment-input" id="">
+                        <input type="text" name="text" class="comment-input" id="" minlength="1" maxlength="50">
                         <button onclick="commentSubmit()" class="comment-btn"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>

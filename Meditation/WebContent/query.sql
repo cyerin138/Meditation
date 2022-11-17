@@ -57,6 +57,3 @@ create table main_comment(
 	text varchar2(100)
 );
 
-select * from member;
-
-drop table member;

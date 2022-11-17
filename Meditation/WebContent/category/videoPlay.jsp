@@ -115,7 +115,7 @@
                 <div class="comment-form" >
                     <form action="<%=request.getContextPath()%>/comment" class="d-flex align-items-center justify-content-between  h-100 " method="post" name="commentForm">
                     	<input type="hidden" value="<%=num%>" class="viNum" name = "viNum">
-                        <input type="text" name="text" class="comment-input" id="">
+                        <input type="text" name="text" class="comment-input" id="" minlength="1" maxlength="50">
                         <button type="button" onclick="commentSubmit()" class="comment-btn" ><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>

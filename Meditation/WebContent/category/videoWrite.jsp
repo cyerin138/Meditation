@@ -47,8 +47,8 @@
                     </button>
                 </div>
             </div>
-            <input type="text" name="title" class="upload-text mb-3" placeholder="TITLE"> <br>
-            <textarea name="text" id="textArea" cols="40" rows="10" placeholder="CONTENT" class="upload-textarea w-100"></textarea>
+            <input type="text" name="title" class="upload-text mb-3" placeholder="TITLE" minlength="1" maxlength="50"> <br>
+            <textarea name="text" id="textArea" cols="40" rows="10" placeholder="CONTENT" class="upload-textarea w-100" minlength="1" maxlength="75"></textarea>
 
         </form>
         </div>
