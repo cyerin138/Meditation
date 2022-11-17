@@ -14,8 +14,9 @@
                 <div class="position-absolute main-content">
                     <div class="position-relative w-100 h-100">
                         <div class="main-box">
-                            <div class="main-text">반갑습니다.</div>
+                            <div class="main-text">반갑습니다.</div>  
                         </div>
+                            <div class="event-text">이 곳을 누르면 주파수가 재생됩니다</div>                          
                     </div>
                 </div>
             </div>
@@ -136,6 +137,7 @@
     <script>
     window.onload = function(){    	
         const TEXT = $('.main-text');
+        const EVENT = $('.event-text');
         
     	let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/주파수.mp3`);
     	audio.volume = 1;
@@ -155,7 +157,7 @@
         
          const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
 
-    async function textChange() {
+    	async function textChange() {
             TEXT.html("반갑습니다.");
             await sleep(1500);
             TEXT.html("이곳은 당신의 밤을<br>책임지는 주파수 공간입니다.");
@@ -173,6 +175,7 @@
             TEXT.html("진짜 자나요.");   
             await sleep(1600);
 	        TEXT.html("");
+	        EVENT.css({'top' : '50%','transform' : 'translate(-50%, -50%)'})
         }
 	}
     
@@ -210,6 +213,18 @@
         }
         
     }
+    $(".event-text").click(function () {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        let oscillatorNode = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        gainNode.gain.value = 0.5;
+        oscillatorNode.type = "sine";
+        oscillatorNode.frequency.value = 2;
+        audioContext.resume();
+        oscillatorNode = audioContext.createOscillator();
+        oscillatorNode.connect(gainNode).connect(audioContext.destination);
+        oscillatorNode.start();
+    })
     
    
     </script>

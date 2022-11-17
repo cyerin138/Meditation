@@ -245,6 +245,8 @@
         TEXT.html("입가에 미소를 지어 봅니다.");
         await sleep(3000);
         TEXT.html("수고하셨습니다.");
+        await sleep(2300);
+        TEXT.html("");
     }
     	
 	}

@@ -161,7 +161,7 @@
 		    async function textChange() {
 		        TEXT.html("반갑습니다.");
 		        await sleep(1500);
-		        TEXT.html("이곳은 당신의 전생을<br> 체험할수 있는 공간입니다.");
+		        TEXT.html("이곳은 당신의 전생을<br> 체험할 수 있는 공간입니다.");
 		        await sleep(4500);
 		        TEXT.html("대략 소요시간은 <br>3분 30초 입니다.");
 		        await sleep(3500);

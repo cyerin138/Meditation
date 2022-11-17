@@ -723,6 +723,14 @@ footer {
     filter: blur(55px);
 }
 
+.event-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #65b8b8;
+}
+
 /* 라인 */
 .line {
     margin-bottom: 150px;
