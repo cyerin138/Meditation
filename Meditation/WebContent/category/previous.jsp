@@ -147,11 +147,16 @@
 <script src="<%=request.getContextPath()%>/js/stripe-gradient.js"></script>
 <script>
 	window.onload = function(){
+        const TEXT = $('.main-text');
+        const COUNT = $('.main-count');
+        const COUNTTIME = $('.main-time');
+        
 		let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/전생체험.mp3`);
 		audio.volume = 1;
 		setTimeout(function() {    		
 			audio.play();
-			
+			COUNT.hide();
+			textChange();
     	}, 1000);
 
 		$('#canvas').gradient({
@@ -194,5 +199,9 @@
         }
         
     }
+    
+    const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
+
+   
 </script>
 <%@ include file="../footer.jsp"%>

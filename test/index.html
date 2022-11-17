@@ -14,119 +14,62 @@
 </head>
 
 <body>
-    <!-- 비주얼 -->
-    <section id="visual">
-        <div class="visual-wrap position-relative">
-            <div class="position-absolute visual-content">
-                <p class="visual-title">A space of<br>meditation that<br>heals you <span class="line-bottom"></span>
-                </p>
-                <p class="visual-text">당신을 치유하는 명상의 공간</p>
-            </div>
-            <div class="position-absolute visual-mouse">
-                <div class="mouse">
-                    <div class="mouse-wheel"></div>
-                </div>
-                <div class="position-relative">
-                    <div class="mouse-move" style="animation-delay: -0.1s;">
-                        <div class="arrow-down"></div>
-                    </div>
-                    <div class="mouse-move" style="animation-delay: -0.5s;">
-                        <div class="arrow-down"></div>
-                    </div>
-                    <div class="mouse-move" style="animation-delay: -1s;">
-                        <div class="arrow-down"></div>
+    <!-- 메인 -->
+    <section id="main">
+        <div class="main-wrap position-relative">
+            <div class="position-absolute main-content">
+                <div class="position-relative w-100 h-100">
+                    <div class="main-box">
+                        <div class="main-text">방갑습니다</div>
+                        <div class="main-count">
+                            <p class="main-tt"></p>
+                            <p class="main-time"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="visual-scroll position-absolute">
-                <p class="first mb-3">01</p>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                        aria-valuemax="100"></div>
-                </div>
-                <p class="second mt-3">02</p>
-            </div>
-            <div class="slide" style="opacity: 1;">
-                <div class="position-relative">
-                    <img src="./resources/imgs/forest1.jpg" alt="visual">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="position-relative">
-                    <img src="./resources/imgs/forest3.jpg" alt="visual">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="position-relative">
-                    <img src="./resources/imgs/forest.png" alt="visual">
-                </div>
+            <div class="circle-box">
+                <div class="circle-1 main-circle"></div>
+                <div class="circle-2 main-circle"></div>
+                <div class="circle-3 main-circle"></div>
+                <div class="circle-4 main-circle"></div>
             </div>
         </div>
     </section>
-    <!-- 비주얼 끝 -->
-    <!-- 글씨 -->
-    <section id="text">
-        <div class="text-wrap position-relative">
-            <div class="text-img1 text-img">
-                <img src="./resources/imgs/meditation1.jpg" alt="명상">
-            </div>
-            <div class="text-img2 text-img">
-                <img src="./resources/imgs/meditation2.png" alt="명상">
-            </div>
-            <p class="m-text">Meditation</p>
-            <p class="f-text">Frequency</p>
-            <p class="p-text">Previous</p>
-        </div>
-    </section>
-    <!-- 글씨 끝 -->
-    <!-- 계기 -->
-    <section id="reason">
-        <div class="reason-wrap text-center position-relative">
-            <div class="reason-content">
-                <p class="reason-title">CONCEPT STORY</p>
-                <p class="reason-text1 reason-text">치명상은 당신이 겪은 스트레스를 명상으로 완화하고 마음을 <br>치유하기 위해 만들어졌습니다.</p>
-                <p class="reason-text2 reason-text">당신과 함께하는 치명상, 이 곳에서 당신이<br>펼치지 못한 꿈을 펼쳐보세요.</p>
-            </div>
-            <div class="reason-back"></div>
-            <div class="reason-img">
-                <img src="./resources/imgs/forest6.jpg" alt="forest">
-            </div>
-        </div>
-    </section>
-    <!-- 계기 끝 -->
-    <!-- 명언 -->
-    <section id="famous">
-        <div class="famous-wrap text-center">
-            <div>
-                <p class="famous-text mb-4 mt-3">The greater the man, <br>the more restrained his anger.</p>
-                <p class="famous-name">&lt;Ovid&gt;</p>
-                <img src="./resources/imgs/forest3.jpg" alt="famous">
-            </div>
-        </div>
-    </section>
-    <!-- 명언 끝 -->
-    <!-- 시작하기 -->
-    <section id="start">
-        <div class="start-wrap text-center position-relative">
-            <div class="start-content">
-                <p class="start-title">안정의 공간으로<br>당신을 초대 합니다.</p>
-                <div class="start-path">
-                    <i class="fa-solid fa-angle-down"></i>
-                </div>
-                <a href="#" class="start-btn">시작하기</a>
-            </div>
-        </div>
-    </section>
-    <!-- 시작하기 끝 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
     <script>
+        const TEXT = $('.main-text');
+        const COUNT = $('.main-count');
+        const COUNTTIME = $('.main-time');
+        let mainText = "";
 
-        $('.start-wrap').ripples({
-            resolution: 512,
-            dropRadius: 20, //px
-            perturbance: 0.04,
-        });
+        let audio = new Audio(`./resources/mp3/주파수.mp3`);
+        audio.volume = 1;
+        window.onload = function () {
+            COUNT.hide();
+            textChange();
+            audio.play();
+        }
 
+        const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
+
+        async function textChange() {
+            TEXT.html("방갑습니다.");
+            await sleep(1500);
+            TEXT.html("이곳은 당신의 밤을<br>책임지는 주파수 공간입니다.");
+            await sleep(4100);
+            TEXT.html("주파수는 2.0 델타파이며 <br> 재생의 뇌파소리로 회복수면에<br> 도움이 됩니다.");
+            await sleep(6100);
+            TEXT.html("무한 반복으로 재생되니 나가고<br> 싶을때 나가셔도 좋습니다.");
+            await sleep(4700);
+            TEXT.html("당신에게 도움이 되길 바랍니다.");
+            await sleep(2800);
+            TEXT.html("잠시 눈을 감고 <br>귀를 귀울여 봅니다.");
+            await sleep(3300);
+            TEXT.html("중간에 잠에 들어도 괜찮습니다.");
+            await sleep(5500);
+            TEXT.html("진짜 자나요.");           
+        }
 
     </script>
 </body>

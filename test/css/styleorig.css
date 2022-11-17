@@ -260,6 +260,162 @@ header button {
         transform: translate(10%, 0.3em);
     }
 }
+/* 글씨 */
+.text-wrap {
+    height: 120vh;
+    margin-bottom: 150px;
+    margin-top: 50px;
+}
+
+.text-wrap>* {
+    position: absolute;
+    font-size: 16rem;
+    font-family: serif;
+
+}
+
+.text-img {
+    overflow: hidden;
+}
+
+.text-img1 {
+    height: 500px;
+    width: 650px;
+    left: 10%;
+    top: 60%;
+    z-index: -10;
+}
+
+.text-img2 {
+    height: 600px;
+    width: 600px;
+    right: 10%;
+    top: 26%;
+    z-index: 2;
+}
+
+.text-img>img {
+    height: auto;
+    width: 100%;
+}
+
+.m-text {
+    top: 2%;
+    right: 5%;
+    z-index: 5;
+}
+
+.f-text {
+    left: 5%;
+    top: 28%;
+    z-index: -1;
+}
+
+.p-text {
+    right: 10%;
+    top: 58%;
+    z-index: 1;
+}
+
+/* 계기 */
+.reason-wrap {
+    height: 100vh;
+}
+
+.reason-img {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+}
+
+.reason-img>img {
+    width: 100%;
+    height: auto;
+}
+
+.reason-content {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0, -50%);
+    z-index: 10;
+}
+
+.reason-content>p {
+    color: white !important;
+    text-align: left;
+}
+
+.reason-title {
+    font-size: 8rem;
+    font-family: serif;
+    margin-bottom: 30px;
+}
+
+.reason-text {
+    padding-left: 30px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.reason-back {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .7);
+    height: 100%;
+    width: 35%;
+}
+
+/* 시작하기 */
+.start-wrap {
+    height: 100vh;
+    color: #fff !important;
+    background-image: url(../resources/imgs/forest9.jpg);
+    background-size: cover;
+    background-position: 50% 0;
+    width: 100%;
+}
+.start-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 350px;
+}
+.start-title {
+    color: white;
+    font-family: serif;
+    font-size: 4rem;
+    line-height: 80px;
+    margin-top: 30px;
+}
+.start-wrap i {
+    font-size: 1.5rem;
+    color: white;
+    margin:  0 auto;
+    padding-top: 20px;
+    display: block;
+}
+.start-btn {
+    display: block;
+    color: white;
+    padding: 13px 20px;
+    border: 1px solid white;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    transition: .5s;
+}
+.start-btn:hover {
+    border: 1px solid black;
+    color: white!important;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* 명언 */
 #famous {
     height: 500px;
@@ -512,11 +668,11 @@ footer {
     transform: translate(-50% ,-50%);
     left: 50%;
     top: 50%;
+    width: 800px;
 }
 .main-text {
     font-size: 3.5rem;
     width: 100%;
-    white-space: pre;
     margin-bottom: 30px;
 }
 .main-tt {
@@ -557,6 +713,15 @@ footer {
     width: 950px;
     height: 950px;
     opacity: 0.1;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(55px);
 }
 
 /* 라인 */
@@ -854,11 +1019,31 @@ footer {
     padding: 20px 40px;
 }
 
-#canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: blur(55px);
+/* 마우스 이펙트 */
+div.clickEffect {
+    position: fixed;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #828282;
+    border-radius: 50%;
+    animation: clickEffect 0.8s ease-out;
+    z-index: 5;
+}
+
+@keyframes clickEffect {
+    0% {
+        opacity: 1;
+        width: 0.5em;
+        height: 0.5em;
+        margin: -0.25em;
+        border-width: 0.3rem;
+    }
+
+    100% {
+        opacity: 0.1;
+        width: 15em;
+        height: 15em;
+        margin: -7.5em;
+        border-width: 0.01rem;
+    }
 }

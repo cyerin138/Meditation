@@ -389,6 +389,7 @@ header button {
     font-family: serif;
     font-size: 4rem;
     line-height: 80px;
+    margin-top: 30px;
 }
 .start-wrap i {
     font-size: 1.5rem;
@@ -667,11 +668,11 @@ footer {
     transform: translate(-50% ,-50%);
     left: 50%;
     top: 50%;
+    width: 800px;
 }
 .main-text {
     font-size: 3.5rem;
     width: 100%;
-    white-space: pre;
     margin-bottom: 30px;
 }
 .main-tt {

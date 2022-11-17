@@ -63,10 +63,8 @@
                         <a
                             href="https://kr.freepik.com/free-photo/pathway-in-the-middle-of-the-green-leafed-trees-with-the-sun-shining-through-the-branches_8281186.htm#query=forest&position=0&from_view=keyword">작가
                             wirestock</a>
-                        <a
-                            href="https://www.freepik.com/free-photo/high-angle-shot-beautiful-forest-with-lot-green-trees-enveloped-fog-new-zealand_10835665.htm#query=forest&position=2&from_view=search&track=sph">Image
-                            by wirestock</a>
-
+                            <a href="https://www.freepik.com/free-photo/brunette-asian-woman-headphones-meditating-bedroom_16084241.htm#query=meditation&position=18&from_view=search&track=sph">by lookstudio</a>
+                            <a href="https://www.freepik.com/free-photo/woman-sitting-yoga-pose-beach_859033.htm#query=meditation&position=13&from_view=search&track=sph">by pressfoto</a> 
                     </div>
                 </div>
             </div>
