@@ -99,17 +99,29 @@
                     <div class="start-path">
                         <i class="fa-solid fa-angle-down"></i>
                     </div>
-                    <a href="#" class="start-btn">시작하기</a>
+                    <a href="<%=request.getContextPath()%>/category/meditation.jsp" class="start-btn">시작하기</a>
                 </div>
             </div>
         </section>
         <!-- 시작하기 끝 -->
+         <!-- 인트로  -->
+        <section id="intro">
+            <div class="intro-wrap text-center position-relative">
+                <div class="position-absolute">
+
+                    <img src="./resources/imgs/headphone.png" alt="헤드폰" class="headphone"> <br>
+                    <img src="./resources/imgs/sound.gif" alt="음파" class="sound">
+                    <p>몰입감을 위해 이어폰을 착용 해주세요</p>
+                </div>
+            </div>
+        </section>
+        <!-- 인트로 끝 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
 
         <script>
             $('.start-wrap').ripples({
                 resolution: 512,
-                dropRadius: 20, //px
+                dropRadius: 20, 
                 perturbance: 0.04,
             });
 
