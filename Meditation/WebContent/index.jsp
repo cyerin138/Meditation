@@ -14,13 +14,13 @@
                     </div>
                     <div class="position-relative">
                         <div class="mouse-move" style="animation-delay: -0.1s;">
-                            <div class="arrow-down" ></div>
+                            <div class="arrow-down"></div>
                         </div>
-                        <div class="mouse-move"  style="animation-delay: -0.5s;">
+                        <div class="mouse-move" style="animation-delay: -0.5s;">
                             <div class="arrow-down"></div>
                         </div>
                         <div class="mouse-move" style="animation-delay: -1s;">
-                            <div class="arrow-down" ></div>
+                            <div class="arrow-down"></div>
                         </div>
                     </div>
                 </div>
@@ -50,6 +50,36 @@
             </div>
         </section>
         <!-- 비주얼 끝 -->
+        <!-- 글씨 -->
+        <section id="text">
+            <div class="text-wrap position-relative">
+                <div class="text-img1 text-img">
+                    <img src="./resources/imgs/meditation1.jpg" alt="명상">
+                </div>
+                <div class="text-img2 text-img">
+                    <img src="./resources/imgs/meditation2.png" alt="명상">
+                </div>
+                <p class="m-text">Meditation</p>
+                <p class="f-text">Frequency</p>
+                <p class="p-text">Previous</p>
+            </div>
+        </section>
+        <!-- 글씨 끝 -->
+        <!-- 계기 -->
+        <section id="reason">
+            <div class="reason-wrap text-center position-relative">
+                <div class="reason-content">
+                    <p class="reason-title">CONCEPT STORY</p>
+                    <p class="reason-text1 reason-text">치명상은 당신이 겪은 스트레스를 명상으로 완화하고 마음을 <br>치유하기 위해 만들어졌습니다.</p>
+                    <p class="reason-text2 reason-text">당신과 함께하는 치명상, 이 곳에서 당신이<br>펼치지 못한 꿈을 펼쳐보세요.</p>
+                </div>
+                <div class="reason-back"></div>
+                <div class="reason-img">
+                    <img src="./resources/imgs/forest6.jpg" alt="forest">
+                </div>
+            </div>
+        </section>
+        <!-- 계기 끝 -->
         <!-- 명언 -->
         <section id="famous">
             <div class="famous-wrap text-center">
@@ -61,60 +91,37 @@
             </div>
         </section>
         <!-- 명언 끝 -->
-        <!-- 계기 -->
-        <section id="reason">
-            <div class="reason-wrap text-center position-relative">
-                <div class="path">
-                    <div class="circle circle-l"></div>
-                    <div class="line"></div>
-                    <div class="circle circle-r"></div>
-                </div>
-                <div class="reason-content">
-                    <p class="reason-text1">치명상은 당신이 겪은 스트레스를 명상으로 <br> 완화하고 마음을 치유하기 위해 만들어졌습니다.</p>
-                    <p class="reason-text2">당신과 함께하는 치명상과 함께 <br>오늘을 보다 멋지고 행복하게 시간을 보내보세요.</p>
-                </div>
-                <div class="reason-img">
-                    <img src="./resources/imgs/left.png" alt="left">
-                    <img src="./resources/imgs/right1.png" alt="right">
-                    <img src="./resources/imgs/right2.png" alt="right">
-                </div>
-            </div>
-        </section>
-        <!-- 계기 끝 -->
         <!-- 시작하기 -->
         <section id="start">
             <div class="start-wrap text-center position-relative">
-                <h1 class="start-title position-absolute">안정의 공간으로<br>당신을 초대 합니다.</h1>
-                <div class="start-path"></div>
-                <div class="start-btn">
-                    <a href="#">시작하기</a>
+                <div class="start-content">
+                    <p class="start-title">안정의 공간으로<br>당신을 초대 합니다.</p>
+                    <div class="start-path">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <a href="#" class="start-btn">시작하기</a>
                 </div>
             </div>
         </section>
         <!-- 시작하기 끝 -->
-        <!-- 인트로  -->
-        <section id="intro">
-            <div class="intro-wrap text-center position-relative">
-                <div class="position-absolute">
-
-                    <img src="./resources/imgs/headphone.png" alt="헤드폰" class="headphone"> <br>
-                    <img src="./resources/imgs/sound.gif" alt="음파" class="sound">
-                    <p>몰입감을 위해 이어폰을 착용 해주세요</p>
-                </div>
-            </div>
-        </section>
-        <!-- 인트로 끝 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
 
         <script>
+            $('.start-wrap').ripples({
+                resolution: 512,
+                dropRadius: 20, //px
+                perturbance: 0.04,
+            });
+
 
             let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/forest.mp3`);
             audio.volume = 1;
-            window.onload = function () {            	
-                setTimeout(function () {        			
-                	$("#intro").fadeOut('slow');
-                	audio.play();
+            window.onload = function () {
+                setTimeout(function () {
+                    $("#intro").fadeOut('slow');
+                    audio.play();
                 }, 3500);
-                
+
             }
             let slide = $('.slide')
             let sno = 0;
