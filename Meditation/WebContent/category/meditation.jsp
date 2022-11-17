@@ -230,7 +230,7 @@
     const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
 
     async function textChange() {
-        TEXT.html("방갑습니다");
+        TEXT.html("반갑습니다");
         await sleep(1600);
         TEXT.html("이곳은 당신의 피로와 스트레스를 완화 하는 곳입니다.");
         await sleep(4300);

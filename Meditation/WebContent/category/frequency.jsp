@@ -199,7 +199,7 @@
     const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
 
     async function textChange() {
-            TEXT.html("방갑습니다.");
+            TEXT.html("반갑습니다.");
             await sleep(1500);
             TEXT.html("이곳은 당신의 밤을<br>책임지는 주파수 공간입니다.");
             await sleep(4100);
