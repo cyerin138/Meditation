@@ -15,11 +15,7 @@
 			<div class="position-absolute main-content">
 				<div class="position-relative w-100 h-100">
 					<div class="main-box">
-						<div class="main-text">숨을 내쉬십시오.</div>
-						<div class="main-count">
-							<p class="main-tt">앞으로</p>
-							<p class="main-time">10초</p>
-						</div>
+						<div class="main-text">반갑습니다.</div>
 					</div>
 				</div>
 			</div>
@@ -151,21 +147,20 @@
 
 <script>
     window.onload = function(){
-        const TEXT = $('.main-text');
-        const COUNT = $('.main-count');
-        const COUNTTIME = $('.main-time');
-        
-    	let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/명상.mp3`);
-    	audio.volume = 1;
-    	setTimeout(function() { 
-			audio.play();
-    		COUNT.hide();
-			textChange();
-    	}, 1000);
+        	const TEXT = $('.main-text');
     	    const CIRCLE1 = $('.circle-1');
             const CIRCLE2 = $('.circle-2');
             const CIRCLE3 = $('.circle-3');
             const CIRCLE4 = $('.circle-4');
+
+            
+    	let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/명상.mp3`);
+    	audio.volume = 1;
+    	
+    	setTimeout(function() { 
+			audio.play();
+			textChange();
+    	}, 1000);
 
             setInterval(function () {
                 CIRCLE1.animate({ width: 720, height: 720 , opacity :0.3}, 2000, 'swing'
@@ -188,49 +183,12 @@
                     ).animate({ width:900, height: 900 , opacity :0.1}, 2000, 'swing'
                     ).animate({ width:950, height: 950 , opacity :0.2}, 2000, 'swing'
                     )
-            })    	   	
-    	
-	}
-    
-    function check() {
-		alert('로그인을 먼저 해주십시오');
-	}
-    
-    let count = false;
-    function commentClick() {
-        if(count == true) {
-            count = false;
-            $('.comment-form').hide();
+            })    
             
-        } else {            
-            count = true;
-            $('.comment-form').show();
-            $('.comment-input').focus();
-        }
-        
-    }
-    
-    function commentSubmit() {
-        let comment = confirm("정말 이 댓글을 올리시겠습니까?");
-        
-        if(comment == true) {
-            $('.comment-form').hide();
-            document.commentForm.submit();
-            $('.comment-input').val("");
-            count = false;
-        } else {
-            $('.comment-form').hide();
-            $('.comment-input').val("");
-        	alert("댓글 작성이 취소 되었습니다")
-        	 count = false;
-        }
-        
-    }
-    
-    const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
+            const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
 
     async function textChange() {
-        TEXT.html("반갑습니다");
+        TEXT.html("반갑습니다.");
         await sleep(1600);
         TEXT.html("이곳은 당신의 피로와 스트레스를 완화 하는 곳입니다.");
         await sleep(4300);
@@ -288,6 +246,45 @@
         await sleep(3000);
         TEXT.html("수고하셨습니다.");
     }
+    	
+	}
+    
+    function check() {
+		alert('로그인을 먼저 해주십시오');
+	}
+    
+    let count = false;
+    function commentClick() {
+        if(count == true) {
+            count = false;
+            $('.comment-form').hide();
+            
+        } else {            
+            count = true;
+            $('.comment-form').show();
+            $('.comment-input').focus();
+        }
+        
+    }
+    
+    function commentSubmit() {
+        let comment = confirm("정말 이 댓글을 올리시겠습니까?");
+        
+        if(comment == true) {
+            $('.comment-form').hide();
+            document.commentForm.submit();
+            $('.comment-input').val("");
+            count = false;
+        } else {
+            $('.comment-form').hide();
+            $('.comment-input').val("");
+        	alert("댓글 작성이 취소 되었습니다")
+        	 count = false;
+        }
+        
+    }
+    
+    
 
     </script>
 <%@ include file="../footer.jsp"%>

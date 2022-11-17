@@ -14,11 +14,7 @@
                 <div class="position-absolute main-content">
                     <div class="position-relative w-100 h-100">
                         <div class="main-box">
-                            <div class="main-text">숨을 내쉬십시오.</div>
-                            <div class="main-count">
-                                <p class="main-tt">앞으로</p>
-                                <p class="main-time">10초</p>
-                            </div>
+                            <div class="main-text">반갑습니다.</div>
                         </div>
                     </div>
                 </div>
@@ -140,14 +136,11 @@
     <script>
     window.onload = function(){    	
         const TEXT = $('.main-text');
-        const COUNT = $('.main-count');
-        const COUNTTIME = $('.main-time');
         
     	let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/주파수.mp3`);
     	audio.volume = 1;
     	setTimeout(function() {    		
 			audio.play();
-			COUNT.hide();
 			textChange();
     	}, 1000);
 
@@ -159,6 +152,28 @@
                 "rgba(186, 247, 255, .5)"
             ]
         })
+        
+         const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
+
+    async function textChange() {
+            TEXT.html("반갑습니다.");
+            await sleep(1500);
+            TEXT.html("이곳은 당신의 밤을<br>책임지는 주파수 공간입니다.");
+            await sleep(4100);
+            TEXT.html("주파수는 2.0 델타파이며 <br> 재생의 뇌파소리로 회복수면에<br> 도움이 됩니다.");
+            await sleep(6100);
+            TEXT.html("무한 반복으로 재생되니 나가고<br> 싶을때 나가셔도 좋습니다.");
+            await sleep(4700);
+            TEXT.html("당신에게 도움이 되길 바랍니다.");
+            await sleep(2800);
+            TEXT.html("잠시 눈을 감고 <br>귀를 귀울여 봅니다.");
+            await sleep(3300);
+            TEXT.html("중간에 잠에 들어도 괜찮습니다.");
+            await sleep(5500);
+            TEXT.html("진짜 자나요.");   
+            await sleep(1600);
+	        TEXT.html("");
+        }
 	}
     
     function check() {
@@ -196,24 +211,6 @@
         
     }
     
-    const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
-
-    async function textChange() {
-            TEXT.html("반갑습니다.");
-            await sleep(1500);
-            TEXT.html("이곳은 당신의 밤을<br>책임지는 주파수 공간입니다.");
-            await sleep(4100);
-            TEXT.html("주파수는 2.0 델타파이며 <br> 재생의 뇌파소리로 회복수면에<br> 도움이 됩니다.");
-            await sleep(6100);
-            TEXT.html("무한 반복으로 재생되니 나가고<br> 싶을때 나가셔도 좋습니다.");
-            await sleep(4700);
-            TEXT.html("당신에게 도움이 되길 바랍니다.");
-            await sleep(2800);
-            TEXT.html("잠시 눈을 감고 <br>귀를 귀울여 봅니다.");
-            await sleep(3300);
-            TEXT.html("중간에 잠에 들어도 괜찮습니다.");
-            await sleep(5500);
-            TEXT.html("진짜 자나요.");           
-        }
+   
     </script>
 <%@ include file="../footer.jsp" %>
