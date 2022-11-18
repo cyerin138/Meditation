@@ -47,6 +47,7 @@
 		}
 		
 		document.memberForm.submit();
+		sessionStorage.setItem("loginOK", true)
 	}
 </script>
 <%@ include file = "../footer.jsp" %>
