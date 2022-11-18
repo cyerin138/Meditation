@@ -17,6 +17,7 @@ create table video(
 	img_url varchar2(150)
 );
 
+-- 영상 시퀀스
 create sequence video_seq;
 
 -- 명상 영상 (꼭 집어넣어주세요!)

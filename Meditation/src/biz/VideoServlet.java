@@ -61,14 +61,15 @@ public class VideoServlet extends HttpServlet {
 		VideoDAO dao = new VideoDAO();
 		VideoVO vo = new VideoVO();
 
+		//크기 제한
 		int maxSize = 1024 * 1024 * 1024;
 		
+		//원래 방식 대로는 .metadata로 들어가서 이미지와 비디오를 가져오기 매우 난이도가 생겨서 그 방식으로는 차마 하지 못했어요 ㅠㅠ 죄송합니다 
+		//파일 경로를 이곳에 옮겨주시면 됩니다 !!
 		String savePath = "C:\\Users\\SEC\\OneDrive\\바탕 화면\\Meditation\\Meditation\\WebContent\\resources\\upload";
-		System.out.println(savePath);
-		// 테스트 돌릴때 오류 날수 잇음 글키 때문에 이 링크를 똒같이 해줄 친구를 찾아야함
 
 		try {
-
+			// 파일을 가져오기 위해 multipartrequest를 사용함 (request.parameter로 하면 이미지나 영상이 안 다운 받아짐 
 			MultipartRequest multi = new MultipartRequest(request,savePath, maxSize, "utf-8", new DefaultFileRenamePolicy());
 
 			vo.setCategory(multi.getParameter("category"));

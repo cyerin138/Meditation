@@ -33,11 +33,7 @@
     </section>
 
     <!-- 추천 동영상 -->
-    <div class="line d-flex align-items-center justify-content-center">
-        <div class="circle"></div>
-        <div class="path"></div>
-        <div class="circle"></div>
-    </div>
+
     <section id="recommend">
         <div class="recommend-wrap container-12">
             <div class="d-flex align-items-center justify-content-start">
@@ -76,11 +72,6 @@
         </div>
     </section>
 
-    <div class="line d-flex align-items-center justify-content-center">
-        <div class="circle"></div>
-        <div class="path"></div>
-        <div class="circle"></div>
-    </div>
     <!-- 댓글 -->
     <section id="comment">
             <div class="comment-wrap container-12">
