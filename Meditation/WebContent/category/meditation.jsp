@@ -57,7 +57,7 @@
 					class="recommend-a">
 					<div class="recommend-img">
 						<img
-							src="<%=request.getRealPath("/resources/upload")%>\<%=vo.getImgUrl()%>"
+							src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>"
 							alt="videos-img">
 					</div>
 					<div class="d-flex align-items-center justify-content-between">

@@ -1,24 +1,17 @@
 package biz;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.util.Collection;
 import java.util.Enumeration;
 
-import javax.servlet.GenericServlet;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
-import javax.servlet.jsp.PageContext;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -30,11 +23,6 @@ import vo.VideoVO;
 /**
  * Servlet implementation class VideoServlet
  */
-@MultipartConfig(
-		maxFileSize = 1024 * 1024 * 50,
-		maxRequestSize = 1024 * 1024 * 50 * 5
-		)
-
 @WebServlet("/video")
 public class VideoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -72,66 +60,42 @@ public class VideoServlet extends HttpServlet {
 		MemberVO login = (MemberVO) session.getAttribute("loginOK");
 		VideoDAO dao = new VideoDAO();
 		VideoVO vo = new VideoVO();
-			
+
 		int maxSize = 1024 * 1024 * 1024;
 		
-		
-//		String uploadPath = request.getRealPath("/resources/upload");
-//		System.out.println(uploadPath);
-		
-		Collection<Part> parts = request.getParts();
-		
-		for(Part file : parts) {
+		String savePath = "C:\\Users\\SEC\\OneDrive\\바탕 화면\\Meditation\\Meditation\\WebContent\\resources\\upload";
+		System.out.println(savePath);
+		// 테스트 돌릴때 오류 날수 잇음 글키 때문에 이 링크를 똒같이 해줄 친구를 찾아야함
+
+		try {
+
+			MultipartRequest multi = new MultipartRequest(request,savePath, maxSize, "utf-8", new DefaultFileRenamePolicy());
+
+			vo.setCategory(multi.getParameter("category"));
+			vo.setName(login.getName());
+			vo.setTitle(multi.getParameter("title"));
+			vo.setText(multi.getParameter("text"));
+			vo.setVideoUrl(multi.getFilesystemName("video"));
+			vo.setImgUrl(multi.getFilesystemName("img"));
+
+			int result = 0;		
 			
-			String originName = file.getSubmittedFileName();
-			
-			InputStream fis = file.getInputStream();
-			
-			String realPath = request.getServletContext().getRealPath("/resources/upload");
-			
-			String filePath = realPath + File.separator + originName;
-			
-			FileOutputStream fos = new FileOutputStream(filePath);
-			
-			byte[] buf = new byte[1024];
-			int size = 0;
-			while((size = fis.read(buf)) != -1) {
-				fos.write(buf, 0, size);
+			result = dao.insertVideo(vo);
+			if (result > 0) {
+				out.println("<script>alert('영상 업로드에 성공했습니다.')</script>");
+				response.sendRedirect(request.getContextPath() + "/category/videos.jsp?category=" + multi.getParameter("category"));
 				
+			} else {
+				out.println("<script>alert('영상 업로드에 실패했습니다.')</script>");
+				out.println("<script>history.back() </script> ");
 			}
-			fis.close();
-			fos.close();
+
+		} catch (IOException ioe) {
+			System.out.println(ioe);
+		} catch (Exception ex) {
+			System.out.println(ex);
 		}
-//
-//		try {
-//
-//			MultipartRequest multi = new MultipartRequest(request,uploadPath, maxSize, "utf-8", new DefaultFileRenamePolicy());
-//
-//			vo.setCategory(multi.getParameter("category"));
-//			vo.setName(login.getName());
-//			vo.setTitle(multi.getParameter("title"));
-//			vo.setText(multi.getParameter("text"));
-//			vo.setVideoUrl(multi.getFilesystemName("video"));
-//			vo.setImgUrl(multi.getFilesystemName("img"));
-//
-//			int result = 0;		
-//			
-//			result = dao.insertVideo(vo);
-//			if (result > 0) {
-//				out.println("<script>alert('영상 업로드에 성공했습니다.')</script>");
-//				response.sendRedirect(request.getContextPath() + "/category/videos.jsp?category=" + multi.getParameter("category"));
-//				
-//			} else {
-//				out.println("<script>alert('영상 업로드에 실패했습니다.')</script>");
-//				out.println("<script>history.back() </script> ");
-//			}
-//
-//		} catch (IOException ioe) {
-//			System.out.println(ioe);
-//		} catch (Exception ex) {
-//			System.out.println(ex);
-//		}
-//		
+		
 	}
 
 }
