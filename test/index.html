@@ -39,22 +39,11 @@
 
     <script>
         window.onload = function () {
+            // var path = window.location.pathname;
+            console.log(__dirname);
+            console.log(path)
         }
-        $(".main-text").click(function () {
 
-
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            let oscillatorNode = audioContext.createOscillator();
-            const gainNode = audioContext.createGain();
-            gainNode.gain.value = 0.5;
-            oscillatorNode.type = "sine";
-            oscillatorNode.frequency.value = 2;
-            audioContext.resume();
-            oscillatorNode = audioContext.createOscillator();
-            oscillatorNode.connect(gainNode).connect(audioContext.destination);
-            oscillatorNode.start();
-
-        })
 
 
     </script>

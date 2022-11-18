@@ -17,7 +17,7 @@
 						VideoVO numVO =  viDao.getVideo(num);
 				%>
                 <div class="video-box">
-                    <video src="<%=request.getContextPath()%>/resources/upload/<%=numVO.getVideoUrl()%>" class="video-play" autoplay controls></video>
+                    <video src="<%=request.getRealPath("/resources/upload")%>\<%=numVO.getVideoUrl()%>" class="video-play" autoplay controls></video>
                 </div>
             <div class="video-content">
                 <div class="video-top d-flex align-items-center justify-content-between">
@@ -62,7 +62,7 @@
 				%>
                     <a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%= vo.getViNum()%>&category=<%=category%>" class="recommend-a">
                         <div class="recommend-img">
-                            <img src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>" alt="videos-img">
+                            <img src="<%=request.getRealPath("/resources/upload")%>\<%=vo.getImgUrl()%>" alt="videos-img">
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
 							<div class="img-title"><%= vo.getTitle()%></div>

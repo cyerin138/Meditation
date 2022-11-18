@@ -65,7 +65,7 @@
 
 			<a href="<%=request.getContextPath()%>/category/videoPlay.jsp?num=<%=vo.getViNum()%>&category=<%=category%>" class="videos-a"> 
 				<div class="videos-img">
-					<img src="<%=request.getContextPath()%>/resources/upload/<%=vo.getImgUrl()%>" alt="videos-img">
+					<img src="<%=request.getRealPath("/resources/upload")%>\<%=vo.getImgUrl()%>" alt="videos-img">
 				</div>
 				<div class="d-flex align-items-center justify-content-between">
 					<div class="img-title"><%= vo.getTitle()%></div>
