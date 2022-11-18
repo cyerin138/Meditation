@@ -57,4 +57,3 @@ create table main_comment(
 	co_date date default sysdate,
 	text varchar2(100)
 );
-
