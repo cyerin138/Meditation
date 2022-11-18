@@ -31,12 +31,12 @@
                 <div class="upload-box d-flex justify-content-between align-items-center">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input upload-file" 
-                        name="video" id="validatedCustomFile" required accept=".mp4">
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">비디오 찾기</label>
+                        name="video" id="validatedCustomFile" required accept=".mp4, .mkv">
+                        <label class="custom-file-label upload-label" for="validatedCustomFile">Choose file...</label>
                       </div>
                     <div class="custom-file ml-3">
                         <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required  accept=".gif, .jpg, .png, .jpeg">
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">이미지 찾기</label>
+                        <label class="custom-file-label upload-label" for="validatedCustomFile">Choose file...</label>
                       </div>
                     <button onclick="check()" class="upload-submit ml-3">
                        		업로드 

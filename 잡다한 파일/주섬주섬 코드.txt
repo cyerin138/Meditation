@@ -1,0 +1,22 @@
+======== 프로그레스 바 https://www.w3schools.com/w3css/w3css_progressbar.asp
+<div class="w3-light-grey">
+  <div id="myBar" class="w3-container w3-green" style="height:24px;width:1%"></div>
+</div>
+
+<button class="w3-button w3-light-grey" onclick="move()">Click Me</button>
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+</script>
