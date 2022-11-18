@@ -1,5 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <%@ include file="header.jsp" %>
+<%
+    /*
+    ※필독※
+
+실행방법
+- 1.(중요) 영상을 업로드 하기 위해 두 방법 중 하나를 골라 설정해주세요!
+[방법 1] C:\\Users\\SEC\\OneDrive\\바탕 화면\\Meditation\\Meditation    
+이 경로대로 프로젝트를 실행한다(마지막에서 두번쨰 \\Meditation은 workSpace로 쓰일 폴더 명 마지막 \\Meditation은 현재 프로젝트 이름 )
+
+[방법 2] 만약 다른 폴더에서 실행 할 경우 src > biz > VideoServlet.java 안에 savePath 변수 값으로  
+해당 폴더에 \\WebContent\\resources\\upload 까지의 절대경로를 적어주세요
+예시 ) C:\\Users\\SEC\\OneDrive\\바탕 화면\\Meditation\\Meditation\\WebContent\\resources\\upload
+ 
+이렇게 해야 제대로 영상이 저장이 되서 실행이 되요 ㅠㅠㅠ 다른 해결책을 열심히 찾아봤지만 답이 없네요 ㅠㅠ 죄송합니다
+
+
+- 2. 영상을 업로드한 후 폴더 새로고침을 제대로 하기 위해 두 방법 중 하나를 골라 설정해주세요!
+[방법 1] (추천) 이클립스 > Window> Preferences > General > Workspace 
+> Refresh using native hooks or polling 을 체크 해주세요
+
+[방법 2] 영상을 추가 할때마다  이클립스 > Meditation > WebContent
+> resources > upload를 새로고침 해주세요
+
+마지막으로 업로드를 눌렀을 때 이동되는 웹페이지(videos.jsp)에서 새로 고침 해주시면  감사하겠습니다
+(이클립스가 가끔 새로고침을 제대로 안해줄때가 있어서 한번만으로 새로고침이 안되면 여러번 해주시면 감사하겠습니다!!)
+
+
+- 3.서버 설정!
+
+ 
+- 4. Data Source를 생성 할때 이름과 비밀번호를 hr, hr 로 해주세요! 
+
+
+- 5. query.sql 에서 위에서 부터 차례대로 생성해주세요
+
+
+- 6. index.jsp에서 실행해주세요!
+
+준비 완료!!
+
+꿀팁 : 음성이 나오는 사이트라 거슬릴 수도 있는데 f5 버튼 누르면 조용해집니다!
+*/
+    %>
+
         <!-- 비주얼 -->
         <section id="visual">
             <div class="visual-wrap position-relative">

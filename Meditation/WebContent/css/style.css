@@ -329,9 +329,10 @@ header button {
     z-index: -10;
 }
 
-.reason-img>img {
+.reason-img > img {
     width: 100%;
     height: auto;
+    filter: saturate(0.5);
 }
 
 .reason-content {
