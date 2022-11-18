@@ -104,8 +104,8 @@
             </div>
         </section>
         <!-- 시작하기 끝 -->
-        <!-- 인트로  -->
-        <section id="intro" class="intro">
+         <!-- 인트로  -->
+        <section id="intro" class="intro intro-box">
             <div class="intro-wrap text-center position-relative">
                 <div class="position-absolute">
 
@@ -122,28 +122,27 @@
             //시작하기 쪽 물 효과
             $('.start-wrap').ripples({
                 resolution: 512,
-                dropRadius: 20,
+                dropRadius: 20, 
                 perturbance: 0.04,
             });
-
-            //새소리 플레이
+            
+			//새소리 플레이
             let audio = new Audio(`<%=request.getContextPath()%>/resources/mp3/forest.mp3`);
             audio.volume = 1;
 
-            if (sessionStorage.getItem("loginOK") == null) {
-                audioPlay();
-            } else {
-                $(".intro").addClass('intro-box');
-                audio.play();
-            }
-            const sleep = delay => new Promise(resolve => setTimeout(resolve, delay));
+
             window.onload = function () {
-                async function audioPlay() {
-                    $(".intro").fadeOut('slow');
-                    audio.play();
-                    await sleep(3500);
-                    $(".intro").addClass('intro-box');
-                }
+                audio.play();
+                
+                // if(sessionStorage.getItem("loginOK")== null) {
+                //     setTimeout(function () {
+                //         $(".intro").fadeOut('slow');
+                //         audio.play();
+                //     }, 3500);
+                // } else {
+                //     $(".intro").addClass('intro-box');
+                //     audio.play();
+                // }
             }
             // 비주얼 슬라이드 효과
             let slide = $('.slide')
