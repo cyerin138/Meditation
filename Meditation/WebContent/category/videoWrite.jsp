@@ -29,15 +29,16 @@
 
                 <p class="upload-title m-0"><%=categoryName%> 영상 업로드</p>
                 <div class="upload-box d-flex justify-content-between align-items-center">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input upload-file" 
-                        name="video" id="validatedCustomFile" required accept=".mp4">
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">비디오 찾기</label>
-                      </div>
-                    <div class="custom-file ml-3">
-                        <input type="file" class="custom-file-input upload-file" name="img" id="validatedCustomFile" required  accept=".gif, .jpg, .png, .jpeg">
-                        <label class="custom-file-label upload-label" for="validatedCustomFile">이미지 찾기</label>
-                      </div>
+					<div class="custom-file">
+						<input class="upload-name v-name" value="Video File..." placeholder="Video File...">
+						<label for="video">Browse</label> 
+						<input type="file" id="video" class="upload-file video-file" name="video" required accept=".mp4">
+					</div>
+					<div class="custom-file  ml-3">
+						<input class="upload-name img-name" value="Image File..." placeholder="Image File...">
+						<label for="img">Browse</label> 
+						<input type="file" id="img" class="upload-file img-file" name="img" required accept=".gif, .jpg, .png, .jpeg">
+					</div>
                     <button onclick="check()" class="upload-submit ml-3">
                        		업로드 
                         <div class="d-flex align-items-center justify-content-center ml-2">
@@ -56,6 +57,15 @@
     
     
     <script>
+	$(".video-file").on('change',function(){
+  		let fileName = $(".video-file").val();
+  		$('.v-name').val(fileName);
+	});
+	$(".img-file").on('change',function(){
+  		let fileName = $(".img-file").val();
+  		$('.img-name').val(fileName);
+	});
+
     //값이 비였는지 체크
 	function check() {
 		if(document.videoForm.video.value == "") {
