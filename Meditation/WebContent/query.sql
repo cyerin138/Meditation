@@ -7,16 +7,17 @@ create table member(
 
 --영상 테이블
 create table video(
-	vi_num number(100) constraint video_num_pk primary key,
+	vi_num number constraint video_num_pk primary key,
 	category varchar2(1) constraint video_category_ck check( category in('M','F','P')),
 	name varchar2(12),
 	vi_date date default sysdate,
-	title varchar2(100),
+	title varchar2(150),
 	text varchar2(150),
 	video_url varchar2(150),
 	img_url varchar2(150)
 );
 
+drop table video;
 -- 영상 시퀀스
 create sequence video_seq;
 
@@ -43,7 +44,7 @@ insert into video values(video_seq.nextval,'F','비타민주파수',default,'똥
 
 --댓글 테이블
 create table vi_comment(
-	vi_num number(100),
+	vi_num number,
 	name varchar2(12),
 	co_date date default sysdate,
 	text varchar2(100),
